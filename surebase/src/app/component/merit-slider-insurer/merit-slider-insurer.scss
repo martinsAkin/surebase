@@ -1,0 +1,147 @@
+.carousel-wrapper{
+  width: 77rem;
+  // background: red;
+  overflow: hidden;
+  position: relative;
+  min-height: 350px;
+  margin-left: 5rem;
+
+  .carousel-track{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: max-content;
+    margin-left: 10rem;
+    padding-left: 5rem;
+    // background: green;
+  }
+
+  .card {
+    flex: 0 0 auto;
+    height: 300px;
+    width: 700px;
+    margin-right: 50px;
+    box-sizing: border-box;
+    // padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    
+
+    .text {
+      width: 450px;
+      margin-left: 1rem;
+      text-align: left;
+
+      h3 {
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 16px;  
+      }
+    }
+
+    .image-container{
+      width: 20rem;
+      height: 18rem;
+
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .main-pagination-div{
+    display: flex; 
+    gap: 1.5rem; 
+    justify-content: center; 
+    margin-top: 2rem;
+
+      .pagination-div{
+      width: 3.5rem;  
+      height: 0.5rem;
+      border-radius: 20px;
+      transition: background-color 0.3s ease;
+    }
+  }
+
+}
+
+@media (max-width: 768px) {
+ .carousel-wrapper{
+  width: 100%;
+  // background: red;
+  margin-left: 5rem;
+  margin: 0 auto;
+
+  .carousel-track{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: max-content;
+    // background: green;
+    padding-left: 0rem;
+    margin-left: 4rem;
+    gap: 25rem;
+  }
+
+  .card {
+    flex: 0 0 auto;
+    height: 330px;
+    width: 300px;
+    margin-right: 0;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+
+    .text {
+      width: 230px;
+      margin-left: 1rem;
+      text-align: left;
+      // background: blue;
+      margin-bottom: 2rem;
+
+      h3 {
+        font-size: 13.5px;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 13px;  
+      }
+    }
+
+    .image-container{
+      width: 15rem;
+      height: 10rem;
+
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+    .main-pagination-div{
+      display: flex; 
+      gap: 1rem; 
+      justify-content: center; 
+      margin-top: 2rem;
+
+        .pagination-div{
+          width: 0.5rem;  
+          height: 0.5rem;
+          border-radius: 50%;
+          transition: background-color 0.3s ease;
+      }
+    }
+
+  } 
+}

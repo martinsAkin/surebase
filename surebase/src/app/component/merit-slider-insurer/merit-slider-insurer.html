@@ -1,0 +1,28 @@
+<section class="carousel-wrapper">
+  <div class="carousel-track" [style.transform]="getTransform()" >
+    <div 
+      class="card"
+      *ngFor="let card of cards"
+      [style.backgroundColor]="card.bgcolor"
+    >
+        <div class="text">
+          <h3>{{ card.header }}</h3>
+          <p>{{ card.text }}</p>
+        </div>
+        <div class="image-container">
+          <img [src]="card.image" alt="card image" />
+        </div>
+
+    </div>
+  </div>
+
+  <div class="main-pagination-div">
+      <div 
+        class="pagination-div"
+        *ngFor="let card of cards; let i = index"
+        [style.backgroundColor] = "i === activeIndex ? card.bgcolor : '#ccc' "
+      ></div>
+  </div>
+  
+</section>
+

@@ -1,0 +1,67 @@
+ nav{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ align-items: center;
+ padding: 20px 100px;
+}
+.list-items{
+ display: flex;
+ flex-direction: row;
+ gap: 15px;
+ align-items: center;
+ list-style: none;
+ color: white;
+
+ li{
+
+   &:hover{
+    color: blue;
+    cursor: pointer;
+   }
+
+ }
+}
+.btn-section{
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ gap: 20px;
+}
+.button-general{
+ border-radius: 20px;
+ border: none;
+ cursor: pointer;
+ width: 7rem;
+ padding: 7.5px 15px;
+}
+.log-in{
+ background-color: white;
+ color: black;
+}
+.get-started{
+ background: #38BA5C;
+ color: black;
+}
+.menu-icon{
+  display: none;
+}
+
+
+@media (max-width: 768px) {
+  nav{
+    padding: 25px;    
+  }
+  .list-items{
+    display: none;
+  }
+  .btn-section{
+    display: none;
+  }
+  .menu-icon{
+    display: block;
+    padding: 0.5rem;
+    background: white;
+    border-radius: 30px;
+  }
+}

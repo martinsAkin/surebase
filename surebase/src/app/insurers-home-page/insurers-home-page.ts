@@ -1,0 +1,23 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MeritSliderInsurer } from '../component/merit-slider-insurer/merit-slider-insurer';
+import { HeroSection } from '../component/hero-section/hero-section';
+import { Footer } from '../component/footer/footer';
+import { TestimonialCarousel } from '../component/testimonial-carousel/testimonial-carousel';
+
+@Component({
+  selector: 'app-insurers-home-page',
+  standalone: true,
+  imports: [
+    CommonModule,
+    HeroSection,
+    MeritSliderInsurer,
+    Footer,
+    TestimonialCarousel,
+  ],
+  templateUrl: './insurers-home-page.html',
+  styleUrls: ['./insurers-home-page.scss']
+})
+export class InsurersHomePage {
+  
+}

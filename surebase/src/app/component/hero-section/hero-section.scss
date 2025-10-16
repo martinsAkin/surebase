@@ -1,0 +1,82 @@
+section{
+ background: linear-gradient(#111B36, #365073);
+ padding: 0 20px;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+    align-items: center;
+    gap: 8rem;
+    height: 100dvh;
+
+    h3{
+      font-size: 40px;
+      width: 450px;   
+      color: white; 
+      font-family: "Space Grotesk", sans-serif;
+    }
+    .span-text{
+      display: inline-block;
+      width: 400px;
+      font-size: 15px;
+      color: white;
+      margin: 1rem 0;
+    }
+
+    .input-getStarted{
+      margin-top: 1rem;
+      display: flex;
+
+        input{
+          padding: 8px 5px;
+          width: 70%;
+          border: none;
+          border-radius: 5px 0 0 5px;
+          background: white;
+        }
+      }
+      .get-started-email{
+      padding: 5px 10px;
+      border: none;
+      border-radius: 0 5px 5px 0;
+      background-color: green;
+      }
+
+      img{
+        height: 600px;
+        width: 650px;
+      }
+  }
+
+
+    @media (max-width: 768px) {
+    main{
+      flex-direction: column;
+      gap: 3.5rem;
+      align-items: center;
+      margin-left: 5px;
+      padding: 0 1rem 2rem 1rem;
+      margin-top: 20px;
+      height: 100%;
+
+      h3{
+        font-size: 25px;
+        width: 300px;
+        color: white;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+      .span-text{
+        width: 300px;
+      }
+
+      img{
+        height: 290px;
+        width: 300px;
+        margin-left: 2rem;
+      }
+  }
+
+
+}

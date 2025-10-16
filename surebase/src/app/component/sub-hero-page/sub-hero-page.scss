@@ -1,0 +1,54 @@
+.main{
+ display: flex;
+ flex-direction: row-reverse;
+ gap: 5rem;
+ align-items: center;
+ padding: 30px 150px 0 30px;
+//  margin: 0 auto;
+
+ img{
+  height: 400px;
+  width: 500px;
+ }
+}
+
+.text-heading{
+ font-size: 30px;
+ font-weight: bold;
+ width: 500px;
+ margin-bottom: 10px;
+ background: #D7F2FE;
+ font-family: "Space Grotesk", sans-serif;
+
+}
+.span-text{
+  display: inline-block;
+  width: 400px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+
+@media (max-width: 768px) {
+ .main{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0rem;
+    align-items: center;
+    padding: 0 1rem 2rem 1.5rem;    
+
+    img{
+      height: 250px;
+      width: 300px;
+    }
+  }
+  .text-heading{
+    font-size: 18px;
+    width: 335px;
+  }
+  .span-text{
+  display: inline-block;
+  width: 300px;
+  font-size: 13px;
+}
+}

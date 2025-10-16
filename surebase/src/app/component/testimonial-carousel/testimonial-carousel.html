@@ -1,0 +1,87 @@
+<!-- testimonial-carousel.html -->
+<div class="carousel-container" (mouseenter)="stopAutoSlide()" (mouseleave)="startAutoSlide()">
+  <!-- Powered by Surebase Badge -->
+   <!-- <div style="display: flex; flex-direction: column-; align-items: center;"> -->
+      <div class="powered-badge">
+        <div class="surebase-logo">
+          <img src="assets/LOGO.svg" alt="Surebase Logo" />
+        </div>
+        <span>Powered by Surebase</span>
+
+      </div>
+      <h1 style="
+      width: max-content;
+      position: absolute;
+      top: 5rem;
+      left: 33%;
+      color: #133f5e;
+      font-family: 'Space Grotesk', sans-serif;
+      ">What Other Brokers are Saying?</h1>
+    <!-- </div> -->
+
+  <!-- Card Stack Container -->
+  <div class="cards-stack" [attr.data-slide]="currentSlide">
+    <!-- Left Card -->
+    <div class="side-card left-card" [style.border-top-color]="currentSlideData.leftCard.color">
+      <div class="card-logo">
+        <img [src]="currentSlideData.leftCard.logo" alt="Partner Logo" />
+      </div>
+    </div>
+
+    <!-- Main Card -->
+    <div class="main-card" [style.border-top-color]="currentSlideData.mainColor">
+      <div class="main-logo">
+        <img [src]="currentSlideData.mainLogo" alt="Surebase" />
+      </div>
+
+      <div class="main-text">
+        {{ currentSlideData.title }}
+      </div>
+
+      <div class="person-info">
+        <div class="avatar">
+          <img [src]="currentSlideData.person.avatar" [alt]="currentSlideData.person.name" />
+        </div>
+        <div class="person-details">
+          <h3 class="person-name">{{ currentSlideData.person.name }}</h3>
+          <p class="person-position">{{ currentSlideData.person.position }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Card -->
+    <div class="side-card right-card" [style.border-top-color]="currentSlideData.rightCard.color">
+      <div class="card-logo">
+        <img [src]="currentSlideData.rightCard.logo" alt="Partner Logo" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Partner Logos Strip -->
+  <div class="partners-strip">
+    <div class="partners-container">
+      <img [src]="currentSlideData.partnerLogos.logo1" alt="Partner" />
+      <img [src]="currentSlideData.partnerLogos.logo2" alt="Partner" />
+      <img
+        *ngIf="currentSlideData.partnerLogos.logo3"
+        [src]="currentSlideData.partnerLogos.logo3"
+        alt="Partner"
+      />
+      <img
+        [src]="currentSlideData.partnerLogos.featuredLogo"
+        alt="Partner"
+        class="featured"
+        #featuredLogo
+        (load)="setProgressBarWidth(featuredLogo)"
+      />
+      <img [src]="currentSlideData.partnerLogos.logo4" alt="Partner" />
+      <img [src]="currentSlideData.partnerLogos.logo5" alt="Partner" />
+      <img [src]="currentSlideData.partnerLogos.logo6" alt="Partner" />
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+      <div class="progress-bar" [style.background-color]="currentSlideData.mainColor"></div>
+    </div>
+  </div>
+</div>

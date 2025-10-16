@@ -1,0 +1,63 @@
+<!-- <body> -->
+  
+    <app-hero-section
+       [heroHeading]="'Your Single API for the Entire Insurance Market'"
+        [heroText]="'End the complexity of managing multiple integrations. Surebase gives you instant access to a vast, unified inventory of insurers products through one powerful, reliable API.'"
+        [image2Path]="'assets/hand-with-globe.png'"
+     />
+
+ <section style="background-color: #d7f2fe;">
+
+  <app-sub-hero-page 
+    [heading]="'Why Manage Dozens of Integrations When You Only Need One?'"
+    [textbody]="' As an Insurance broker or corporate partner, your time is spent managing fragmented systems, complex contracts, and multiple APIs. The scattered approach slows down your sales cycle, limits the products you can offer, and creates unneccessary operational overhead.'"
+    [imgSrcPath]="'assets/broker-integeration.png'"
+  />
+
+  <div class="div-below-main"> 
+   <h3>Access More. Sell Faster. Grow Smarter. with
+      <div style="width: 10rem; margin: 0 auto;">
+        <img src="assets/SurebaseLogo-dark.png" alt="" width="100%" />
+      </div>
+   </h3>
+   <p>We provide the infrastructure you need to connect with insurers and manage your business with unprecedented efficiency.</p>
+  </div>
+
+  <section class="merit-cards">
+    <app-merit-card 
+     [imagePath]="'assets/merit-box1.png'"
+     [heading]="'Unified Product Inventory'"
+     [body]="'Access thousand of insurance products from multiple licensed providers through a single API endpoint. This eliminates the need for multiple integrations and contracts, freeing you to focus on your clients.'"
+    />
+    <app-merit-card 
+     [imagePath]="'assets/merit-box2.png'"
+     [heading]="'Streamlined Operations'"
+     [body]="'Manage every aspect of your business--from policy creation and client management to claims submission and commission tracking--all from your Surebase dashboard'"
+    />
+    <app-merit-card 
+     [imagePath]="'assets/merit-box3.png'"
+     [heading]="'Transparent Commissions'"
+     [body]="'Get clear, real-time insights into your commission earnings. Our platform automates commission tracking and ensures complete transparency into your revenue, so you always know where you stand.'"
+    />
+    <app-merit-card 
+     [imagePath]="'assets/merit-box4.png'"
+     [heading]="'Powerful Developer Tools'"
+     [body]="'Leverage our roboust API keys and webhook endpoints to seamlessly integrate Surebase with your existing systems, such as CRMs or other custom applications.'"
+    />
+  </section>
+
+ </section>
+
+
+ <div style="background-color: #f8fdff">
+    <app-testimonial-carousel />
+
+   <section class="simplify-container">
+    <app-simplify-card />
+   </section>
+ </div>
+ 
+ <app-footer />
+
+<!-- </body> -->
+

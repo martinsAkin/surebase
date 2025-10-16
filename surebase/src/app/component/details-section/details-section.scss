@@ -1,0 +1,74 @@
+section{
+ text-align: center;
+ background: #D7F2FE;
+ padding: 3rem 0;
+ 
+ .h1{
+  font-family: "Space Grotesk", sans-serif;
+  color: #133F53;
+  font-weight: bold;
+  font-size: 30px;
+ }
+
+ .who-surebase-serves{
+   background: #D7F1DE;
+   width: max-content;
+   border: none;
+   border-radius: 20px;
+   padding: 0.5rem;
+   box-shadow: 1px 1px 3.5px grey;
+   display: flex;
+   align-items: center;
+   font-size: 13px;
+   gap: 5px;
+   font-weight: 500;
+   margin: 0 auto;
+
+   img{
+    height: 15px;
+    width: 15px;
+   }
+ }
+}
+main{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 2.5rem;
+
+
+ .detail-item{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+
+   img{
+    height: 200px;
+    width: 210px;
+   }
+   div{
+    color: #030508;
+    width: 350px;
+    font-size: 14px;
+    text-align: center;
+
+    h2{
+     font-size: 17px;
+     margin-bottom: 0.5rem;
+    }
+   }
+
+ }
+ 
+}
+
+@media (max-width: 768px) {
+ section{
+  padding: 2rem;
+ }
+ main{
+  flex-direction: column;
+  padding: 2rem;
+ }
+}
