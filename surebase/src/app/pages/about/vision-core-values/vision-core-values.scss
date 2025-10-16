@@ -1,0 +1,163 @@
+.vision-mission-values {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 120px 96px;
+  overflow: hidden ;
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 80px;
+
+    h1 {
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 64px;
+      margin-bottom: 20px;
+      color: #0b2632;
+    }
+
+    p {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 32px;
+      color: #555;
+    }
+  }
+
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    margin-bottom: 100px;
+
+    .text-block {
+      flex: 1;
+
+      h2 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        font-size: 28px;
+        margin-bottom: 16px;
+        color: #0F172A;
+      }
+
+      p {
+        font-family: "Montserrat", sans-serif;
+        font-size: 18px;
+        line-height: 28px;
+        color: #333;
+      }
+    }
+
+    .image-block {
+      flex: 1;
+      img {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 20px;
+      }
+    }
+  }
+
+ .core-values {
+  text-align: center;
+  padding: 80px 32px;
+
+  h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 60px; /* Increased bottom margin */
+    color: #0F172A;
+  }
+
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px; /* This should work for both horizontal AND vertical spacing */
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .value-card {
+      background: #f4fcf0;
+      padding: 32px;
+      border-radius: 24px;
+      text-align: left;
+      border: 1px solid #e0f0e0;
+      
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: auto;
+      min-height: 200px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      }
+
+      .value-title {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 20px; /* Increased spacing */
+
+        .number {
+          font-family: "Montserrat", sans-serif;
+          font-size: 20px;
+          font-weight: 700;
+          color: #133f53;
+          background: #bde9fd;
+          width: 40px;
+          height: 40px;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+
+        h3 {
+          font-family: "Montserrat", sans-serif;
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 32px;
+          margin: 0;
+          color: #0F172A;
+          white-space: nowrap;
+        }
+      }
+
+      p {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #030508;
+        margin: 0; /* Reset margin */
+        flex-grow: 1; /* Push content to take available space */
+      }
+    }
+  }
+
+  /* 📱 Responsive */
+  @media (max-width: 1200px) {
+    .values-grid {
+      grid-template-columns: repeat(2, 1fr); // ✅ 2 per row on medium screens
+    }
+  }
+
+  @media (max-width: 768px) {
+    .values-grid {
+      grid-template-columns: 1fr; // ✅ Stack on small screens
+    }
+  }
+}
+}

@@ -1,0 +1,187 @@
+.challenge-opportunity {
+  width: 100%;
+  max-width: 1200px; /* Reduced from 1728px */
+  margin: 0 auto;
+  min-height: 600px; /* Reduced from 800px */
+  background: #f4fcf0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px; /* Reduced from 40px */
+  padding: 100px 160px 0; /* Reduced from 80px 48px */
+
+  .challenge-card,
+  .opportunity-card,
+  .third-card {
+    flex: 1;
+    min-height: 400px; /* Reduced from 550px */
+    border-radius: 24px; /* Reduced from 32px */
+    padding: 24px 20px; /* Reduced from 32px 24px */
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+    gap: 20px; /* Increased gap to spread content */
+  }
+
+  h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 18px; /* Reduced from 20px */
+    line-height: 24px; /* Reduced from 28px */
+    margin: 0;
+    padding-bottom: 12px;
+  }
+
+  p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 14px; /* Reduced from 16px */
+    line-height: 20px; /* Reduced from 24px */
+    color: #0b2632;
+    margin: 0 auto;
+    max-width: 95%; /* Increased from 90% */
+    flex-grow: 1; 
+    align-items: center; /* Center text vertically */
+    justify-content: center;
+  }
+
+  .vector,
+  .logo {
+    width: 100px; /* Reduced from 140px */
+    height: auto;
+    margin-bottom: 8px; /* Reduced from 12px */
+  }
+
+  .challenge-card {
+    background: #d7f2fe;
+    border: 1px solid #9bdefb;
+
+    h2 {
+      color: #133f53;
+    }
+  }
+
+  .opportunity-card {
+    background: #d7f1de;
+    border: 1px solid #9bdefb;
+    margin-top: 60px; /* Reduced from 80px */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 36px; /* Reduced from 48px */
+    padding-bottom: 16px; /* Reduced from 20px */
+
+    h2 {
+      color: #133e1f;
+    }
+
+    .logo {
+      width: 150px; /* Reduced from 200px */
+    }
+  }
+
+  .third-card {
+    background: #d7f1de;
+    border: 1px solid #9bdefb;
+
+    h2 {
+      color: #5c3b09;
+    }
+  }
+}
+
+// 📱 Responsive
+@media (max-width: 1024px) { /* Changed from 1200px to 1024px */
+  .challenge-opportunity {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 24px; /* Reduced from 48px 32px */
+    gap: 24px; /* Reduced from 32px */
+    min-height: auto; /* Remove fixed height on mobile */
+
+    .challenge-card,
+    .opportunity-card,
+    .third-card {
+      width: 100%;
+      max-width: 400px; /* Reduced from 500px */
+      margin-top: 0; 
+      padding: 20px 16px; /* Reduced from 24px 20px */
+      min-height: 350px; /* Reduced for mobile */
+    }
+
+    .opportunity-card {
+      margin-top: 0; /* Remove offset on mobile */
+      padding-top: 24px; /* Reduced from 32px */
+      padding-bottom: 16px;
+    }
+  }
+}
+
+/* Additional mobile optimization for smaller screens */
+@media (max-width: 768px) {
+  .challenge-opportunity {
+    padding: 32px 20px; /* Further reduced */
+    gap: 20px;
+    
+    .challenge-card,
+    .opportunity-card,
+    .third-card {
+      min-height: 300px;
+      border-radius: 20px;
+      padding: 16px 12px;
+      gap: 16px;
+    }
+    
+    h2 {
+      font-size: 16px;
+      line-height: 22px;
+    }
+    
+    p {
+      font-size: 13px;
+      line-height: 18px;
+      max-width: 100%; /* Full width on very small screens */
+    }
+    
+    .vector, .logo {
+      width: 80px;
+    }
+    
+    .opportunity-card .logo {
+      width: 120px;
+    }
+    
+    .opportunity-card {
+      padding-top: 20px;
+    }
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .challenge-opportunity {
+    padding: 24px 16px;
+    gap: 16px;
+    
+    .challenge-card,
+    .opportunity-card,
+    .third-card {
+      min-height: 280px;
+      border-radius: 16px;
+      padding: 12px 10px;
+      gap: 12px;
+    }
+    
+    h2 {
+      font-size: 15px;
+      line-height: 20px;
+    }
+    
+    p {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+}

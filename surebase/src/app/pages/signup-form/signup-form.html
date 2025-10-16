@@ -1,0 +1,195 @@
+<!-- signup-form.component.html -->
+<div class="signup-container">
+  <div class="signup-form-wrapper">
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()" class="signup-form">
+      <!-- Header Section -->
+      <div class="form-header">
+        <div class="logo-section">
+          <div class="logo">
+            <img src="/Surebase Logo.svg" alt="Surebase Logo" />
+          </div>
+          <h1 class="form-title">Create your Surebase Account</h1>
+        </div>
+      </div>
+
+      <!-- Form Fields -->
+      <div class="form-fields">
+        <!-- Email Field -->
+        <div class="input-field">
+          <div class="input-with-label">
+            <label for="email" class="field-label">Email Address</label>
+            <div class="input-container">
+              <div class="input-content">
+                <div class="input-icon">
+                  <img src="/sms.svg" alt="Email" width="20" height="20" />
+                </div>
+                <input
+                  type="email"
+                  id="email"
+                  formControlName="email"
+                  placeholder="info@surebase.it"
+                  class="text-input"
+                />
+              </div>
+            </div>
+            <div class="error-message" *ngIf="getFieldError('email')">
+              {{ getFieldError('email') }}
+            </div>
+          </div>
+        </div>
+
+        <!-- Full Name Field -->
+        <div class="input-field">
+          <div class="input-with-label">
+            <label for="fullName" class="field-label">Business Name</label>
+            <div class="input-container">
+              <div class="input-content">
+                <div class="input-icon">
+                  <img src="/user-square.svg" alt="User" width="20" height="20" />
+                </div>
+                <input
+                  type="text"
+                  id="fullName"
+                  formControlName="fullName"
+                  placeholder="Surebase"
+                  class="text-input"
+                />
+              </div>
+            </div>
+            <div class="error-message" *ngIf="getFieldError('fullName')">
+              {{ getFieldError('fullName') }}
+            </div>
+          </div>
+        </div>
+
+        <!-- Phone Number Field -->
+        <div class="input-field">
+          <div class="input-with-label">
+            <label for="phoneNumber" class="field-label">Phone Number</label>
+            <div class="input-container phone-container">
+              <div class="country-dropdown" (click)="toggleCountryDropdown()">
+                <span class="country-flag">{{ selectedCountry.flag }}</span>
+                <span class="country-code">{{ selectedCountry.code }}</span>
+                <img src="/Icon.svg" alt="Dropdown" width="20" height="20" class="dropdown-arrow" />
+
+                <!-- Country Dropdown -->
+                <div class="country-options" *ngIf="showCountryDropdown">
+                  <div
+                    *ngFor="let country of countryCodes"
+                    class="country-option"
+                    (click)="selectCountry(country)"
+                  >
+                    <span class="country-flag">{{ country.flag }}</span>
+                    <span class="country-name">{{ country.name }}</span>
+                    <span class="country-code">{{ country.code }}</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="phone-input">
+                <input
+                  type="tel"
+                  id="phoneNumber"
+                  formControlName="phoneNumber"
+                  placeholder="0000000000"
+                  class="text-input"
+                />
+              </div>
+            </div>
+            <div class="error-message" *ngIf="getFieldError('phoneNumber')">
+              {{ getFieldError('phoneNumber') }}
+            </div>
+          </div>
+        </div>
+
+        <!-- Password Field -->
+        <div class="input-field password-field">
+          <div class="input-with-label">
+            <label for="password" class="field-label">Password</label>
+            <div class="input-container">
+              <div class="input-content">
+                <div class="input-icon">
+                  <img src="/lock.svg" alt="Password" width="20" height="20" />
+                </div>
+                <input
+                  [type]="showPassword ? 'text' : 'password'"
+                  id="password"
+                  formControlName="password"
+                  placeholder="********"
+                  class="text-input"
+                />
+                <button type="button" class="password-toggle" (click)="togglePasswordVisibility()">
+                  <img src="/eye.svg" alt="Toggle visibility" width="16" height="16" />
+                </button>
+              </div>
+            </div>
+            <div class="error-message" *ngIf="getFieldError('password')">
+              {{ getFieldError('password') }}
+            </div>
+          </div>
+        </div>
+
+        <!-- Terms and Conditions -->
+        <div class="terms-section">
+          <h3 class="terms-title">Terms and Conditions</h3>
+
+          <div class="checkbox-group">
+            <div class="checkbox-item">
+              <input
+                type="checkbox"
+                id="agreeToTerms"
+                formControlName="agreeToTerms"
+                class="checkbox"
+              />
+              <label for="agreeToTerms" class="checkbox-label">
+                <div class="checkbox-text">
+                  <span class="checkbox-title">I agree to the Terms of Service</span>
+                  <span class="checkbox-description"
+                    >By checking this box, you agree to our Terms of Service and acknowledge that
+                    you have read our Privacy Policy.</span
+                  >
+                </div>
+              </label>
+            </div>
+
+            <div class="checkbox-item">
+              <input
+                type="checkbox"
+                id="agreeToPrivacy"
+                formControlName="agreeToPrivacy"
+                class="checkbox"
+              />
+              <label for="agreeToPrivacy" class="checkbox-label">
+                <div class="checkbox-text">
+                  <span class="checkbox-title">I agree to the Privacy Policy</span>
+                  <span class="checkbox-description"
+                    >We will use your personal information in accordance with our Privacy Policy to
+                    provide you with our services.</span
+                  >
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="submit-button" [disabled]="signupForm.invalid">
+          Create Account
+        </button>
+      </div>
+
+      <!-- Footer -->
+      <div class="form-footer">
+        <p class="footer-text">
+          By clicking the “Create Account” button, you agree to
+          <span class="green-text"> Surebase Terms & conditions </span>
+        </p>
+
+        <div class="sign-in-link">
+          <span class="sign-in-text">Already have an account?</span>
+          <a href="/signin" class="sign-in-button">Log In</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

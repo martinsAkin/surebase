@@ -1,0 +1,11 @@
+{
+  "/": {
+    "target": "http://localhost:4200",
+    "secure": false,
+    "bypass": function (req, res) {
+      if (req.method === "GET" && req.headers.accept && req.headers.accept.indexOf("html") !== -1) {
+        return "/index.html";
+      }
+    }
+  }
+}

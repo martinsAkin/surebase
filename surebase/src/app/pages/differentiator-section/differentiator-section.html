@@ -1,0 +1,62 @@
+<section class="differentiators-section">
+  <div class="container">
+    <!-- Top Section: Badge + Hero + Image -->
+    <div class="top-section">
+      <div class="left-content">
+        <!-- Badge -->
+        <div class="badge">
+          <div class="badge-logo">
+            <img src="LOGO.svg" alt="Surebase" />
+          </div>
+          <span>Surebase Differentiators</span>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="hero-section">
+          <h2 class="section-title">Seamless Integration. Unwavering Reliability</h2>
+          <p class="section-description">
+            Our strategy combines a unified API, digital dashboards, and robust infrastructure for
+            99.99% uptime and full regulatory compliance, ensuring unmatched scale and security.
+          </p>
+
+          <!-- Email Form -->
+          <form class="email-form" (ngSubmit)="onSubmit()">
+            <div class="input-group">
+              <input
+                type="email"
+                class="email-input"
+                [(ngModel)]="emailInput"
+                name="email"
+                placeholder="Enter your email address"
+                [disabled]="isSubmitting"
+                required
+              />
+              <button type="submit" class="submit-button" [disabled]="isSubmitting || !emailInput">
+                {{ isSubmitting ? 'Submitting...' : 'Get Started' }}
+              </button>
+            </div>
+            <p class="submit-message" *ngIf="submitMessage">{{ submitMessage }}</p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Right Content - Hero Image -->
+      <div class="right-content">
+        <img src="freepik-assistant.svg" alt="Surebase platform illustration" class="hero-image" />
+      </div>
+    </div>
+
+    <!-- Features Grid - Full Width -->
+    <div class="features-grid">
+      <div class="feature-card" *ngFor="let item of differentiators">
+        <div class="feature-icon" [ngClass]="'feature-icon--' + item.iconBg">
+          <img [src]="'' + item.icon" [alt]="item.title" />
+        </div>
+        <div class="feature-content">
+          <h3 class="feature-title">{{ item.title }}</h3>
+          <p class="feature-description">{{ item.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

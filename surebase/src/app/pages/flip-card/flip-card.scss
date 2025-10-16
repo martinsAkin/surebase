@@ -1,0 +1,231 @@
+.component-4 {
+  position: absolute;
+  width: 425px;
+  height: 350px;
+  left: 722px;
+  top: 68px;
+  cursor: pointer;
+}
+
+.back-card, .front-card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  
+  &.hidden {
+    display: none;
+  }
+}
+
+.back {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background: #D7F2FE;
+  border: 1px solid #9BDEFB;
+  border-radius: 17px;
+}
+
+.front {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background: #D7F1DE;
+  border: 1px solid #9BDCAD;
+  border-radius: 17px;
+}
+
+.frame-56 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  position: absolute;
+  width: 335px;
+  height: 48px;
+  left: 45px;
+  top: 22px;
+
+  .surebase-logo {
+    width: 112px;
+    height: 25px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  .gds-description {
+    width: 335px;
+    height: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    color: #44474B;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0;
+  }
+}
+
+.global-illustration {
+  position: absolute;
+  width: 350px;
+  height: 112px;
+  left: calc(50% - 350px/2);
+  top: 86px;
+}
+
+.flip-hint-blue {
+  position: absolute;
+  width: 204px;
+  height: 11px;
+  left: calc(50% - 204px/2 + 8px);
+  top: 327px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 11px;
+  text-align: center;
+  color: #257EA5;
+  margin: 0;
+}
+
+.target-illustration {
+  position: absolute;
+  width: 119px;
+  height: 119px;
+  left: 335px;
+  top: -46px;
+}
+
+.frame-57 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 8px;
+  position: absolute;
+  width: 112px;
+  height: 48px;
+  left: calc(50% - 112px/2);
+  top: 22px;
+
+  .surebase-logo {
+    width: 112px;
+    height: 25px;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+  }
+
+  .vision-title {
+    width: 112px;
+    height: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+    color: #030508;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 0;
+  }
+}
+
+.vision-text {
+  position: absolute;
+  width: 364px;
+  height: 78px;
+  left: calc(50% - 364px/2);
+  top: 83px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 20px;
+  text-align: center;
+  color: #030508;
+  margin: 0;
+}
+
+.goals-title {
+  position: absolute;
+  width: 29px;
+  height: 15px;
+  left: 201px;
+  top: 173px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 16px;
+  text-align: center;
+  color: #030508;
+  margin: 0;
+}
+
+.goals-text {
+  position: absolute;
+  width: 364px;
+  height: 59px;
+  left: calc(50% - 364px/2);
+  top: 188px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 20px;
+  text-align: center;
+  color: #030508;
+  margin: 0;
+}
+
+.mission-text {
+  position: absolute;
+  width: 364px;
+  height: 98px;
+  left: calc(50% - 364px/2);
+  top: 221px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 20px;
+  text-align: center;
+  color: #030508;
+  margin: 0;
+}
+
+.flip-hint-green {
+  position: absolute;
+  width: 152px;
+  height: 11px;
+  left: calc(50% - 152px/2 - 7px);
+  top: 324px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 11px;
+  text-align: center;
+  color: #257C3D;
+  margin: 0;
+}

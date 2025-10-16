@@ -1,0 +1,98 @@
+<div class="section">
+  <!-- Header badge -->
+  <div class="header-badge">
+    <div class="logo">
+      <img src="/LOGO.svg" alt="Surebase Logo" />
+    </div>
+    <span class="badge-text">What is Surebase?</span>
+  </div>
+
+  <!-- Main content -->
+  <div class="content-container">
+    <div class="text-content">
+      <h1 class="main-heading">Your Foundation for Modern Insurance.</h1>
+
+      <!-- Feature 1 -->
+      <div class="feature-row">
+        <div class="icon-container">
+          <img src="/blockchain.svg" alt="Blockchain Technology" class="feature-icon" />
+        </div>
+        <p class="feature-text">
+          Surebase is the B2B insurance aggregation platform built to back the entire insurance
+          stack.
+        </p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="feature-row">
+        <div class="icon-container secondary">
+          <img src="/cloud-ntwk.svg" alt="Cloud Networking" class="feature-icon" />
+        </div>
+        <p class="feature-text">
+          We consolidate thousands of insurance products into a single, unified API, enabling
+          seamless, secure connections between licensed insurance providers and distribution
+          partners like brokers, fintechs, banks, and more.
+        </p>
+      </div>
+    </div>
+
+    <!-- Flip Card -->
+    <div class="flip-card-container">
+      <div class="flip-card" (click)="toggleFlip()" [class.flipped]="isFlipped">
+        <div class="flip-card-inner">
+          <!-- Front of card (shown first) -->
+          <div class="flip-card-front">
+            <div class="card-content">
+              <div class="card-header">
+                <img src="/Surebase Logo.svg" alt="Surebase Logo" class="card-logo" />
+                <div class="vision-text">
+                  We are building the Global Distribution System (GDS) for Insurance.
+                </div>
+              </div>
+              <img
+                src="/group-distribution.svg"
+                alt="Network Illustration"
+                class="card-main-image"
+              />
+              <p class="card-description">
+                We are building the Global Distribution System (GDS) for insurance, creating the
+                core infrastructure that will revolutionize how insurance products are distributed
+                worldwide. We're starting in Nigeria, empowering the local ecosystem, with a clear
+                roadmap for international expansion.
+              </p>
+              <div class="flip-hint secondary-hint">
+                This is just the beginning - Click to flip the card
+              </div>
+            </div>
+          </div>
+
+          <!-- Back of card (shown after flip) -->
+          <div class="flip-card-back">
+            <!-- Target Image -->
+            <img src="/target.svg" alt="Target Illustration" class="target-image" />
+
+            <div class="card-content">
+              <div class="card-header">
+                <img src="/Surebase Logo.svg" alt="Surebase Logo" class="card-logo" />
+                <div class="vision-text">Vision</div>
+              </div>
+              <p class="card-description">
+                To become the go-to global hub for insurance distribution—starting in Nigeria and
+                expanding internationally. Just as Amadeus and Sabre serve the airline industry,
+                Surebase will be the GDS (Global Distribution System) for insurance.
+              </p>
+              <div class="goals-section">
+                <div class="goals-title">Goals</div>
+                <p class="goals-text">
+                  Onboard all licensed brokers and insurance companies in Nigeria within 4 quarters,
+                  Expand into international markets
+                </p>
+              </div>
+              <div class="flip-hint">There's more - Click to flip the card</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

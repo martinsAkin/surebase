@@ -1,0 +1,1004 @@
+// signup-form.component.scss
+
+// Variables
+$surface-lowest: #FBFBFB;
+$surface-bright: #FFFFFF;
+$text-header: #0F172A;
+$text-primary: #292B2D;
+$text-secondary: #44474B;
+$text-tertiary: #666B71;
+$gray-base: #CBD5E1;
+$gray-50: #D4DCE6;
+$primary-base: #38BA5C;
+$primary-70: #257C3D;
+$error-color: #DC2626;
+
+// Font family
+$font-family: 'Montserrat', sans-serif;
+
+// Mixins
+@mixin input-shadow {
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+// Main container
+.signup-container {
+  position: relative;
+  width: 100%;
+  max-width: 864px;
+  min-height: 100vh;
+  background: $surface-lowest;
+  margin: 0 auto;
+  
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+}
+
+.signup-form-wrapper {
+  position: absolute;
+  width: 480px;
+  left: 50%;
+  top: 96px;
+  transform: translateX(-50%);
+  
+  @media (max-width: 768px) {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    left: auto;
+    top: 20px;
+    transform: none;
+  }
+}
+
+.signup-form {
+  @include flex-column;
+  gap: 24px;
+  width: 100%;
+}
+
+// Header section
+.form-header {
+  @include flex-column;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+}
+
+.logo-section {
+  @include flex-column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 445px;
+}
+
+.logo {
+  width: 214px;
+  height: 48px;
+  
+  @media (max-width: 480px) {
+    width: 180px;
+    height: 40px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.form-title {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 40px;
+  color: $text-header;
+  text-align: center;
+  margin: 0;
+  
+  @media (max-width: 480px) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+// Form fields
+.form-fields {
+  @include flex-column;
+  gap: 24px;
+  width: 100%;
+}
+
+.input-field {
+  @include flex-column;
+  gap: 6px;
+  width: 100%;
+}
+
+.input-with-label {
+  @include flex-column;
+  gap: 6px;
+  width: 100%;
+}
+
+.field-label {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $text-secondary;
+}
+
+.input-container {
+  position: relative;
+  @include flex-row;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  background: $surface-bright;
+  border: 1px solid $gray-50;
+  border-radius: 8px;
+  @include input-shadow;
+  
+  &:focus-within {
+    border-color: $primary-base;
+  }
+}
+
+.input-content {
+  @include flex-row;
+  align-items: center;
+  padding: 10px 14px;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+.input-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.text-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: $text-primary;
+  
+  &::placeholder {
+    color: $gray-50;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+// Phone number specific styles
+.phone-container {
+  padding: 0;
+}
+
+.country-dropdown {
+  position: relative;
+  @include flex-row;
+  align-items: center;
+  padding: 8px 0 8px 12px;
+  gap: 4px;
+  min-width: 103px;
+  height: 100%;
+  cursor: pointer;
+  border-right: 1px solid $gray-base;
+  
+  .country-flag {
+    font-size: 16px;
+  }
+  
+  .country-code {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    color: $text-primary;
+  }
+  
+  .dropdown-arrow {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.country-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: $surface-bright;
+  border: 1px solid $gray-base;
+  border-radius: 8px;
+  @include input-shadow;
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.country-option {
+  @include flex-row;
+  align-items: center;
+  padding: 8px 12px;
+  gap: 8px;
+  cursor: pointer;
+  
+  &:hover {
+    background: #F8F9FA;
+  }
+  
+  .country-flag {
+    font-size: 16px;
+  }
+  
+  .country-name {
+    flex: 1;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 14px;
+    color: $text-primary;
+  }
+  
+  .country-code {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 14px;
+    color: $text-secondary;
+  }
+}
+
+.phone-input {
+  flex: 1;
+  height: 100%;
+  
+  .text-input {
+    padding: 10px 14px 10px 12px;
+    height: 100%;
+  }
+}
+
+// Password field
+.password-field {
+  position: relative;
+}
+
+.password-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+// Terms section
+.terms-section {
+  @include flex-column;
+  gap: 20px;
+  width: 100%;
+}
+
+.terms-title {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $text-primary;
+  margin: 0;
+}
+
+.checkbox-group {
+  @include flex-column;
+  gap: 16px;
+}
+
+.checkbox-item {
+  @include flex-row;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid $gray-base;
+  border-radius: 10px;
+  background: $surface-bright;
+  cursor: pointer;
+  margin: 0;
+  flex-shrink: 0;
+  
+  &:checked {
+    background: $primary-base;
+    border-color: $primary-base;
+  }
+}
+
+.checkbox-label {
+  cursor: pointer;
+  flex: 1;
+}
+
+.checkbox-text {
+  @include flex-column;
+  gap: 8px;
+}
+
+.checkbox-title {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $text-primary;
+}
+
+.checkbox-description {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: $text-tertiary;
+}
+
+// Submit button
+.submit-button {
+  @include flex-row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 40px;
+  gap: 8px;
+  width: 100%;
+  height: 48px;
+  background: $primary-base;
+  border: 1px solid $primary-base;
+  border-radius: 100px;
+  @include input-shadow;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: $text-header;
+  
+  &:hover:not(:disabled) {
+    background: darken($primary-base, 5%);
+    border-color: darken($primary-base, 5%);
+  }
+  
+  &:disabled {
+    background: $gray-base;
+    border-color: $gray-base;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+// Footer
+.form-footer {
+  @include flex-column;
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+  
+  @media (max-width: 480px) {
+    gap: 32px;
+  }
+}
+
+.footer-text {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  color: $text-tertiary;
+  margin: 0;
+}
+
+.sign-in-link {
+  @include flex-row;
+  align-items: center;
+  gap: 16px;
+  
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.sign-in-text {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $text-primary;
+}
+
+.sign-in-button {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  color: $primary-70;
+  text-decoration: none;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Error messages
+.error-message {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: $error-color;
+  margin-top: 4px;
+}
+
+// Responsive adjustments
+@media (max-width: 480px) {
+  .signup-form-wrapper {
+    padding: 0 10px;
+  }
+  
+  .form-fields {
+    gap: 20px;
+  }
+  
+  .checkbox-item {
+    align-items: flex-start;
+  }
+  
+  .checkbox {
+    margin-top: 2px;
+  }
+}// signup-form.component.scss
+
+// Variables
+$surface-lowest: #FBFBFB;
+$surface-bright: #FFFFFF;
+$text-header: #0F172A;
+$text-primary: #292B2D;
+$text-secondary: #44474B;
+$text-tertiary: #666B71;
+$gray-base: #CBD5E1;
+$gray-50: #D4DCE6;
+$primary-base: #38BA5C;
+$primary-70: #257C3D;
+$error-color: #DC2626;
+
+// Font family
+$font-family: 'Montserrat', sans-serif;
+
+// Mixins
+@mixin input-shadow {
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+// Main container
+.signup-container {
+  position: relative;
+  width: 100%;
+  max-width: 864px;
+  min-height: 100vh;
+  background: $surface-lowest;
+  margin: 0 auto;
+  
+  @media (max-width: 768px) {
+    padding: 20px;
+  }
+}
+
+.signup-form-wrapper {
+  position: absolute;
+  width: 480px;
+  left: 50%;
+  top: 96px;
+  transform: translateX(-50%);
+  
+  @media (max-width: 768px) {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    left: auto;
+    top: 20px;
+    transform: none;
+  }
+}
+
+.signup-form {
+  @include flex-column;
+  gap: 24px;
+  width: 100%;
+}
+
+// Header section
+.form-header {
+  @include flex-column;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+}
+
+.logo-section {
+  @include flex-column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 445px;
+}
+
+.logo {
+  width: 214px;
+  height: 48px;
+  
+  @media (max-width: 480px) {
+    width: 180px;
+    height: 40px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.form-title {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 40px;
+  color: $text-header;
+  text-align: center;
+  margin: 0;
+  
+  @media (max-width: 480px) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+// Form fields
+.form-fields {
+  @include flex-column;
+  gap: 24px;
+  width: 100%;
+}
+
+.input-field {
+  @include flex-column;
+  gap: 6px;
+  width: 100%;
+}
+
+.input-with-label {
+  @include flex-column;
+  gap: 6px;
+  width: 100%;
+}
+
+.field-label {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $text-secondary;
+}
+
+.input-container {
+  position: relative;
+  @include flex-row;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  background: $surface-bright;
+  border: 1px solid $gray-50;
+  border-radius: 8px;
+  @include input-shadow;
+  
+  &:focus-within {
+    border-color: $primary-base;
+  }
+}
+
+.input-content {
+  @include flex-row;
+  align-items: center;
+  padding: 10px 14px;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+.input-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.text-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: $text-primary;
+  
+  &::placeholder {
+    color: $gray-50;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+// Phone number specific styles
+.phone-container {
+  padding: 0;
+}
+
+.country-dropdown {
+  position: relative;
+  @include flex-row;
+  align-items: center;
+  padding: 8px 0 8px 12px;
+  gap: 4px;
+  min-width: 103px;
+  height: 100%;
+  cursor: pointer;
+  border-right: 1px solid $gray-base;
+  
+  .country-flag {
+    font-size: 16px;
+  }
+  
+  .country-code {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    color: $text-primary;
+  }
+  
+  .dropdown-arrow {
+    width: 15px;
+    height: 20px;
+  }
+}
+
+.country-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: $surface-bright;
+  border: 1px solid $gray-base;
+  border-radius: 8px;
+  @include input-shadow;
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.country-option {
+  @include flex-row;
+  align-items: center;
+  padding: 8px 12px;
+  gap: 8px;
+  cursor: pointer;
+  
+  &:hover {
+    background: #F8F9FA;
+  }
+  
+  .country-flag {
+    font-size: 16px;
+  }
+  
+  .country-name {
+    flex: 1;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 14px;
+    color: $text-primary;
+  }
+  
+  .country-code {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 14px;
+    color: $text-secondary;
+  }
+}
+
+.phone-input {
+  flex: 1;
+  height: 100%;
+  
+  .text-input {
+    padding: 10px 14px 10px 12px;
+    height: 100%;
+  }
+}
+
+// Password field
+.password-field {
+  position: relative;
+}
+
+.password-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+// Terms section
+.terms-section {
+  @include flex-column;
+  gap: 20px;
+  width: 100%;
+}
+
+.terms-title {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $text-primary;
+  margin: 0;
+}
+
+.checkbox-group {
+  @include flex-column;
+  gap: 16px;
+}
+
+.checkbox-item {
+  @include flex-row;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border: 1px solid $gray-base;
+  border-radius: 50%S;
+  background: $surface-bright;
+  cursor: pointer;
+  margin: 0;
+  flex-shrink: 0;
+  
+  &:checked {
+    background: $primary-base;
+    border-color: $primary-base;
+  }
+}
+
+.checkbox-label {
+  cursor: pointer;
+  flex: 1;
+}
+
+.checkbox-text {
+  @include flex-column;
+  gap: 8px;
+}
+
+.checkbox-title {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $text-primary;
+}
+
+.checkbox-description {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: $text-tertiary;
+}
+
+// Submit button
+.submit-button {
+  @include flex-row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 40px;
+  gap: 8px;
+  width: 100%;
+  height: 48px;
+  background: $primary-base;
+  border: 1px solid $primary-base;
+  border-radius: 100px;
+  @include input-shadow;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: $text-header;
+  
+  &:hover:not(:disabled) {
+    background: darken($primary-base, 5%);
+    border-color: darken($primary-base, 5%);
+  }
+  
+  &:disabled {
+    background: $gray-base;
+    border-color: $gray-base;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+// Footer
+.form-footer {
+  @include flex-column;
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+  
+  @media (max-width: 480px) {
+    gap: 32px;
+  }
+}
+
+.green-text {
+  color:$primary-70;
+  font-weight: 700;
+}
+
+.footer-text {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  color: $text-tertiary;
+  margin: 0;
+}
+
+.sign-in-link {
+  @include flex-row;
+  align-items: center;
+  gap: 16px;
+  
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.sign-in-text {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: $text-primary;
+}
+
+.sign-in-button {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  color: $primary-70;
+  text-decoration: none;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Error messages
+.error-message {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: $error-color;
+  margin-top: 4px;
+}
+
+// Responsive adjustments
+@media (max-width: 480px) {
+  .signup-form-wrapper {
+    padding: 0 10px;
+  }
+  
+  .form-fields {
+    gap: 20px;
+  }
+  
+  .checkbox-item {
+    align-items: flex-start;
+  }
+  
+  .checkbox {
+    margin-top: 2px;
+  }
+}

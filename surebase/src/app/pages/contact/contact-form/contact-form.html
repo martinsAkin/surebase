@@ -1,0 +1,156 @@
+<section class="contact-section">
+  <div class="contact-container">
+    <!-- Left Side - Contact Info -->
+    <div class="contact-info">
+      <div class="info-header">
+        <h1 class="title">Get in touch</h1>
+        <p class="subtitle">
+          Streamline product access, accelerate market expansion, and scale your
+        </p>
+      </div>
+
+      <div class="contact-details">
+        <!-- Location -->
+        <div class="contact-item">
+          <div class="icon-container">
+            <img src="location.svg" alt="Location" class="icon" />
+          </div>
+          <div class="contact-text">
+            <h3 class="contact-title">Head Office</h3>
+            <p class="contact-description">Adeniji Jones, Ikeja GRA, Lagos</p>
+          </div>
+        </div>
+
+        <!-- Email -->
+        <div class="contact-item">
+          <div class="icon-container">
+            <img src="sms.svg" alt="Email" class="icon" />
+          </div>
+          <div class="contact-text">
+            <h3 class="contact-title">Email Us</h3>
+            <p class="contact-description">Info@surebase.it</p>
+            <p class="contact-description">Support@surebase.it</p>
+          </div>
+        </div>
+
+        <!-- Phone -->
+        <div class="contact-item">
+          <div class="icon-container">
+            <img src="call-calling.svg" alt="Phone" class="icon" />
+          </div>
+          <div class="contact-text">
+            <h3 class="contact-title">Call Us</h3>
+            <p class="contact-description">+234811234567890</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="social-section">
+        <h2 class="social-title">Follow our social pages</h2>
+        <div class="social-icons">
+          <a href="#" class="social-icon">
+            <img src="Facebook.svg" alt="Facebook" />
+          </a>
+          <a href="#" class="social-icon">
+            <img src="X logo.svg" alt="X" />
+          </a>
+          <a href="#" class="social-icon">
+            <img src="Group 2.svg" alt="Instagram" />
+          </a>
+          <a href="#" class="social-icon">
+            <img src="LinkedIn.svg" alt="LinkedIn" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Side - Contact Form -->
+    <div class="contact-form-section">
+      <h2 class="form-title">Send Us a Message</h2>
+
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="form">
+        <div class="form-row">
+          <!-- First Name -->
+          <div class="input-field">
+            <label class="input-label">First Name</label>
+            <div class="input-container">
+              <img src="user-square.svg" alt="User" class="input-icon" />
+              <input
+                type="text"
+                formControlName="firstName"
+                placeholder="Tell us your name"
+                class="input"
+              />
+            </div>
+          </div>
+
+          <!-- Last Name -->
+          <div class="input-field">
+            <label class="input-label">Business Name</label>
+            <div class="input-container">
+              <img src="user.svg" alt="User" class="input-icon" />
+              <input type="text" formControlName="lastName" placeholder="Surebase" class="input" />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <!-- Phone -->
+          <div class="input-field">
+            <label class="input-label">Phone Number</label>
+            <div class="phone-input">
+              <div class="country-code">
+                <img src="NG.svg" alt="Nigeria Flag" class="flag-icon" />
+                <span class="country-text">+234</span>
+                <img src="Icon.svg" alt="Dropdown" class="dropdown-icon" />
+              </div>
+              <input
+                type="tel"
+                formControlName="phone"
+                placeholder="0000000000"
+                class="phone-input-field"
+              />
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="input-field">
+            <label class="input-label">Email Address</label>
+            <div class="input-container">
+              <img src="sms.svg" alt="Email" class="input-icon" />
+              <input
+                type="email"
+                formControlName="email"
+                placeholder="Your email address"
+                class="input"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Message -->
+        <div class="input-field textarea-field">
+          <label class="input-label">Description</label>
+          <textarea
+            formControlName="message"
+            placeholder="Enter your Description"
+            rows="5"
+            class="textarea"
+          ></textarea>
+        </div>
+
+        <!-- Terms -->
+        <p class="terms-text">
+          By clicking Send below, you agree to Surebase's
+          <a href="#" class="green-link">Terms</a> and processing of your personal data as described
+          in our <a href="#" class="green-link">Privacy Policy</a>.
+        </p>
+
+        <!-- Submit Button -->
+        <button type="submit" class="submit-button" [disabled]="!contactForm.valid">Send</button>
+      </form>
+    </div>
+  </div>
+</section>

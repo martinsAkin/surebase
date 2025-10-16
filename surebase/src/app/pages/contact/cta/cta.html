@@ -1,0 +1,42 @@
+<section class="cta-banner-section">
+  <div class="container">
+    <!-- Decorative Logo - Left -->
+    <div class="logo-decoration logo-left">
+      <img src="Surebase-Logo.svg" alt="Surebase Logo Decoration" class="watermark-logo" />
+    </div>
+
+    <!-- Decorative Logo - Right -->
+    <div class="logo-decoration logo-right">
+      <img src="Surebase-Logo.svg" alt="Surebase Logo Decoration" class="watermark-logo" />
+    </div>
+
+    <!-- Banner Content -->
+    <div class="banner-content">
+      <div class="content-header">
+        <h2 class="banner-title">Ready to Build the Future of Insurance with Surebase?</h2>
+        <p class="banner-subtitle">
+          Whether you're an insurer looking to expand your digital footprint or a broker seeking
+          streamlined access to a vast product portfolio, Surebase is your indispensable partner.
+        </p>
+      </div>
+
+      <!-- Email Form -->
+      <form class="email-form" (ngSubmit)="onSubmit()">
+        <div class="input-group">
+          <input
+            type="email"
+            class="email-input"
+            [(ngModel)]="emailInput"
+            name="email"
+            placeholder="Enter your email address"
+            [disabled]="isSubmitting"
+            required
+          />
+          <button type="submit" class="submit-button" [disabled]="isSubmitting || !emailInput">
+            {{ isSubmitting ? 'Submitting...' : 'Get Started' }}
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
