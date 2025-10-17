@@ -1,0 +1,145 @@
+<!-- HERO -->
+<section class="hero">
+ <header class="nav">
+  <img src="/assets/Surebase-logo-white.png" alt="Surebase" class="logo" />
+
+  <nav class="links">
+    <a>About Us</a>
+    <a>Product Offerings</a>
+    <a>Contact Us</a>
+  </nav>
+
+  <div class="actions">
+    <button class="btn ghost">Log In</button>
+    <button class="btn primarys">Get Started</button>
+  </div>
+
+  <button class="hamburger" aria-label="menu">☰</button>
+</header>
+
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="pill">
+        <img src="/assets/LOGO.png" alt="Logo" />
+        FAQS</span>
+      <h1>We’re here to answer<br/> your questions.</h1>
+      <p>Got questions about our platform or how to get started? We’ve compiled a list of common
+         questions and detailed answers to give you the information you need, fast.</p>
+    </div>
+    <div class="hero-art">
+      <!-- Replace with your SVG/image -->
+      <img src="/assets/message.png" alt="Q&A" />
+    </div>
+  </div>
+  <div class="hero-curve"></div>
+</section>
+
+<!-- FAQ PANEL -->
+<section class="faq-panel">
+  <!-- Tabs -->
+  <div class="tabs">
+    <button
+      *ngFor="let c of categories"
+      class="tab"
+      [class.active]="activeTab() === c.key"
+      (click)="setTab(c.key)">
+      {{ c.label }}
+    </button>
+  </div>
+
+  <!-- Accordion -->
+  <div class="accordion">
+    <div class="item" *ngFor="let f of activeItems; let i = index">
+    <button class="header"
+        (click)="toggle(i)"
+        [attr.aria-expanded]="expanded() === i"
+        [attr.aria-controls]="'panel-' + i">
+  <span class="question">{{ f.q }}</span>
+  <svg class="chev" viewBox="0 0 24 24" [class.open]="expanded() === i"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+</button>
+
+<div class="body" [id]="'panel-' + i" [class.open]="expanded() === i">
+  <div class="body-inner">
+    <p>{{ f.a }}</p>
+  </div>
+</div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-inner">
+    <div class="cta-copy">
+      <h2>Ready to Build the Future with Us?</h2>
+      <p>Discover how Surebase can transform your insurance distribution and unlock new possibilities for growth.</p>
+     <div class="cta-actions">
+  <input type="email" placeholder="Type your email" class="email-input" />
+  <button class="btn primary">Get Started</button>
+</div>
+    </div>
+    <img class="cta-img" src="/assets/Group.png" alt="Team" />
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="brand">
+      <img src="/assets/Surebase-logo-white.png" class="logo" alt="Surebase-Logo" />
+      <p class="tagline">Built to Back the Insurance Stack</p>
+
+      <div class="socials">
+  <a class="social" href="#" aria-label="Facebook" title="Facebook">
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+    </svg>
+  </a>
+  <a class="social" href="#" aria-label="X" title="X">
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+      <path d="M3 3h4.5l5.2 6.8L17.5 3H21l-7 9 7 9h-4.5l-5.2-6.8L6.5 21H3l7-9z"/>
+    </svg>
+  </a>
+  <a class="social" href="#" aria-label="Instagram" title="Instagram">
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <rect x="3" y="3" width="18" height="18" rx="5" ry="5"></rect>
+      <circle cx="12" cy="12" r="4"></circle>
+      <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle>
+    </svg>
+  </a>
+  <a class="social" href="#" aria-label="LinkedIn" title="LinkedIn">
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+      <path d="M4 3a2 2 0 1 0 0 4 2 2 0 0 0 0-4zM4 8h4v13H4zM10 8h4v2a4 4 0 0 1 3.5-2c3 0 4.5 1.9 4.5 5.4V21h-4v-6.2c0-1.9-.7-3-2.2-3-1.3 0-2.1.9-2.3 1.8-.1.2-.1.6-.1.9V21h-4V8z"/>
+    </svg>
+  </a>
+</div>
+
+    </div>
+
+    <div class="cols">
+      <div>
+        <h4>Company</h4>
+        <a>About Us</a><a>FAQs</a><a>Contact</a>
+      </div>
+      <div>
+        <h4>Solutions</h4>
+        <a>Insurers</a><a>Brokers & Partners</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a>Terms of Use</a><a>Privacy Policy</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a>info@surebase.io</a>
+        <a>+234987439803 (8:00AM - 5:00PM)</a>
+        <a>Adeniji Jones, Ikeja GRA, Lagos</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="copy">© {{ year }} · Surebase · All rights reserved.</div>
+</footer>
+

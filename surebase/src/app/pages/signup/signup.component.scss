@@ -1,0 +1,496 @@
+/* Host takes full screen and centers the content */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:host {
+  display: flex;
+  justify-content: center; /* horizontally center */
+  align-items: center;    /* vertically center */
+  min-height: 100vh;
+  width: 100%;
+  background: #1f2937; /* Dark background behind the layout */
+}
+
+
+
+/* Layout container */
+.auth-layout{
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr); /* exact halves */
+  width: 100%;
+  max-width: 1300px;
+  min-height: 80vh;
+  align-items: stretch; /* both sides same height */
+}
+
+/* Left side (form) */
+.panel-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  background: #f8fafc; /* light gray background */
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+}
+
+.brand {
+  display: block;
+  height: 40px;
+  margin: 0 auto 18px;
+  object-fit: contain;
+}
+
+.title {
+ font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 40px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #0F172A;
+}
+
+form {
+  display: grid;
+  gap: 16px;
+}
+
+.field {
+  display: block;
+  width: 100%;
+}
+
+.field .label {
+  display: inline-block;
+  font-size: 16px;
+  color: #292B2D;
+  margin-bottom: 6px;
+}
+
+input[type='email'],
+input[type='password'],
+input[type='text'] {
+   &::placeholder { color: #D4DCE6; } 
+  width: 100%;
+  height: 42px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0 12px;
+  font-size: 18px;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box; /* important for equal sizing */
+  font-family: "Montserrat", sans-serif;
+}
+
+input:focus {
+  border-color: #38BA5C; /* green focus */
+}
+
+input.invalid {
+  border-color: #ef4444;
+}
+
+/* Password wrapper ensures alignment */
+/* wrapper takes full row */
+.password-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* input fills wrapper; room for icons on both sides */
+.password-wrap input {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 40px;   /* space for padlock */
+  padding-right: 44px;  /* space for eye button */
+}
+
+/* left padlock icon */
+.icon-left {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #6b7280;       /* Tailwind gray-500-ish */
+  opacity: 0.9;
+  pointer-events: none; /* click-through */
+}
+
+/* right eye button: subtle circle, thin gray icon */
+.eye-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 28px;
+  width: 30px;
+  border-radius: 9999px;
+  border: 0px solid #cbd5e1;   /* light gray ring */
+  background: #ffffff;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  cursor: pointer;
+}
+
+.eye-btn i {
+  font-size: 12px;
+  color: #4b5563;       /* gray-600 (not pure black) */
+}
+
+.eye-btn:hover {
+  border-color: #94a3b8;       /* a bit darker on hover */
+}
+
+.eye-btn:focus-visible {
+  outline: 2px solid #22c55e33;  /* subtle green focus */
+  outline-offset: 2px;
+}
+
+
+.error {
+  color: #b91c1c;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.row.between {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.link {
+  color: #38BA5C;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.link.subtle {
+  font-weight: 500;
+  color: #38BA5C;
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn.primary {
+  margin-top: 6px;
+  width: 100%;
+  height: 44px;
+  border: 0;
+  border-radius: 999px;
+  background: #38BA5C;
+  color: #030508;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0%;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+}
+
+.btn.primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.agreed {
+  display: block;
+  margin-top: 8px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 22px;
+  color: #666B71;
+  font-weight: 700;
+}
+
+.agreed a{
+  color: #38BA5C ;
+  font-weight: 700;
+  text-decoration: none;                 /* no underline by default */
+  border-bottom: 1px solid transparent;  /* subtle hover underline */
+  transition: color .2s ease, border-color .2s ease, box-shadow .2s ease;
+  font-family: "Montserrat", sans-serif;
+}
+
+.muted {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #292B2D;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Right side with background image */
+.panel-right{
+  /* artwork fills the right half */
+  background-color: #0b1330; /* fallback */
+  background-image: url('/assets/Login-Right-Side.png');
+  background-repeat: no-repeat;
+  background-position: center;   /* tweak to 'center right' if needed */
+  background-size: cover;        /* fill the column */
+  min-height: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 960px) {
+  .auth-layout {
+    grid-template-columns: 1fr;
+    max-width: 640px;
+  }
+
+ 
+}
+
+@media (max-width: 640px){
+  :host { align-items: flex-start; padding: 16px 0; }
+
+  .auth-layout{
+    grid-template-columns: 1fr;   /* stack */
+    max-width: 360px;
+    background: transparent;
+    box-shadow: none;
+    row-gap: 0;                    /* no visual gap */
+  }
+
+ .panel-left{
+    background: #ffffff;
+    padding: 16px 16px 0;          /* no bottom padding so it touches the dark panel */
+    border-radius: 8px 8px 0 0;     /* rounded only on top so seam is flush */
+    box-shadow: 0 8px 24px rgba(0,0,0,.15);
+  }
+
+  .brand{ height: 20px; }
+  .title{ font-size: 14px; margin: 6px 0 14px; }
+
+    .panel-right{
+    display: block;
+    margin-top: 0 !important;      /* kill any spacer */
+    height: 520px;                  /* adjust to taste */
+    border-radius: 0 0 8px 8px;     /* rounded only on bottom */
+    background-color: #0b1330;
+    background-position: center top;
+    background-size: cover;         /* fill the box on mobile too */
+  }
+}
+
+/* phone group */
+.phone-wrap {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 8px;
+}
+.phone-wrap select,
+.phone-wrap input {
+  height: 42px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0 12px;
+  background: #fff;
+}
+
+/* radios + terms */
+.radios {
+  display: grid;
+  gap: 10px;
+}
+
+.radio {
+  display: flex;
+  align-items: flex-start;   /* align bullet with top of text block */
+  gap: 10px;
+  cursor: pointer;
+}
+
+.radio input {
+  width: 18px;
+  height: 18px;
+  margin-top:10px;         /* vertically align with title */
+  accent-color: #22c55e;     /* green selected dot (modern browsers) */
+}
+
+.radio .text {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+
+.radio .title{
+  text-align: left;                 /* <-- key fix */
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #292B2D;
+  font-family: "Montserrat", sans-serif;
+}
+
+.radio .desc {
+  font-size: 14px;
+  line-height: 22px;
+  color: #666B71;
+}
+
+/* nice selected/hover states */
+.radio:hover { border-color: #cbd5e1; }
+.radio input:focus-visible { outline: 2px solid #22c55e33; outline-offset: 2px; }
+.radio input:checked + .text .title { color: #0b5cab; }     /* highlight title when chosen */
+
+.agree{
+  display: block;
+  margin-top: 8px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666B71;
+}
+
+/* if you ever add a checkbox back in */
+.agree input{ margin-right: 8px; transform: translateY(2px); }
+
+.agree a{
+  color: #38BA5C ;
+  font-weight: 700;
+  text-decoration: none;                 /* no underline by default */
+  border-bottom: 1px solid transparent;  /* subtle hover underline */
+  transition: color .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.agree a:hover{
+  color: #38BA5C;
+  text-decoration: none;    /* show underline on hover */
+}
+
+/* keyboard focus */
+.agree a:focus-visible{
+  outline: none;
+  border-radius: 4px;
+  box-shadow: 0 0 0 3px rgba(56,186,92,.18);
+}
+
+
+/* center the left column just like login */
+.panel-left { display:flex; align-items:center; justify-content:center; }
+.card       { width: 100%; max-width: 420px; }
+
+/* right side artwork for signup */
+.signup-art {
+  background-color: #0b1330;
+  background-image: url('/assets/Login-Right-Side.png'); /* <-- put your uploaded image here */
+  background-repeat: no-repeat;
+  background-position: center;   /* centered */
+  background-size:cover;      /* whole image visible */
+}
+
+.field .phone-wrap{
+  position: relative;
+  display: flex;                 /* one horizontal field */
+  align-items: center;
+  gap: 0;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 6px 10px;
+  background: #fff;
+}
+
+/* country code select */
+.field .phone-wrap select{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 0 18px 0 34px;        /* left space for the flag circle */
+  height: 28px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #111827;
+
+  /* custom down chevron */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23111' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 4px center;
+  background-size: 12px 12px;
+}
+
+/* phone number input */
+.field .phone-wrap input{
+  flex: 1 1 auto;
+  border: 0;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 10px;
+  outline: none;
+  border-left: 1px solid #e5e7eb; /* divider between code and number */
+}
+
+.field .phone-wrap input::placeholder{
+  color: #cbd5e1;
+}
+
+/* focus ring on the whole control */
+.field .phone-wrap:focus-within{
+  border-color: #38BA5C;
+  box-shadow: 0 0 0 3px rgba(56,186,92,.12);
+}
+
+/* circular "flag" before the select (Nigeria-style green/white/green) */
+.field .phone-wrap::before{
+  content: "";
+  position: absolute;
+  left: 12px; top: 50%;
+  transform: translateY(-50%);
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  border: 1px solid #cbd5e1;
+  background: linear-gradient(
+    to right,
+    #16a34a 0 33%,
+    #ffffff 33% 66%,
+    #16a34a 66% 100%
+  );
+}
+
+.field { position: relative; }
+
+.input-icon{
+  position: relative;
+}
+
+.input-icon i{
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #94a3b8; /* subtle gray */
+  pointer-events: none;
+}
+
+.input-icon input{
+  height: 44px;
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding-left: 44px;    /* room for the icon */
+  font-size: 14px;
+  background: #fff;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+
+.input-icon input::placeholder{ color:#cbd5e1; }
+
+.input-icon input:focus{
+  border-color:#38BA5C;
+  box-shadow:0 0 0 3px rgba(56,186,92,.12);
+}
+
+

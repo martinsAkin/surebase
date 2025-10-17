@@ -1,0 +1,125 @@
+<!-- src/app/pages/login/login.component.html -->
+<div class="auth-layout">
+  <!-- Left: Form Card -->
+  <section class="panel-left">
+    <div class="card">
+      <img class="brand" src="/assets/Surebase-Logo.png" alt="Surebase Logo" />
+      <h1 class="title">Log into your Surebase Account</h1>
+
+      <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+        <!-- Email Field -->
+      <label class="field">
+  <span class="label">Email Address</span>
+
+  <div class="input-wrap">
+    <!-- Left icon (your SVG) -->
+    <span class="icon-left" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+           xmlns="http://www.w3.org/2000/svg">
+        <path d="M14.1665 17.0832H5.83317C3.33317 17.0832 1.6665 15.8332 1.6665 12.9165V7.08317C1.6665 4.1665 3.33317 2.9165 5.83317 2.9165H14.1665C16.6665 2.9165 18.3332 4.1665 18.3332 7.08317V12.9165C18.3332 15.8332 16.6665 17.0832 14.1665 17.0832Z"
+              stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M14.1668 7.5L11.5585 9.58333C10.7002 10.2667 9.29183 10.2667 8.43349 9.58333L5.8335 7.5"
+              stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </span>
+
+    <input
+      type="email"
+      formControlName="email"
+      placeholder="info@surebase.it"
+      [class.invalid]="f['email'].touched && f['email'].invalid"
+    />
+  </div>
+
+  <small class="error" *ngIf="f['email'].touched && f['email'].errors?.['required']">
+    Email is required.
+  </small>
+  <small class="error" *ngIf="f['email'].touched && f['email'].errors?.['email']">
+    Enter a valid email.
+  </small>
+</label>
+
+        <!-- Password Field -->
+        <label class="field">
+  <span class="label">Password</span>
+
+  <div class="password-wrap">
+    <!-- left padlock -->
+
+    <span class="icon-left" aria-hidden="true">
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 8.33317V6.6665C5 3.90817 5.83333 1.6665 10 1.6665C14.1667 1.6665 15 3.90817 15 6.6665V8.33317" stroke="#44474B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.1665 18.3335H5.83317C2.49984 18.3335 1.6665 17.5002 1.6665 14.1668V12.5002C1.6665 9.16683 2.49984 8.3335 5.83317 8.3335H14.1665C17.4998 8.3335 18.3332 9.16683 18.3332 12.5002V14.1668C18.3332 17.5002 17.4998 18.3335 14.1665 18.3335Z" stroke="#44474B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.3305 13.3332H13.338" stroke="#44474B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.99607 13.3332H10.0036" stroke="#44474B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6.66209 13.3332H6.66957" stroke="#44474B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
+</span>
+
+    <input
+      [type]="showPassword ? 'text' : 'password'"
+      formControlName="password"
+      placeholder="********"
+      [class.invalid]="f['password'].touched && f['password'].invalid"
+    />
+
+    <!-- right eye (outlined) -->
+    <button
+  type="button"
+  class="eye-btn"
+  (click)="showPassword = !showPassword"
+  [attr.aria-label]="showPassword ? 'Hide password' : 'Show password'">
+  <ng-container *ngIf="showPassword; else eyeOpen">
+    <!-- Eye OFF -->
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M17.94 17.94A10.94 10.94 0 0 1 12 20C5.73 20 1.05 13.78 1 12a21.77 21.77 0 0 1 5.06-5.94"/>
+      <path d="M1 1l22 22"/>
+      <path d="M9.88 9.88a3 3 0 0 0 4.24 4.24"/>
+      <path d="M20.49 3.51A21.77 21.77 0 0 1 23 12c-.05.78-4.73 8-11 8"/>
+    </svg>
+  </ng-container>
+  <ng-template #eyeOpen>
+    <!-- Eye ON -->
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/>
+      <circle cx="12" cy="12" r="3"/>
+    </svg>
+  </ng-template>
+</button>
+
+  </div>
+
+  <small class="error" *ngIf="f['password'].touched && f['password'].errors?.['required']">
+    Password is required.
+  </small>
+  <small class="error" *ngIf="f['password'].touched && f['password'].errors?.['minlength']">
+    Minimum 6 characters.
+  </small>
+</label>
+
+
+        <!-- Forgot Password -->
+        <div class="row between">
+          <a class="link subtle" href="#">Forgot Password</a>
+        </div>
+
+        <!-- Submit Button -->
+        <button class="btn primary" type="submit" [disabled]="submitting">
+          {{ submitting ? 'Logging in…' : 'Log In' }}
+        </button>
+
+        <!-- Create Account -->
+        <p class="muted">
+          Don’t have an account?
+          <a class="link" routerLink="/register">Create Account</a>
+        </p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Right: Full Image Panel -->
+  <aside class="panel-right"></aside>
+</div>

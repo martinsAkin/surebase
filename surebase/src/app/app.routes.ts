@@ -1,20 +1,15 @@
-import { RouterModule, Routes } from '@angular/router';
-import { Pages } from './pages/pages/pages';
-import { TestimonialCarousel } from './pages/testimonial-carousel/testimonial-carousel';
-import { About } from './pages/about/about/about';
-import { SignupFormComponent } from './pages/signup-form/signup-form';
-import { ListOfPartners } from './pages/list-of-partners/list-of-partners';
-import { ImageBanners } from './pages/image-banners/image-banners';
-import { ContactHeroComponent } from './pages/contact/contact-hero/contact-hero';
-import { Contact } from './pages/contact/contact/contact';
+import { Routes } from '@angular/router';
+import { LoginComponent } from './pages/login/login.component';
+import { FaqComponent } from './pages/faq/faq.component';
+import { TermsOfUsePageComponent } from './pages/terms-of-use/terms-of-use-page.component';
+import { PrivacyPolicyPageComponent } from './pages/privacy/privacy-policy-page.component';
 
 export const routes: Routes = [
-    { path: '', component: Pages },  
-    { path: 'testimonial-carousel', component: TestimonialCarousel },
-    { path: 'about', component: About },
-    { path: 'signup-form', component: SignupFormComponent }, 
-    { path: 'list-of-partners', component: ListOfPartners },
-    { path: 'image-banners', component: ImageBanners },
-    { path: 'contact', component: Contact }, 
-    { path: '', component: Pages, pathMatch: 'full' }
+  { path: 'login', component: LoginComponent },
+  { path: 'faq',   component: FaqComponent },
+   { path: 'terms-of-use', component: TermsOfUsePageComponent },
+   { path: 'privacy-policy', component: PrivacyPolicyPageComponent },
+   { path: 'signup', loadComponent: () => import('./pages/signup/signup.component').then(m => m.SignupComponent) },
+  { path: '', redirectTo: 'login', pathMatch: 'full' }, // or 'faq'
+  { path: '**', redirectTo: 'login' }                   // catch-all
 ];
