@@ -36,57 +36,6 @@
 }
 
 
-.build-the-future{
-  background-color: #d7f2fe;
-  display: flex;
-  align-items: center;
-  height: 300px;
-  width: 100%;
-  gap: 10%;
-  margin-top: 2rem;
-    
-  .text-box{
-     width: 40%; 
-     margin-left: 10rem;
-    h3{
-      font-size: 25px;
-      color: mediumseagreen;
-      font-weight: bold;
-      font-family: "Space Grotesk", sans-serif;
-    }
-  }
-
-    
-   .input-getStarted{
-    margin-top: 1rem;
-    display: flex;
-
-      input{
-        padding: 8px 5px;
-        width: 77%;
-        border: none;
-        border-radius: 5px 0 0 5px;
-        background: white;
-
-        &:focus{
-            outline: none;
-          }
-      }
-    }
-    .get-started-email{
-    padding: 5px 10px;
-    border: none;
-    border-radius: 0 5px 5px 0;
-    background: #38BA5C;
-
-    }
-
-    img{
-      height: 100%;
-      width: 50%;
-    }
-}
-
 
 @media (max-width: 768px) {
   .fragmented-section{
@@ -95,14 +44,14 @@
     justify-content: center;
     gap: 1rem;
     margin-left: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
 
     .text-area{
       width: 350px;
       font-size: 14px;
       height: 200px;
       margin-left: 0rem;
-      // background: red;
+      margin-top: 2.5rem;
     
     h2{
       margin-left: 1rem;
@@ -124,50 +73,4 @@
     }
   }
 
-
-  .build-the-future{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-    height: max-content;
-    width: 100%;
-    margin-top: 2rem;
-    // background-color: red;
-      
-    .text-box{
-      margin-top: 1rem;
-      width: 90%; 
-      margin-left: 1rem;
-      // text-align: center;
-      // background: gold;
-
-      h3{
-        text-align: center;
-      }
-    }
-
-      
-    .input-getStarted{
-      margin-top: 1rem;
-      display: flex;
-
-      input{
-        padding: 8px 5px;
-        width: 70%;
-
-        &:focus{
-          outline: none;
-        }
-      }
-      }
-      .get-started-email{
-      padding: 5px;
-      }
-
-      img{
-        height: 100%;
-        width: 100%;
-      }
-  }
 }

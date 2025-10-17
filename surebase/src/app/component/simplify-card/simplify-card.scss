@@ -18,7 +18,6 @@ main{
   align-items: center;
   width: 500px;
   text-align: center;
-  // margin: 3rem 0 3rem 0;
 
   h3{
     font-family: "Space Grotesk", sans-serif;
@@ -37,7 +36,6 @@ main{
  .img-top-right{
   top: 0;
   right: 0;
-  // transform: rotate(180deg);
  }
 }
 
@@ -65,20 +63,25 @@ main{
 @media (max-width: 768px) {
     main{
       padding: 1rem;
+      width: max-content;
+      height: 250px;
+
 
       .text-area{
         align-items: center;
-        width: 300px;
         text-align: center;
+        font-size: 13px;
+        padding: 1.5rem 0;
+        width: 300px;
 
         h2{
-          font-size: medium;
+          font-size: medium; 
         }
       }
 
       img{
         position: absolute;
-        width: 50px;
+        width: 35px;
       }
   }
 

@@ -4,6 +4,7 @@ import { MeritSliderInsurer } from '../component/merit-slider-insurer/merit-slid
 import { HeroSection } from '../component/hero-section/hero-section';
 import { Footer } from '../component/footer/footer';
 import { TestimonialCarousel } from '../component/testimonial-carousel/testimonial-carousel';
+import { BuildTheFuture } from '../component/build-the-future/build-the-future';
 
 @Component({
   selector: 'app-insurers-home-page',
@@ -14,6 +15,7 @@ import { TestimonialCarousel } from '../component/testimonial-carousel/testimoni
     MeritSliderInsurer,
     Footer,
     TestimonialCarousel,
+    BuildTheFuture
   ],
   templateUrl: './insurers-home-page.html',
   styleUrls: ['./insurers-home-page.scss']

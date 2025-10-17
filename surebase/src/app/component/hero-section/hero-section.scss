@@ -7,7 +7,7 @@ main{
     flex-direction: row;
     margin-left: 100px;
     align-items: center;
-    gap: 8rem;
+    gap: 10rem;
     height: 100dvh;
 
     h3{
@@ -45,12 +45,17 @@ main{
 
       img{
         height: 600px;
-        width: 650px;
+        width: 700px;
+        position: absolute;
+        right: 0;
       }
   }
 
 
     @media (max-width: 768px) {
+    section{
+      height: 750px;
+    }
     main{
       flex-direction: column;
       gap: 3.5rem;
@@ -75,8 +80,8 @@ main{
         height: 290px;
         width: 300px;
         margin-left: 2rem;
+        margin-top: 20rem;
       }
   }
-
 
 }
