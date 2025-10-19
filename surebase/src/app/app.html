@@ -1,3 +1,5 @@
-<app-details-section></app-details-section>
-<app-brokers-home-page></app-brokers-home-page>
-<app-insurers-home-page></app-insurers-home-page>
+<main>
+  <app-headbar *ngIf="!hideLayout"></app-headbar>
+  <router-outlet></router-outlet>
+  <app-footer *ngIf="!hideLayout"></app-footer>
+</main>

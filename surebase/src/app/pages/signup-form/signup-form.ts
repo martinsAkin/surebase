@@ -2,6 +2,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule, ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { RouterLink } from '@angular/router'
 
 interface CountryCode {
   code: string;
@@ -12,7 +13,7 @@ interface CountryCode {
 @Component({
   selector: 'app-signup-form',
   standalone: true,
-  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  imports: [ RouterLink, CommonModule, FormsModule, ReactiveFormsModule],
   templateUrl: './signup-form.html',
   styleUrls: ['./signup-form.scss']
 })

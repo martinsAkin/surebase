@@ -1,9 +1,8 @@
 import { Component, input } from '@angular/core';
-import { Headbar } from '../headbar/headbar';
 
 @Component({
   selector: 'app-hero-section',
-  imports: [Headbar],
+  imports: [],
   templateUrl: './hero-section.html',
   styleUrl: './hero-section.scss'
 })

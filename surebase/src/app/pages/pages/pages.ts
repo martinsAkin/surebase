@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterModule } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-pages',
   standalone: true,
-  imports: [RouterLink, RouterModule],
+  imports: [RouterLink],
   templateUrl: `./pages.html`,
   styleUrls: ['./pages.scss']
 })

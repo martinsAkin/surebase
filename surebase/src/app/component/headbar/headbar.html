@@ -1,22 +1,46 @@
-<main>
-  <nav>
-   <div>
-     <img src="assets/Surebase-hero.png" alt="image" width="150px" />
-   </div>
+  <header class="nav">
+    <img src="/assets/Surebase-logo-white.png" alt="Surebase" class="logo" />
+  
+    <nav class="links">
+      <a 
+        routerLink="/about" 
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >About Us</a>
+      <div class="productOffering">
+        <a (click)="toggeleProductOffering()">Product Offerings</a>
 
-   <ul class="list-items">
-     <li>About Us</li>
-     <li>Product Oferrings</li>
-     <li>Contact Us</li>
-   </ul>
+          <ol class="productOfferingOptions" *ngIf="isProductOffering">
+            <li routerLink="/insurers" (click)="closeProductOffering()">Insurer`s Page</li>
+            <li routerLink="/brokers" (click)="closeProductOffering()">Broker`s Page</li>
+          </ol>
+      </div>
+      <a 
+        routerLink="/contact" 
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >Contact Us</a>
+    </nav>
+  
+    <div class="actions">
+      <a routerLink="/login">
+        <button class="btn ghost">Log In</button>
+      </a>
+      <a routerLink="/signup">
+        <button class="btn primarys">Get Started</button>
+      </a>
+    </div>
+  
+    <div class="mobile-menu">
+      <button class="hamburger" aria-label="menu" (click)="toggeleProductOffering()">☰</button>
 
-   <div class="btn-section">
-     <button class="button-general log-in">Log in</button>
-     <button class="button-general get-started">Get Started</button>
-   </div>
-
-   <div class="menu-icon">
-      Menu
-   </div>
-  </nav>
-</main>
+      <ul *ngIf="isProductOffering" class="mobile-menu-list">
+        <li routerLink="/about" (click)="closeProductOffering()">About Us</li>
+        <li routerLink="/insurers" (click)="closeProductOffering()">Insurer`s Page</li>
+        <li routerLink="/brokers" (click)="closeProductOffering()">Broker`s Pagee</li>
+        <li routerLink="/contact" (click)="closeProductOffering()">Contact Us</li>
+        <li routerLink="/login" (click)="closeProductOffering()">Log In</li>
+        <li routerLink="/signup" (click)="closeProductOffering()">Get Started</li>
+      </ul>
+    </div>
+  </header>

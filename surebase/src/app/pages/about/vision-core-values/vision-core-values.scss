@@ -3,8 +3,9 @@
   max-width: 1200px;
   margin: 0 auto;
   background: #fff;
-  padding: 120px 96px;
+  padding: 120px 0;
   overflow: hidden ;
+  // background: rgb(7, 6, 6);
 
   .section-header {
     text-align: center;
@@ -66,7 +67,7 @@
 
  .core-values {
   text-align: center;
-  padding: 80px 32px;
+  padding: 80px 25px;
 
   h2 {
     font-family: "Montserrat", sans-serif;

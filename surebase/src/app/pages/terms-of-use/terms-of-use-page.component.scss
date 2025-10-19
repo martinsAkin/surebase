@@ -9,7 +9,7 @@
 /* HEADER (same as FAQ) */
 .hero{
   position:relative;
-  background: radial-gradient(1200px 500px at 70% -100px, #1a2b56, #0b1330);
+  background: linear-gradient(#111B36, #365073);
   color:#eef2ff;
   padding-bottom:56px;
   overflow:hidden;
@@ -17,47 +17,6 @@
 
 .hero-art img{ width:100%; height:auto; object-fit:contain; }
 .hero-curve{ position:absolute; left:0; right:0; bottom:0; height:56px; background:#fff; border-top-left-radius:24px; border-top-right-radius:24px; }
-
-/* Top bar container */
-.nav{
-  position: relative;                 /* allow absolute centering */
-  max-width:1400px;
-  margin:0 auto;
-  padding:16px 20px;
-  display:flex;
-  align-items:center;
-}
-
-/* logo on the left stays normal */
-.nav .logo{ height:40px; }
-
-/* ⬇️ Center the links as a group */
-.nav .links{
-  position: absolute;                 /* center relative to the whole header */
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  gap: 48px;                          /* even gap between the 3 items */
-  color:#E5EAF0;
-}
-
-.nav .links a{
-  white-space: nowrap;
-  font-size:18px;
-  line-height:28px;
-  text-align:center;
-  font-family: "Montserrat", sans-serif;
-}
-
-/* actions pinned to the far right */
-.nav .actions{
-  margin-left:auto;
-  display:flex;
-  gap:12px;
-}
-
-.hamburger{ display:none; background:transparent; border:0; color:#cbd5e1; font-size:20px; margin-left:auto; }
 
 /* Responsive: collapse middle links on small screens if you want */
 @media (max-width: 900px){
@@ -70,8 +29,8 @@
 
 /* HERO inner (from FAQ) */
 .hero-inner{
-  max-width:1400px; margin:36px auto 0; padding:0 20px;
-  display:grid; grid-template-columns: 1.1fr .9fr; gap:40px; align-items:center;
+  max-width: 100%; margin:36px auto 0; padding:0 75px;
+  display:grid; grid-template-columns: 1.1fr .9fr; gap:10px; align-items:center;
 }
 .hero-copy{ width: 500px; }
 .hero-copy h1{ font-size:48px; line-height:1.1; margin:14px 0; color:#fff; font-family: "Space Grotesk", sans-serif;  }
