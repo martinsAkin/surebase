@@ -6,7 +6,7 @@
       <div class="form-header">
         <div class="logo-section">
           <div class="logo">
-            <img src="/Surebase Logo.svg" alt="Surebase Logo" />
+            <img src="assets/Surebase Logo.svg" alt="Surebase Logo" />
           </div>
           <h1 class="form-title">Create your Surebase Account</h1>
         </div>
@@ -21,7 +21,7 @@
             <div class="input-container">
               <div class="input-content">
                 <div class="input-icon">
-                  <img src="/sms.svg" alt="Email" width="20" height="20" />
+                  <img src="assets/sms.svg" alt="Email" width="20" height="20" />
                 </div>
                 <input
                   type="email"
@@ -45,7 +45,7 @@
             <div class="input-container">
               <div class="input-content">
                 <div class="input-icon">
-                  <img src="/user-square.svg" alt="User" width="20" height="20" />
+                  <img src="assets/user-square.svg" alt="User" width="20" height="20" />
                 </div>
                 <input
                   type="text"
@@ -70,7 +70,7 @@
               <div class="country-dropdown" (click)="toggleCountryDropdown()">
                 <span class="country-flag">{{ selectedCountry.flag }}</span>
                 <span class="country-code">{{ selectedCountry.code }}</span>
-                <img src="/Icon.svg" alt="Dropdown" width="20" height="20" class="dropdown-arrow" />
+                <img src="assets/Icon.svg" alt="Dropdown" width="20" height="20" class="dropdown-arrow" />
 
                 <!-- Country Dropdown -->
                 <div class="country-options" *ngIf="showCountryDropdown">
@@ -109,7 +109,7 @@
             <div class="input-container">
               <div class="input-content">
                 <div class="input-icon">
-                  <img src="/lock.svg" alt="Password" width="20" height="20" />
+                  <img src="assets/lock.svg" alt="Password" width="20" height="20" />
                 </div>
                 <input
                   [type]="showPassword ? 'text' : 'password'"
@@ -119,7 +119,7 @@
                   class="text-input"
                 />
                 <button type="button" class="password-toggle" (click)="togglePasswordVisibility()">
-                  <img src="/eye.svg" alt="Toggle visibility" width="16" height="16" />
+                  <img src="assets/eye.svg" alt="Toggle visibility" width="16" height="16" />
                 </button>
               </div>
             </div>
