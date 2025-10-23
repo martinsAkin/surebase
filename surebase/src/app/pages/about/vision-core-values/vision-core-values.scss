@@ -1,15 +1,15 @@
 .vision-mission-values {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1728px;
   margin: 0 auto;
   background: #fff;
-  padding: 120px 0;
-  overflow: hidden ;
-  // background: rgb(7, 6, 6);
+  padding: 120px 100px;
+  overflow: hidden;
 
   .section-header {
     text-align: center;
     margin-bottom: 80px;
+    padding: 0 20px;
 
     h1 {
       font-family: "Space Grotesk", sans-serif;
@@ -35,6 +35,7 @@
     justify-content: space-between;
     gap: 60px;
     margin-bottom: 100px;
+    padding: 0 20px;
 
     .text-block {
       flex: 1;
@@ -57,108 +58,425 @@
 
     .image-block {
       flex: 1;
+      
       img {
         width: 100%;
         max-width: 600px;
+        height: auto;
         border-radius: 20px;
       }
     }
   }
 
- .core-values {
-  text-align: center;
-  padding: 80px 25px;
+  .core-values {
+    text-align: center;
+    padding: 80px 25px;
 
-  h2 {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 32px;
-    margin-bottom: 60px; /* Increased bottom margin */
-    color: #0F172A;
-  }
+    h2 {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      font-size: 32px;
+      margin-bottom: 60px;
+      color: #0F172A;
+    }
 
-  .values-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px; /* This should work for both horizontal AND vertical spacing */
-    align-items: start;
-    max-width: 1200px;
-    margin: 0 auto;
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      align-items: stretch;
+      max-width: 1200px;
+      margin: 0 auto;
 
-    .value-card {
-      background: #f4fcf0;
-      padding: 32px;
-      border-radius: 24px;
-      text-align: left;
-      border: 1px solid #e0f0e0;
-      
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      height: auto;
-      min-height: 200px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-      &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      }
-
-      .value-title {
+      .value-card {
+        background: #f4fcf0;
+        padding: 32px;
+        border-radius: 24px;
+        text-align: left;
+        border: 1px solid #e0f0e0;
         display: flex;
-        align-items: center;
-        gap: 12px;
-        margin-bottom: 20px; /* Increased spacing */
+        flex-direction: column;
+        height: 100%;
+        min-height: 280px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-        .number {
-          font-family: "Montserrat", sans-serif;
-          font-size: 20px;
-          font-weight: 700;
-          color: #133f53;
-          background: #bde9fd;
-          width: 40px;
-          height: 40px;
-          border-radius: 8px;
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .value-title {
           display: flex;
           align-items: center;
-          justify-content: center;
-          flex-shrink: 0;
+          gap: 12px;
+          margin-bottom: 20px;
+
+          .number {
+            font-family: "Montserrat", sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #133f53;
+            background: #bde9fd;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+          }
+
+          h3 {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 32px;
+            margin: 0;
+            color: #0F172A;
+            white-space: nowrap;
+          }
         }
 
-        h3 {
+        p {
           font-family: "Montserrat", sans-serif;
-          font-weight: 700;
-          font-size: 22px;
-          line-height: 32px;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 24px;
+          color: #030508;
           margin: 0;
-          color: #0F172A;
-          white-space: nowrap;
+          flex-grow: 1;
+          display: flex;
+          align-items: center;
         }
-      }
-
-      p {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 24px;
-        color: #030508;
-        margin: 0; /* Reset margin */
-        flex-grow: 1; /* Push content to take available space */
       }
     }
   }
 
-  /* 📱 Responsive */
-  @media (max-width: 1200px) {
-    .values-grid {
-      grid-template-columns: repeat(2, 1fr); // ✅ 2 per row on medium screens
+  @media (max-width: 1024px) {
+    padding: 100px 0;
+
+    .section-header {
+      margin-bottom: 60px;
+      padding: 0 20px;
+
+      h1 {
+        font-size: 42px;
+        line-height: 56px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 30px;
+      }
+    }
+
+    .row {
+      gap: 50px;
+      margin-bottom: 80px;
+      padding: 0 20px;
+
+      .text-block {
+        h2 {
+          font-size: 26px;
+        }
+
+        p {
+          font-size: 17px;
+          line-height: 27px;
+        }
+      }
+
+      .image-block {
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+
+    .core-values {
+      padding: 70px 25px;
+
+      h2 {
+        font-size: 30px;
+        margin-bottom: 50px;
+      }
+
+      .values-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+        .value-card {
+          padding: 24px;
+          min-height: 260px;
+
+          .value-title {
+            h3 {
+              font-size: 18px;
+              line-height: 28px;
+              white-space: normal;
+            }
+          }
+
+          p {
+            font-size: 14px;
+            line-height: 22px;
+          }
+        }
+      }
     }
   }
 
   @media (max-width: 768px) {
-    .values-grid {
-      grid-template-columns: 1fr; // ✅ Stack on small screens
+    padding: 80px 0;
+
+    .section-header {
+      margin-bottom: 50px;
+      padding: 0 16px;
+
+      h1 {
+        font-size: 36px;
+        line-height: 48px;
+      }
+
+      p {
+        font-size: 17px;
+        line-height: 28px;
+      }
+    }
+
+    .row {
+      gap: 40px;
+      margin-bottom: 70px;
+      padding: 0 16px;
+
+      .text-block {
+        h2 {
+          font-size: 24px;
+          margin-bottom: 14px;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 26px;
+        }
+      }
+    }
+
+    .core-values {
+      padding: 60px 20px;
+
+      h2 {
+        font-size: 28px;
+        margin-bottom: 40px;
+      }
+
+      .values-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+
+        .value-card {
+          padding: 24px;
+          min-height: 200px;
+
+          .value-title {
+            gap: 10px;
+            margin-bottom: 16px;
+
+            .number {
+              width: 38px;
+              height: 38px;
+              font-size: 18px;
+            }
+
+            h3 {
+              font-size: 19px;
+              line-height: 28px;
+              white-space: normal;
+            }
+          }
+
+          p {
+            font-size: 15px;
+            line-height: 22px;
+          }
+        }
+      }
     }
   }
-}
+
+  @media (max-width: 600px) {
+    .row {
+      flex-direction: column;
+
+      .image-block {
+        width: 100%;
+        order: 2;
+      }
+
+      .text-block {
+        order: 1;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 60px 0;
+
+    .section-header {
+      margin-bottom: 40px;
+      padding: 0 16px;
+
+      h1 {
+        font-size: 30px;
+        line-height: 40px;
+        margin-bottom: 16px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+
+    .row {
+      gap: 32px;
+      margin-bottom: 60px;
+      padding: 0 16px;
+
+      .text-block {
+        h2 {
+          font-size: 22px;
+          margin-bottom: 12px;
+        }
+
+        p {
+          font-size: 15px;
+          line-height: 24px;
+        }
+      }
+
+      .image-block {
+        img {
+          border-radius: 16px;
+        }
+      }
+    }
+
+    .core-values {
+      padding: 50px 16px;
+
+      h2 {
+        font-size: 24px;
+        margin-bottom: 32px;
+      }
+
+      .values-grid {
+        gap: 20px;
+
+        .value-card {
+          padding: 20px;
+          border-radius: 20px;
+          min-height: 180px;
+
+          .value-title {
+            gap: 10px;
+            margin-bottom: 14px;
+
+            .number {
+              width: 34px;
+              height: 34px;
+              font-size: 16px;
+              border-radius: 6px;
+            }
+
+            h3 {
+              font-size: 17px;
+              line-height: 26px;
+            }
+          }
+
+          p {
+            font-size: 14px;
+            line-height: 21px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    padding: 50px 0;
+
+    .section-header {
+      margin-bottom: 36px;
+      padding: 0 12px;
+
+      h1 {
+        font-size: 26px;
+        line-height: 36px;
+        margin-bottom: 14px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 24px;
+      }
+    }
+
+    .row {
+      gap: 28px;
+      margin-bottom: 50px;
+      padding: 0 12px;
+
+      .text-block {
+        h2 {
+          font-size: 20px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+    }
+
+    .core-values {
+      padding: 40px 12px;
+
+      h2 {
+        font-size: 22px;
+        margin-bottom: 28px;
+      }
+
+      .values-grid {
+        gap: 16px;
+
+        .value-card {
+          padding: 18px;
+          min-height: 160px;
+
+          .value-title {
+            gap: 8px;
+            margin-bottom: 12px;
+
+            .number {
+              width: 32px;
+              height: 32px;
+              font-size: 15px;
+            }
+
+            h3 {
+              font-size: 16px;
+              line-height: 24px;
+            }
+          }
+
+          p {
+            font-size: 13px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
 }
