@@ -27,7 +27,7 @@ export class FaqComponent {
     },
     {
       key: 'insurers',
-      label: 'For Insurance Companies',
+      label: 'Insurance Companies',
       items: [
         { q: 'How do we distribute products on Surebase?', a: 'Publish products through our partner console and gain access to our network of vetted distributors.' },
         { q: 'How are rates & rules managed?', a: 'Via the console or API; changes are versioned and auditable.' },
@@ -35,7 +35,7 @@ export class FaqComponent {
     },
     {
       key: 'enterprises',
-      label: 'For Brokers & Corporate',
+      label: 'Brokers & Corporate',
       items: [
         { q: 'Can we white-label?', a: 'Yes, configurable branding and hosted flows are available.' },
       ],
