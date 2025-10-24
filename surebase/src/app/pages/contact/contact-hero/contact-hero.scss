@@ -20,12 +20,12 @@ $font-body: 'Montserrat', sans-serif;
 // Contact Hero Section
 .contact-hero-section {
   background: linear-gradient(180deg, $gradient-start 0%, $gradient-end 125.57%);
-  min-height: 700px;
+  min-height: 600px;
   padding: 0 16px;
   position: relative;
 
   @media (max-width: 1024px) {
-    min-height: 600px;
+    min-height: 400px;
   }
 
   @media (max-width: 768px) {
@@ -40,8 +40,12 @@ $font-body: 'Montserrat', sans-serif;
   width: 100%;
   padding: 0 64px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1200px) {
     padding: 0 48px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 0 40px;
   }
 
   @media (max-width: 768px) {
@@ -58,7 +62,7 @@ $font-body: 'Montserrat', sans-serif;
   position: relative;
 
   @media (max-width: 1024px) {
-    height: 80px;
+    height: 100px;
   }
 
   @media (max-width: 768px) {
@@ -69,6 +73,11 @@ $font-body: 'Montserrat', sans-serif;
 .logo {
   width: 214px;
   height: 48px;
+
+  @media (max-width: 1024px) {
+    width: 190px;
+    height: 42px;
+  }
 
   @media (max-width: 768px) {
     width: 160px;
@@ -91,6 +100,10 @@ $font-body: 'Montserrat', sans-serif;
   padding: 0;
 
   @media (max-width: 1024px) {
+    gap: 12px;
+  }
+
+  @media (max-width: 768px) {
     display: none;
   }
 
@@ -115,6 +128,10 @@ $font-body: 'Montserrat', sans-serif;
   cursor: pointer;
   transition: background-color 0.3s;
 
+  @media (max-width: 1024px) {
+    padding: 6px 12px;
+  }
+
   &:hover {
     background: rgba(255, 255, 255, 0.1);
   }
@@ -126,6 +143,11 @@ $font-body: 'Montserrat', sans-serif;
     line-height: 28px;
     color: $color-text-light;
     white-space: nowrap;
+
+    @media (max-width: 1024px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   .arrow-icon {
@@ -137,6 +159,10 @@ $font-body: 'Montserrat', sans-serif;
   display: flex;
   align-items: center;
   gap: 24px;
+
+  @media (max-width: 1024px) {
+    gap: 20px;
+  }
 
   @media (max-width: 768px) {
     gap: 12px;
@@ -155,6 +181,12 @@ $font-body: 'Montserrat', sans-serif;
   border-radius: 100px;
   cursor: pointer;
   transition: all 0.3s;
+
+  @media (max-width: 1024px) {
+    padding: 8px 32px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 
   @media (max-width: 768px) {
     padding: 8px 20px;
@@ -180,6 +212,12 @@ $font-body: 'Montserrat', sans-serif;
   transition: all 0.3s;
   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
 
+  @media (max-width: 1024px) {
+    padding: 8px 32px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
   @media (max-width: 768px) {
     padding: 8px 20px;
     font-size: 14px;
@@ -202,13 +240,18 @@ $font-body: 'Montserrat', sans-serif;
   align-items: center;
   padding: 60px 0 0;
 
+  @media (max-width: 1200px) {
+    gap: 50px;
+    padding: 50px 0 0;
+  }
+
   @media (max-width: 1024px) {
-    flex-direction: column;
     gap: 40px;
-    padding: 40px 0;
+    padding: 40px 0 0;
   }
 
   @media (max-width: 768px) {
+    flex-direction: column;
     gap: 32px;
     padding: 32px 0;
   }
@@ -218,7 +261,15 @@ $font-body: 'Montserrat', sans-serif;
   flex: 1;
   max-width: 500px;
 
+  @media (max-width: 1200px) {
+    max-width: 450px;
+  }
+
   @media (max-width: 1024px) {
+    max-width: 380px;
+  }
+
+  @media (max-width: 768px) {
     max-width: 100%;
   }
 }
@@ -266,8 +317,13 @@ $font-body: 'Montserrat', sans-serif;
   margin-top: 0;
   margin-bottom: 32px;
 
+  @media (max-width: 1200px) {
+    font-size: clamp(30px, 5vw, 44px);
+    margin-bottom: 28px;
+  }
+
   @media (max-width: 1024px) {
-    font-size: clamp(28px, 6vw, 42px);
+    font-size: clamp(28px, 5vw, 36px);
     margin-bottom: 24px;
   }
 
@@ -284,8 +340,12 @@ $font-body: 'Montserrat', sans-serif;
   line-height: 1.5;
   color: $color-text-dim;
 
+  @media (max-width: 1200px) {
+    font-size: clamp(15px, 2.5vw, 20px);
+  }
+
   @media (max-width: 1024px) {
-    font-size: clamp(15px, 3vw, 20px);
+    font-size: clamp(14px, 2.5vw, 18px);
   }
 
   @media (max-width: 768px) {
@@ -295,17 +355,23 @@ $font-body: 'Montserrat', sans-serif;
 
 .hero-image {
   flex-shrink: 0;
-  width: 700px;
+  width: 600px;
   max-height: 368px;
 
+  @media (max-width: 1200px) {
+    width: 550px;
+    max-height: 300px;
+  }
+
   @media (max-width: 1024px) {
-    width: 100%;
-    max-width: 600px;
+    width: 420px;
+    max-height: 250px;
   }
 
   @media (max-width: 768px) {
+    width: 420px;
     max-width: 100%;
-    max-height: 400px;
+    max-height: 350px;
   }
 
   img {
@@ -313,5 +379,23 @@ $font-body: 'Montserrat', sans-serif;
     height: 100%;
     object-fit: cover;
     border-radius: 12px;
+  }
+}
+
+// Mobile adjustments
+@media (max-width: 768px) {
+  .hero-content-wrapper {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .hero-image {
+    max-height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-image {
+    max-height: 250px;
   }
 }
