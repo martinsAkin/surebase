@@ -66,13 +66,11 @@
       </div>
     </div>
 
-    <!-- Right Side - Contact Form -->
     <div class="contact-form-section">
       <h2 class="form-title">Send Us a Message</h2>
 
       <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="form">
         <div class="form-row">
-          <!-- First Name -->
           <div class="input-field">
             <label class="input-label">First Name</label>
             <div class="input-container">
@@ -86,7 +84,6 @@
             </div>
           </div>
 
-          <!-- Last Name -->
           <div class="input-field">
             <label class="input-label">Business Name</label>
             <div class="input-container">
@@ -97,7 +94,7 @@
         </div>
 
         <div class="form-row">
-          <!-- Phone -->
+          
           <div class="input-field">
             <label class="input-label">Phone Number</label>
             <div class="phone-input">
@@ -115,7 +112,7 @@
             </div>
           </div>
 
-          <!-- Email -->
+          
           <div class="input-field">
             <label class="input-label">Email Address</label>
             <div class="input-container">
@@ -130,7 +127,6 @@
           </div>
         </div>
 
-        <!-- Message -->
         <div class="input-field textarea-field">
           <label class="input-label">Description</label>
           <textarea
@@ -141,14 +137,12 @@
           ></textarea>
         </div>
 
-        <!-- Terms -->
         <p class="terms-text">
           By clicking Send below, you agree to Surebase's
           <a href="#" class="green-link">Terms</a> and processing of your personal data as described
           in our <a href="#" class="green-link">Privacy Policy</a>.
         </p>
 
-        <!-- Submit Button -->
         <button type="submit" class="submit-button" [disabled]="!contactForm.valid">Send</button>
       </form>
     </div>

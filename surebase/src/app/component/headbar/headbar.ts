@@ -17,4 +17,12 @@ export class Headbar {
     closeProductOffering(){
       this.isProductOffering = false;
     }
+
+    isMenuOpen = false;
+    toggleMenuOpen(){
+      this.isMenuOpen = !this.isMenuOpen
+    }
+    toggleMenuClose(){
+      this.isMenuOpen = false;
+    }
 }

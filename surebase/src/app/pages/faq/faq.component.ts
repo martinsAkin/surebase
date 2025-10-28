@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BuildTheFuture } from '../../component/build-the-future/build-the-future';
 
 type FaqItem = { q: string; a: string; };
 type FaqCategory = { key: string; label: string; items: FaqItem[] };
@@ -7,7 +8,7 @@ type FaqCategory = { key: string; label: string; items: FaqItem[] };
 @Component({
   selector: 'app-faq',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, BuildTheFuture],
   templateUrl: './faq.component.html',
   styleUrls: ['./faq.component.scss'],
 })

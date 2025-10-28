@@ -1,14 +1,28 @@
-// src/app/app.ts
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-
+import { CommonModule } from '@angular/common'
+import { RouterOutlet, RouterLinkWithHref, RouterLinkActive } from '@angular/router';
+import { Footer } from './component/footer/footer';
+import { Headbar } from './component/headbar/headbar';
+import { Router } from '@angular/router'
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',    // <-- points to the file you have
-  styleUrls: ['./app.scss'],              // or remove if you don't have app.scss
+  imports: [
+    CommonModule,
+    Headbar,
+    RouterOutlet,
+    RouterLinkWithHref,
+    RouterLinkActive,
+    Footer
+  ],
+  templateUrl: './app.html',   
+  styleUrls: ['./app.scss'],          
 })
 export class AppComponent {
-  title = 'surebase-ui';
+  constructor(public router: Router){}
+
+  get hideLayout(){
+    const hiddenRoutes = ['/login', '/signup']
+    return hiddenRoutes.includes(this.router.url)
+  }
 }

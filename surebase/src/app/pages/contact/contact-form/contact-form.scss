@@ -22,8 +22,6 @@
     overflow: hidden;
   }
 }
-
-// Contact Info Styles
 .contact-info {
   display: flex;
   padding-top: 200px;
@@ -165,8 +163,6 @@
     }
   }
 }
-
-// Contact Form Styles
 .contact-form-section {
   background: #F3F3F3;
   border-radius: 0 32px 32px 0;
@@ -651,7 +647,7 @@
     }
 
     .contact-details {
-      align-items: center;
+      align-items: flex-start;
     }
 
     .social-section {

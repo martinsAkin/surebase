@@ -1,6 +1,5 @@
 .carousel-wrapper{
   width: 85rem;
-  // background: red;
   overflow: hidden;
   position: relative;
   min-height: 350px;
@@ -12,7 +11,6 @@
     width: max-content;
     margin-left: 10rem;
     padding-left: 5rem;
-    // background: green;
   }
 
   .card {
@@ -21,7 +19,6 @@
     width: 700px;
     margin-right: 50px;
     box-sizing: border-box;
-    // padding: 10px;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     display: flex;
@@ -71,7 +68,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 760px) {
   .carousel-wrapper {
     width: 100%;
     margin: 0 auto;
@@ -88,7 +85,6 @@
       margin-left: 0;
       gap: 27rem;
       flex-wrap: nowrap;
-      // background-color: red;
     }
 
     .card {
@@ -103,7 +99,6 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       display: flex;
       align-items: center;
-      // flex-direction: column;
       margin: 0 auto;
 
       .text {
@@ -129,7 +124,6 @@
         img {
           width: 100%;
           height: 100%;
-          // object-fit: cover;
         }
       }
     }
@@ -148,4 +142,37 @@
       }
     }
   }
+}
+
+
+@media (min-width: 767px) and (max-width: 1025px) {
+ .carousel-wrapper{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    overflow: hidden;
+    min-height: max-content;
+
+  .carousel-track{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: max-content;
+    margin-left: 0;
+    padding-left: 2rem;
+  }
+
+    .main-pagination-div {
+      display: flex;
+      gap: 0.8rem;
+      justify-content: center;
+      margin-top: 1.5rem;
+
+      .pagination-div {
+        width: 3rem;
+        height: 0.5rem;
+        border-radius: 20px;
+        transition: background-color 0.3s ease;
+      }
+    }
+ } 
 }
