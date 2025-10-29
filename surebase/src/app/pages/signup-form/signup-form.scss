@@ -395,8 +395,8 @@ $font-family: 'Montserrat', sans-serif;
   color: $text-header;
   
   &:hover:not(:disabled) {
-    background: color.adjust($primary-base, 5%);
-    border-color: color.adjust($primary-base, 5%);
+    background: darken($primary-base, 5%);
+    border-color: darken($primary-base, 5%);
   }
   
   &:disabled {
@@ -894,8 +894,8 @@ $font-family: 'Montserrat', sans-serif;
   color: $text-header;
   
   &:hover:not(:disabled) {
-    background: color.adjust($primary-base, 5%);
-    border-color: color.adjust($primary-base, 5%);
+    background: darken($primary-base, 5%);
+    border-color: darken($primary-base, 5%);
   }
   
   &:disabled {

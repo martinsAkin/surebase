@@ -194,7 +194,7 @@ $font-body: 'Montserrat', sans-serif;
   }
 
   &:hover {
-    background: color.adjust($color-secondary-bg, 5%);
+    background: darken($color-secondary-bg, 5%);
   }
 }
 
@@ -224,8 +224,8 @@ $font-body: 'Montserrat', sans-serif;
   }
 
   &:hover {
-    background: color.adjust($color-primary, 5%);
-    border-color: color.adjust($color-primary, 5%);
+    background: darken($color-primary, 5%);
+    border-color: darken($color-primary, 5%);
   }
 
   &:active {
