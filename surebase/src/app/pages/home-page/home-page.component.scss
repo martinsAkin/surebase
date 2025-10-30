@@ -366,10 +366,11 @@ $radius: 16px;
   grid-template-columns: 1.1fr 0.9fr;
   gap: clamp(20px, 4vw, 48px);
   align-items: center;
+  /* flex-wrap: wrap; */
 
-  @media (max-width: 960px) {
+  @media (max-width: 1025px) {
     grid-template-columns: 1fr;
-    align-items: start;
+    justify-content: center;
   }
 }
 
@@ -458,8 +459,8 @@ $radius: 16px;
   max-width: 590px;
   justify-self: end;
 
-  @media (max-width: 960px) {
-    justify-self: stretch;
+  @media (max-width: 1025px) {
+    justify-self: center;
   }
 }
 
@@ -1669,13 +1670,11 @@ $radius: 16px;
     width: 50px;
     opacity: 0.28;
   }
-  .band.band-cta .cta-card .deco-left {
-    transform: translate(-6%, 4%);
+  .deco-left {
+    bottom: 0;
+    left: 0;
+    transform: rotate(180deg);
   }
-  .band.band-cta .cta-card .deco-right {
-    transform: translate(6%, -6%);
-  }
-
   .band.band-cta .cta-card .cta-copy {
     max-width: 420px;
   }

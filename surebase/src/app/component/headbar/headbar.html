@@ -1,49 +1,52 @@
-  <header class="nav">
-    <img src="assets/Surebase-logo-white.png" alt="Surebase" class="logo" />
-  
-    <nav class="links">
-      <a 
-        routerLink="/about" 
-        routerLinkActive="active-link"
-        [routerLinkActiveOptions]="{ exact: true }"
-      >About Us</a>
-      <div class="productOffering">
-        <a (click)="toggeleProductOffering()" style="display: flex; align-items: center;">
-          Product Offerings
-          <img src="assets/arrow-down.png" style="width: 20px; margin-left: 0.5rem;" alt="dropdown"/>
-        </a>
+<header class="nav">
+  <img src="assets/Surebase-logo-white.png" alt="Surebase" class="logo" />
 
-          <ul class="productOfferingOptions" *ngIf="isProductOffering">
-            <li routerLink="/insurers" (click)="closeProductOffering()">Insurer`s Page</li>
-            <li routerLink="/brokers" (click)="closeProductOffering()">Broker`s Page</li>
-          </ul>
-      </div>
-      <a 
-        routerLink="/contact" 
-        routerLinkActive="active-link"
-        [routerLinkActiveOptions]="{ exact: true }"
-      >Contact Us</a>
-    </nav>
-  
-    <div class="actions">
-      <a routerLink="/login">
-        <button class="btn ghost">Log In</button>
+  <nav class="links">
+    <a
+      routerLink="/about"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >About Us</a
+    >
+    <div class="productOffering">
+      <a (click)="toggeleProductOffering()" style="display: flex; align-items: center">
+        Product Offerings
+        <img src="assets/arrow-down.png" style="width: 20px; margin-left: 0.5rem" alt="dropdown" />
       </a>
-      <a routerLink="/signup">
-        <button class="btn primarys">Get Started</button>
-      </a>
-    </div>
-  
-    <div class="mobile-menu">
-      <button class="hamburger" aria-label="menu" (click)="toggleMenuOpen()">☰</button>
 
-      <ul *ngIf="isMenuOpen" class="mobile-menu-list">
-        <li routerLink="/about" (click)="toggleMenuClose()">About Us</li>
-        <li routerLink="/insurers" (click)="toggleMenuClose()">Insurer`s Page</li>
-        <li routerLink="/brokers" (click)="toggleMenuClose()">Broker`s Pagee</li>
-        <li routerLink="/contact" (click)="toggleMenuClose()">Contact Us</li>
-        <li routerLink="/login" (click)="toggleMenuClose()">Log In</li>
-        <li routerLink="/signup" (click)="toggleMenuClose()">Get Started</li>
+      <ul class="productOfferingOptions" *ngIf="isProductOffering">
+        <li routerLink="/insurers" (click)="closeProductOffering()">Insurer`s Page</li>
+        <li routerLink="/brokers" (click)="closeProductOffering()">Broker`s Page</li>
       </ul>
     </div>
-  </header>
+    <a
+      routerLink="/contact"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Contact Us</a
+    >
+  </nav>
+
+  <div class="actions">
+    <a routerLink="/login">
+      <button class="btn ghost">Log In</button>
+    </a>
+    <a routerLink="/signup">
+      <button class="btn primarys">Get Started</button>
+    </a>
+  </div>
+
+  <div class="mobile-menu">
+    <button class="hamburger" aria-label="menu" (click)="toggleMenuOpen()">☰</button>
+
+    <ul *ngIf="isMenuOpen" class="mobile-menu-list">
+      <li routerLink="/home" (click)="toggleMenuClose()">Home</li>
+      <li routerLink="/about" (click)="toggleMenuClose()">About Us</li>
+      <li routerLink="/insurers" (click)="toggleMenuClose()">Insurer`s Page</li>
+      <li routerLink="/brokers" (click)="toggleMenuClose()">Broker`s Pagee</li>
+      <li routerLink="/contact" (click)="toggleMenuClose()">Contact Us</li>
+      <li routerLink="/login" (click)="toggleMenuClose()">Log In</li>
+      <li routerLink="/signup" (click)="toggleMenuClose()">Get Started</li>
+    </ul>
+  </div>
+</header>
