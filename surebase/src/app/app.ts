@@ -1,11 +1,9 @@
-// src/app/app.ts
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common'
 import { RouterOutlet, RouterLinkWithHref, RouterLinkActive } from '@angular/router';
 import { Footer } from './component/footer/footer';
 import { Headbar } from './component/headbar/headbar';
 import { Router } from '@angular/router'
-
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -16,9 +14,9 @@ import { Router } from '@angular/router'
     RouterLinkWithHref,
     RouterLinkActive,
     Footer
-],
-  templateUrl: './app.html',
-  styleUrl: './app.scss'
+  ],
+  templateUrl: './app.html',   
+  styleUrls: ['./app.scss'],          
 })
 export class AppComponent {
   constructor(public router: Router){}

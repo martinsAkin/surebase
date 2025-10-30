@@ -1,29 +1,27 @@
 
 :host {
   display: flex;
-  justify-content: center; /* horizontally center */
-  align-items: center;    /* vertically center */
+  justify-content: center; 
+  align-items: center;    
   min-height: 100vh;
   width: 100%;
-  background: #1f2937; /* Dark background behind the layout */
+  background: #1f2937; 
 }
 
-/* Layout container */
 .auth-layout{
   display:grid;
-  grid-template-columns: 1fr 1fr;   /* EXACT 50/50 */
+  grid-template-columns: 1fr 1fr;   
   width:100%;
   max-width:1190px;
   min-height:80vh;
 }
 
-/* Left side (form) */
 .panel-left {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 32px;
-  background: #f8fafc; /* light gray background */
+  background: #f8fafc; 
 }
 
 .card {
@@ -78,11 +76,11 @@ input[type='text'] {
   background: #fff;
   outline: none;
   transition: border-color 0.2s ease;
-  box-sizing: border-box; /* important for equal sizing */
+  box-sizing: border-box; 
 }
 
 input:focus {
-  border-color: #38BA5C; /* green focus */
+  border-color: #38BA5C; 
 }
 
 input.invalid {
@@ -95,17 +93,16 @@ input.invalid {
 
 .field .input-wrap input {
   width: 100%;
-  /* match your input height/line-height; add left padding for the icon */
-  padding-left: 40px; /* tweak to align with your design */
+  padding-left: 40px; 
 }
 
 .icon-left {
   position: absolute;
-  left: 12px;                 /* align with password icon */
+  left: 12px;                
   top: 50%;
   transform: translateY(-50%);
-  pointer-events: none;       /* so clicks focus the input */
-  color: #44474B;             /* icon color (can be set via theme) */
+  pointer-events: none;       
+  color: #44474B;             
 }
 
 .icon-left svg {
@@ -114,8 +111,6 @@ input.invalid {
   height: 20px;
 }
 
-/* Password wrapper ensures alignment */
-/* wrapper takes full row */
 .password-wrap {
   position: relative;
   display: flex;
@@ -123,27 +118,24 @@ input.invalid {
   width: 100%;
 }
 
-/* input fills wrapper; room for icons on both sides */
 .password-wrap input {
   width: 100%;
   box-sizing: border-box;
-  padding-left: 40px;   /* space for padlock */
-  padding-right: 44px;  /* space for eye button */
+  padding-left: 40px;   
+  padding-right: 44px;  
 }
 
-/* left padlock icon */
 .icon-left {
   position: absolute;
   left: 10px;
   top: 50%;
   transform: translateY(-50%);
   font-size: 16px;
-  color: #6b7280;       /* Tailwind gray-500-ish */
+  color: #6b7280;       
   opacity: 0.9;
-  pointer-events: none; /* click-through */
+  pointer-events: none; 
 }
 
-/* right eye button: subtle circle, thin gray icon */
 .eye-btn {
   position: absolute;
   right: 8px;
@@ -152,7 +144,7 @@ input.invalid {
   height: 28px;
   width: 30px;
   border-radius: 9999px;
-  border: 0px solid #cbd5e1;   /* light gray ring */
+  border: 0px solid #cbd5e1;   
   background: #ffffff;
   display: grid;
   place-items: center;
@@ -162,15 +154,15 @@ input.invalid {
 
 .eye-btn i {
   font-size: 12px;
-  color: #4b5563;       /* gray-600 (not pure black) */
+  color: #4b5563;       
 }
 
 .eye-btn:hover {
-  border-color: #94a3b8;       /* a bit darker on hover */
+  border-color: #94a3b8;       
 }
 
 .eye-btn:focus-visible {
-  outline: 2px solid #22c55e33;  /* subtle green focus */
+  outline: 2px solid #22c55e33;  
   outline-offset: 2px;
 }
 
@@ -224,14 +216,13 @@ input.invalid {
   text-align: center;
 }
 
-/* Right side with background image */
 .panel-right{
-  background-color:#0b1330;                 /* fallback */
+  background-color:#0b1330;                 
   background-image:url('/assets/Login-Right-Side.png');
   background-repeat:no-repeat;
-  background-position:center;               /* center subject */
-  background-size:cover;                    /* fill the half, crop if needed */
-  min-height:100%;                          /* stretch with grid row */
+  background-position:center;               
+  background-size:cover;                    
+  min-height:100%;                         
 }
 
 /* Responsive Design */
@@ -248,18 +239,54 @@ input.invalid {
   :host { align-items: flex-start; padding: 16px 0; }
 
   .auth-layout{
-    grid-template-columns: 1fr;        /* stack */
-    max-width: 360px;                  /* narrow like the mock */
-    background: transparent;           /* card has its own bg */
+    grid-template-columns: 1fr;        
+    max-width: 360px;                  
+    background: transparent;           
     box-shadow: none;
     row-gap: 0; 
   }
 
+  .field .label {
+  display: inline-block;
+  font-size: 14px;
+  color: #44474B;
+  margin-bottom: 6px;
+}
+
+.icon-left svg {
+  display: block;
+  width: 15px;
+  height: 15px;
+}
+
+  .muted {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #292B2D;
+  text-align: center;
+}
+
+.btn.primary {
+  margin-top: 6px;
+  width: 100%;
+  height: 38px;
+  border: 0;
+  border-radius: 999px;
+  background: #38BA5C;
+  color: #030508;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+
+
   .panel-left{
     background: #ffffff;
-     padding: 16px 16px 0;         /* remove bottom padding that created space */
+     padding: 16px 16px 0;         
     border-radius: 8px 8px 0 0;
     box-shadow: 0 8px 24px rgba(0,0,0,.15);
+    padding-bottom: 40px ;
   }
 
   .brand{ height: 20px; }
@@ -268,10 +295,10 @@ input.invalid {
    .panel-right{
     display:block;
     height:520px;
-     margin-top: 0 !important;     /* kill the spacer */
-    border-radius: 0 0 8px 8px;                /* adjust to taste */
+     margin-top: 0 !important;     
+    border-radius: 0 0 8px 8px;               
     background-color:#0b1330;
     background-position:center top;
-    background-size:cover;      /* key: fill the box on mobile too */
+    background-size:cover;      
   }
 }

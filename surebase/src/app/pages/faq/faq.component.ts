@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BuildTheFuture } from '../../component/build-the-future/build-the-future';
 
 type FaqItem = { q: string; a: string; };
 type FaqCategory = { key: string; label: string; items: FaqItem[] };
@@ -7,7 +8,7 @@ type FaqCategory = { key: string; label: string; items: FaqItem[] };
 @Component({
   selector: 'app-faq',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, BuildTheFuture],
   templateUrl: './faq.component.html',
   styleUrls: ['./faq.component.scss'],
 })
@@ -27,7 +28,7 @@ export class FaqComponent {
     },
     {
       key: 'insurers',
-      label: 'For Insurance Companies',
+      label: 'Insurance Companies',
       items: [
         { q: 'How do we distribute products on Surebase?', a: 'Publish products through our partner console and gain access to our network of vetted distributors.' },
         { q: 'How are rates & rules managed?', a: 'Via the console or API; changes are versioned and auditable.' },
@@ -35,7 +36,7 @@ export class FaqComponent {
     },
     {
       key: 'enterprises',
-      label: 'For Brokers & Corporate',
+      label: 'Brokers & Corporate',
       items: [
         { q: 'Can we white-label?', a: 'Yes, configurable branding and hosted flows are available.' },
       ],

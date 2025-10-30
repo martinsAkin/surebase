@@ -1,13 +1,13 @@
 <div class="auth-layout">
-  <!-- Left: centered form card -->
+
   <section class="panel-left">
     <div class="card">
-      <img class="brand" src="assets/Surebase-Logo.png" alt="Surebase Logo" />
+      <img class="brand" src="/assets/Surebase-Logo.png" alt="Surebase Logo" />
 
       <h1 class="title">Create your Surebase Account</h1>
 
       <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
-        <!-- Email -->
+        
          <label class="field">
   <span class="label">Email Address</span>
   <div class="input-icon">
@@ -27,7 +27,7 @@
 </label>
 
 
-        <!-- Business name -->
+      
         <label class="field">
   <span class="label">Business Name</span>
   <div class="input-icon">
@@ -45,7 +45,7 @@
 
        
 
-        <!-- Phone (country code + number) -->
+        
         <label class="field">
           <span class="label">Phone Number</span>
           <div class="phone-wrap">
@@ -66,7 +66,7 @@
           </small>
         </label>
 
-        <!-- Password with reveal -->
+        
         <label class="field">
           <span class="label">Password</span>
           <div class="password-wrap">
@@ -87,16 +87,16 @@
   [class.invalid]="f['password'].touched && f['password'].invalid"
 />
 
-<!-- right eye button -->
+
 <button
   type="button"
   class="eye-btn"
   (click)="showPassword.set(!showPassword())"
   [attr.aria-label]="showPassword() ? 'Hide password' : 'Show password'">
 
-  <!-- when visible: show eye-off (slashed) -->
+  
   <ng-container *ngIf="showPassword(); else eyeOpen">
-    <!-- Eye OFF (slashed) -->
+    
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
          aria-hidden="true">
@@ -107,9 +107,9 @@
     </svg>
   </ng-container>
 
-  <!-- when hidden: show your 16x16 eye -->
+  
   <ng-template #eyeOpen>
-    <!-- Eye ON (your SVG, set to currentColor so it themes) -->
+    
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
          aria-hidden="true">
       <path d="M10.3866 7.99995C10.3866 9.31995 9.31995 10.3866 7.99995 10.3866C6.67995 10.3866 5.61328 9.31995 5.61328 7.99995C5.61328 6.67995 6.67995 5.61328 7.99995 5.61328C9.31995 5.61328 10.3866 6.67995 10.3866 7.99995Z"
@@ -125,7 +125,7 @@
           </small>
         </label>
 
-        <!-- Business type -->
+        
        <div class="field">
   <span class="label">Choose your business type</span>
 
@@ -153,12 +153,14 @@
 </div>
     
 
-         <!-- Submit -->
-        <button class="btn primary" type="submit" [disabled]="form.invalid">
-          Create Account
-        </button>
+         
+        <a routerLink="/about">
+          <button class="btn primary" type="submit" [disabled]="form.invalid">
+            Create Account
+          </button>
+        </a>
 
-        <!-- Terms -->
+        
         <label class="agreed">
           
           <span>
@@ -177,6 +179,6 @@
     </div>
   </section>
 
-  <!-- Right: artwork (centered) -->
+  
   <aside class="panel-right signup-art"></aside>
 </div>

@@ -103,7 +103,6 @@ $font-body: 'Montserrat', sans-serif;
   }
 }
 
-// Banner Content
 .banner-content {
   display: flex;
   flex-direction: column;
@@ -121,6 +120,7 @@ $font-body: 'Montserrat', sans-serif;
   @media (max-width: 768px) {
     gap: 32px;
     padding: 48px 0;
+    // background-color: red;
   }
 }
 

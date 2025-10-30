@@ -22,8 +22,6 @@
     overflow: hidden;
   }
 }
-
-// Contact Info Styles
 .contact-info {
   display: flex;
   padding-top: 200px;
@@ -165,8 +163,6 @@
     }
   }
 }
-
-// Contact Form Styles
 .contact-form-section {
   background: #F3F3F3;
   border-radius: 0 32px 32px 0;
@@ -652,6 +648,119 @@
 
     .contact-details {
       align-items: center;
+    }
+
+    .social-section {
+      align-items: center;
+    }
+  }
+
+  .contact-form-section {
+    padding: 48px 24px;
+    border-radius: 32px;
+
+    .form {
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+    }
+  }
+}
+
+// Small mobile adjustments
+@media (max-width: 480px) {
+  .contact-section {
+    .contact-container {
+      padding: 0 12px;
+      gap: 40px;
+    }
+  }
+
+  .contact-info {
+    padding: 40px 16px 0;
+  }
+
+  .contact-form-section {
+    padding: 40px 20px;
+  }
+
+  .contact-form-section {
+    padding: 56px 32px;
+    min-height: 750px;
+
+    .form-title {
+      font-size: 32px;
+      line-height: 40px;
+      margin-bottom: 32px;
+    }
+
+    .form {
+      gap: 24px;
+
+      .form-row {
+        gap: 20px;
+      }
+
+      .input-field {
+        .input-container {
+          min-height: 44px;
+          padding: 10px 12px;
+
+          .input {
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+
+        .phone-input {
+          .country-code {
+            padding: 8px 10px;
+
+            .flag, .country-text {
+              font-size: 14px;
+              line-height: 24px;
+            }
+          }
+
+          .phone-input-field {
+            padding: 8px 12px;
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+
+        .textarea {
+          min-height: 140px;
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
+
+// Stack only on tablets and mobile (768px and below)
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 48px 0;
+    
+    .contact-container {
+      grid-template-columns: 1fr;
+      gap: 48px;
+      padding: 0 16px;
+    }
+  }
+
+  .contact-info {
+    padding: 60px 20px 0;
+
+    .info-header {
+      text-align: center;
+    }
+
+    .contact-details {
+      align-items: flex-start;
     }
 
     .social-section {
