@@ -82,11 +82,11 @@ $badge-bg: #D7F2FE;
   @include elevation-shadow;
   
   @media (max-width: 960px) {
-    top: 2rem;
+    top: 1rem;
   }
   
   @media (max-width: 768px) {
-    top: 1rem;
+    top: 0.5rem;
     font-size: 0.65rem;
     padding: 3px 6px;
   }
@@ -120,11 +120,40 @@ $badge-bg: #D7F2FE;
     flex-direction: column;
     gap: 2rem;
     padding: 1rem;
+    margin-top: 15%;
   }
   
   @media (max-width: 768px) {
     gap: 1.5rem;
     padding: 0.5rem;
+    margin: 15% 0 10% 0;
+  }
+  @media (max-width: 600px){
+    gap: 1.5rem;
+    padding: 0.5rem;
+    margin: 25% 0 20% 0;
+  }
+}
+
+.brokers-title {
+  position: absolute;
+  top: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #133f5e;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  text-wrap: nowrap;
+  
+  @media (max-width: 960px) {
+    top: 4rem;
+    font-size: 1.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    top: 3rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -290,7 +319,6 @@ $badge-bg: #D7F2FE;
   }
 }
 
-// Side cards - now positioned to peek behind main card with always visible effect
 .side-card {
   position: absolute;
   width: 509px;
@@ -304,14 +332,9 @@ $badge-bg: #D7F2FE;
   opacity: 0.85; 
 
  @media (max-width: 960px) {
-    position: relative;
-    width: 300px;
-    height: 250px;
-    padding: 1.5rem;
-    opacity: 1;
-  }
+  display: none;
+ }
 
-  
   @media (max-width: 768px) {
     width: 100%;
     height: 200px;
@@ -477,12 +500,11 @@ $badge-bg: #D7F2FE;
 
     @media (max-width: 960px) {
       bottom: 35px;
-      height: 12px;
     }
     
     @media (max-width: 768px) {
       bottom: 25px;
-      height: 10px;
+      padding-top: 20px;
     }
   }
 
@@ -540,7 +562,7 @@ $badge-bg: #D7F2FE;
 
       &:hover {
         opacity: 0.6;
-        transform: scale(1.05);  // Add hover scale effect
+        transform: scale(1.05); 
       }
     }
 
@@ -573,6 +595,7 @@ $badge-bg: #D7F2FE;
     
   }
   }
+  
 // Animations
 @keyframes fadeInSlide {
   from {

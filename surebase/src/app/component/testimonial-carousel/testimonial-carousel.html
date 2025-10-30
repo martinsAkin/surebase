@@ -1,23 +1,15 @@
 <!-- testimonial-carousel.html -->
 <div class="carousel-container" (mouseenter)="stopAutoSlide()" (mouseleave)="startAutoSlide()">
   <!-- Powered by Surebase Badge -->
-   <!-- <div style="display: flex; flex-direction: column-; align-items: center;"> -->
-      <div class="powered-badge">
-        <div class="surebase-logo">
-          <img src="assets/LOGO.svg" alt="Surebase Logo" />
-        </div>
-        <span>Powered by Surebase</span>
-
-      </div>
-      <h1 style="
-      width: max-content;
-      position: absolute;
-      top: 5rem;
-      left: 33%;
-      color: #133f5e;
-      font-family: 'Space Grotesk', sans-serif;
-      ">What Other Brokers are Saying?</h1>
-    <!-- </div> -->
+  <!-- <div style="display: flex; flex-direction: column-; align-items: center;"> -->
+  <div class="powered-badge">
+    <div class="surebase-logo">
+      <img src="assets/LOGO.svg" alt="Surebase Logo" />
+    </div>
+    <span>Powered by Surebase</span>
+  </div>
+  <h1 class="brokers-title">What Other Brokers are Saying?</h1>
+  <!-- </div> -->
 
   <!-- Card Stack Container -->
   <div class="cards-stack" [attr.data-slide]="currentSlide">
