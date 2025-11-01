@@ -1,18 +1,179 @@
-<!-- src/app/pages/login/login.component.html -->
+<div class="auth-shell">
+  <div class="auth-card">
+    
+    <section class="panel-left">
+      <div class="card">
+        
+<div class="mobile-topbar">
+  <img class="top-logo" src="assets/Surebase-Logo.png" alt="Surebase" />
+
+  <button class="hamburger" type="button" aria-label="Open menu">
+    
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="3" y1="6" x2="21" y2="6"/>
+      <line x1="3" y1="12" x2="21" y2="12"/>
+      <line x1="3" y1="18" x2="21" y2="18"/>
+    </svg>
+  </button>
+</div>
+
+        <img class="brand" src="assets/Surebase-Logo.png" alt="Surebase Logo" />
+        <h1 class="title">Log into your Surebase Account</h1>
+
+        <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+          
+          <label class="field">
+            <span class="label">Email Address</span>
+            <div class="input-wrap">
+              <span class="icon-left" aria-hidden="true">
+                
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14.17 17.08H5.83C3.33 17.08 1.67 15.83 1.67 12.92V7.08C1.67 4.17 3.33 2.92 5.83 2.92H14.17C16.67 2.92 18.33 4.17 18.33 7.08V12.92C18.33 15.83 16.67 17.08 14.17 17.08Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M14.17 7.5L11.56 9.58C10.7 10.27 9.29 10.27 8.43 9.58L5.83 7.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <input
+                type="email"
+                formControlName="email"
+                placeholder="info@surebase.it"
+                [class.invalid]="f['email'].touched && f['email'].invalid"
+              />
+            </div>
+            <small class="error" *ngIf="f['email'].touched && f['email'].errors?.['required']">Email is required.</small>
+            <small class="error" *ngIf="f['email'].touched && f['email'].errors?.['email']">Enter a valid email.</small>
+          </label>
+
+        
+          <label class="field">
+            <span class="label">Password</span>
+            <div class="password-wrap">
+              <span class="icon-left" aria-hidden="true">
+                
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 8.33V6.67C5 3.91 5.83 1.67 10 1.67C14.17 1.67 15 3.91 15 6.67V8.33" stroke="#44474B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M14.17 18.33H5.83C2.5 18.33 1.67 17.5 1.67 14.17V12.5C1.67 9.17 2.5 8.33 5.83 8.33H14.17C17.5 8.33 18.33 9.17 18.33 12.5V14.17C18.33 17.5 17.5 18.33 14.17 18.33Z" stroke="#44474B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+              <input
+                [type]="showPassword ? 'text' : 'password'"
+                formControlName="password"
+                placeholder="********"
+                [class.invalid]="f['password'].touched && f['password'].invalid"
+              />
+              <button
+                type="button"
+                class="eye-btn"
+                (click)="showPassword = !showPassword"
+                [attr.aria-label]="showPassword ? 'Hide password' : 'Show password'">
+                <ng-container *ngIf="!showPassword; else eyeOff">
+                  
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                  </svg>
+                </ng-container>
+                <ng-template #eyeOff>
+                  
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                       stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M17.94 17.94A10.94 10.94 0 0 1 12 20C5.73 20 1.05 13.78 1 12a21.77 21.77 0 0 1 5.06-5.94"/>
+                    <path d="M1 1l22 22"/>
+                  </svg>
+                </ng-template>
+              </button>
+            </div>
+            <small class="error" *ngIf="f['password'].touched && f['password'].errors?.['required']">Password is required.</small>
+            <small class="error" *ngIf="f['password'].touched && f['password'].errors?.['minlength']">Minimum 6 characters.</small>
+          </label>
+
+          
+          <div class="row between">
+            <a class="link subtle" routerLink="/forgot">Forgot Password</a>
+          </div>
+
+        
+          <button class="btn primary" type="submit" [disabled]="submitting">
+            {{ submitting ? 'Logging in…' : 'Log In' }}
+          </button>
+
+          
+          <p class="muted">
+            Don’t have an account?
+            <a class="link" routerLink="/signup">Create Account</a>
+          </p>
+        </form>
+      </div>
+    </section>
+
+    
+    <aside class="right-panel">
+      <div class="content">
+        <h3>Why Surebase?</h3>
+
+        <div class="feature">
+          <img src="assets/server.png" alt="" />
+          <div>
+            <h4>Unified Access</h4>
+            <p>Connect once for vast insurance inventory and broad distribution. Our single API endpoint simplifies access to thousands of products.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <img src="assets/blockchain.png" alt="" />
+          <div>
+            <h4>Unwavering Reliability</h4>
+            <p>Experience 99.99% uptime and a robust infrastructure built for scale. Surebase ensures your operations are always on, always performing.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <img src="assets/justice.png" alt="" />
+          <div>
+            <h4>Simplified Compliance</h4>
+            <p>Navigate complex regulations with ease. Our platform ensures NAICOM, NDPR, and GDPR adherence.</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <img src="assets/stock.png" alt="" />
+          <div>
+            <h4>Accelerated Growth</h4>
+            <p>Digitize your offerings, expand your market reach, and streamline workflows. Boost sales and enhance efficiency through digital tools.</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
 <div class="auth-layout">
-  <!-- Left: Form Card -->
   <section class="panel-left">
     <div class="card">
       <img class="brand" src="assets/Surebase-Logo.png" alt="Surebase Logo" />
       <h1 class="title">Log into your Surebase Account</h1>
 
       <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
-        <!-- Email Field -->
+        
       <label class="field">
   <span class="label">Email Address</span>
 
   <div class="input-wrap">
-    <!-- Left icon (your SVG) -->
+    
     <span class="icon-left" aria-hidden="true">
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
            xmlns="http://www.w3.org/2000/svg">
@@ -39,12 +200,12 @@
   </small>
 </label>
 
-        <!-- Password Field -->
+    
         <label class="field">
   <span class="label">Password</span>
 
   <div class="password-wrap">
-    <!-- left padlock -->
+    
 
     <span class="icon-left" aria-hidden="true">
     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -64,14 +225,14 @@
       [class.invalid]="f['password'].touched && f['password'].invalid"
     />
 
-    <!-- right eye (outlined) -->
+    
     <button
   type="button"
   class="eye-btn"
   (click)="showPassword = !showPassword"
   [attr.aria-label]="showPassword ? 'Hide password' : 'Show password'">
   <ng-container *ngIf="showPassword; else eyeOpen">
-    <!-- Eye OFF -->
+    
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M17.94 17.94A10.94 10.94 0 0 1 12 20C5.73 20 1.05 13.78 1 12a21.77 21.77 0 0 1 5.06-5.94"/>
@@ -81,7 +242,7 @@
     </svg>
   </ng-container>
   <ng-template #eyeOpen>
-    <!-- Eye ON -->
+    
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
       <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/>
@@ -101,17 +262,17 @@
 </label>
 
 
-        <!-- Forgot Password -->
+    
         <div class="row between">
           <a class="link subtle" href="#">Forgot Password</a>
         </div>
 
-        <!-- Submit Button -->
+    
         <button class="btn primary" type="submit" [disabled]="submitting">
           {{ submitting ? 'Logging in…' : 'Log In' }}
         </button>
 
-        <!-- Create Account -->
+    
         <p class="muted">
           Don’t have an account?
           <a class="link" routerLink="/signup">Create Account</a>
@@ -120,6 +281,6 @@
     </div>
   </section>
 
-  <!-- Right: Full Image Panel -->
+
   <aside class="panel-right"></aside>
-</div>
+</div> -->

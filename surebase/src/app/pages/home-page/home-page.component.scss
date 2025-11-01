@@ -503,11 +503,11 @@ $radius: 16px;
   }
 
   .band-left .feature-list {
-    gap: 12px;
+    gap: 20px;
   }
   .band-left .feature-list li {
     grid-template-columns: 56px 1fr;
-    gap: 12px;
+    gap: 20px;
   }
   .band-left .feature-list li img {
     width: 76px;
@@ -519,17 +519,16 @@ $radius: 16px;
   .band-left .feature-list li p {
     margin: 0;
     padding: 10px;
-
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 11px;
+    line-height: 13px;
     color: #334155;
   }
   .band-left .feature-list li span {
     margin: 0;
     padding: 10px;
     padding-top: 0px;
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 11px;
+    line-height: 13px;
     color: #334155;
   }
 
