@@ -1,13 +1,12 @@
 .footer {
-  background: linear-gradient(180deg, #111B36 0%, #365073 168.81%);
-  padding: 60px 32px 10px;
+  background: linear-gradient(180deg, #111b36 0%, #365073 168.81%);
+  padding: 2.5rem 5rem;
 
   .footer__content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 80px;
-    max-width: 1200px;
     margin: 0 auto;
   }
 
@@ -15,7 +14,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    max-width: 200px;
+    max-width: 250px;
 
     .footer__logo {
       width: 140px;
@@ -66,7 +65,8 @@
       color: #ffffff;
     }
 
-    a, p {
+    a,
+    p {
       font-family: 'Montserrat', sans-serif;
       font-weight: 500;
       font-size: 13px;
@@ -100,7 +100,7 @@
   .footer {
     padding: 50px 24px;
   }
-  
+
   .footer .footer__content {
     flex-wrap: wrap;
     gap: 50px;
@@ -112,7 +112,7 @@
   .footer {
     padding: 40px 20px;
   }
-  
+
   .footer .footer__content {
     flex-direction: column;
     // align-items: flex-start;
@@ -141,11 +141,11 @@
   .footer {
     padding: 30px 16px;
   }
-  
+
   .footer .footer__content {
     gap: 25px;
   }
-  
+
   .footer .footer__bottom {
     margin-top: 25px;
     font-size: 11px;

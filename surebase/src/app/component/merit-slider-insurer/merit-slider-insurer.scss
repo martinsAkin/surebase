@@ -1,33 +1,31 @@
-.carousel-wrapper{
+.carousel-wrapper {
   width: 85rem;
   overflow: hidden;
   position: relative;
   min-height: 350px;
   margin-left: 5rem;
+  margin-top: 2rem;
 
-  .carousel-track{
+  .carousel-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: max-content;
-    margin-left: 10rem;
-    padding-left: 5rem;
   }
 
   .card {
     flex: 0 0 auto;
     height: 300px;
-    width: 700px;
+    width: 850px;
     margin-right: 50px;
     box-sizing: border-box;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
-    
 
     .text {
       width: 450px;
-      margin-left: 1rem;
+      margin-left: 1.5rem;
       text-align: left;
 
       h3 {
@@ -36,37 +34,35 @@
       }
 
       p {
-        font-size: 16px;  
+        font-size: 16px;
       }
     }
 
-    .image-container{
+    .image-container {
       width: 20rem;
       height: 18rem;
 
-      img{
+      img {
         width: 100%;
         height: 100%;
       }
     }
   }
 
-  .main-pagination-div{
-    display: flex; 
-    gap: 1.5rem; 
-    justify-content: center; 
+  .main-pagination-div {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
     margin-top: 2rem;
 
-      .pagination-div{
-      width: 3.5rem;  
+    .pagination-div {
+      width: 3.5rem;
       height: 0.5rem;
       border-radius: 20px;
       transition: background-color 0.3s ease;
     }
   }
-
 }
-
 
 @media (max-width: 760px) {
   .carousel-wrapper {
@@ -96,7 +92,7 @@
       box-sizing: border-box;
       padding: 1.5rem;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       display: flex;
       align-items: center;
       margin: 0 auto;
@@ -144,22 +140,21 @@
   }
 }
 
-
 @media (min-width: 767px) and (max-width: 1025px) {
- .carousel-wrapper{
+  .carousel-wrapper {
     width: 100%;
     margin: 0 auto;
     padding: 0 1rem;
     overflow: hidden;
     min-height: max-content;
 
-  .carousel-track{
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: max-content;
-    margin-left: 0;
-    padding-left: 2rem;
-  }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: max-content;
+      margin-left: 0;
+      padding-left: 2rem;
+    }
 
     .main-pagination-div {
       display: flex;
@@ -174,5 +169,5 @@
         transition: background-color 0.3s ease;
       }
     }
- } 
+  }
 }

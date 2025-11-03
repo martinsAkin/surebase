@@ -1,79 +1,77 @@
-.main{
- display: flex;
- flex-direction: row-reverse;
- gap: 5rem;
- align-items: center;
- padding: 30px 150px 0 30px;
- justify-content: center;
+.main {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 7rem;
+  align-items: center;
+  padding: 2rem 3rem;
+  justify-content: center;
 
- img{
-  height: 400px;
-  width: 500px;
- }
+  img {
+    height: 500px;
+    width: 700px;
+    margin-left: -2rem;
+  }
 }
 
-.text-heading{
- font-size: 30px;
- font-weight: bold;
- width: 500px;
- margin-bottom: 10px;
- background: #D7F2FE;
- font-family: "Space Grotesk", sans-serif;
-
+.text-heading {
+  font-size: 30px;
+  font-weight: bold;
+  width: 550px;
+  margin-bottom: 10px;
+  background: #d7f2fe;
+  font-family: 'Space Grotesk', sans-serif;
 }
-.span-text{
+.span-text {
   display: inline-block;
-  width: 400px;
-  font-size: 14px;
-  line-height: 20px;
+  width: 500px;
+  font-size: 15px;
+  line-height: 25px;
 }
-
 
 @media (max-width: 760px) {
- .main{
+  .main {
     display: flex;
     flex-direction: column-reverse;
     gap: 0rem;
     align-items: center;
-    padding: 0 1rem 2rem 1.5rem;    
+    padding: 0 1rem 2rem 1.5rem;
 
-    img{
+    img {
       height: 250px;
       width: 300px;
     }
   }
-  .text-heading{
+  .text-heading {
     font-size: 18px;
     width: 335px;
   }
-  .span-text{
-  display: inline-block;
-  width: 300px;
-  font-size: 13px;
+  .span-text {
+    display: inline-block;
+    width: 300px;
+    font-size: 13px;
+  }
 }
-}
-
 
 @media (min-width: 767px) and (max-width: 1025px) {
-  .main{
+  .main {
     display: flex;
     gap: 1rem;
     align-items: center;
     padding: 1rem;
 
-    img{
+    img {
       height: 250px;
       width: 300px;
       margin-left: 2.5rem;
     }
   }
-  .text-heading{
+  .text-heading {
     font-size: 18px;
     width: 335px;
   }
-  .span-text{
-  display: inline-block;
-  width: 300px;
-  font-size: 13px;
-}
+  .span-text {
+    display: inline-block;
+    width: 300px;
+    font-size: 13px;
+  }
 }

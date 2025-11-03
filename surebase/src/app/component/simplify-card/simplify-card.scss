@@ -1,128 +1,130 @@
-*{
- margin: 0;
- padding: 0;
- outline: 0;
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
 }
 
-main{
- background: #D7F2FE;
- border-radius: 20px;
- border: none;
- display: grid;
- justify-items: center;
- position: relative;
- padding: 2.5rem;
- overflow: hidden;
- width: 80%;
- justify-self: center;
+main {
+  background: #d7f2fe;
+  border-radius: 20px;
+  border: none;
+  display: grid;
+  justify-items: center;
+  position: relative;
+  padding: 2.5rem;
+  overflow: hidden;
+  height: 20rem;
+  width: 100%;
+  justify-self: center;
+  margin: 1rem 3rem;
 
- .text-area{
-  align-items: center;
-  width: 500px;
-  text-align: center;
+  .text-area {
+    /* align-items: center; */
+    margin-top: 1.5rem;
+    width: 550px;
+    text-align: center;
 
-  h2{
-    font-family: "Space Grotesk", sans-serif;
+    h2 {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    span {
+      display: inline-block;
+      margin-top: 1rem;
+      line-height: 25px;
+    }
   }
- }
 
- img{
-  position: absolute;
-  width: 200px;
- }
- .img-bottom-left{
-  bottom: 0;
-  left: 0;
-  transform: rotate(180deg);
- }
- .img-top-right{
-  top: 0;
-  right: 0;
- }
+  img {
+    position: absolute;
+    width: 200px;
+  }
+  .img-bottom-left {
+    bottom: 0;
+    left: 0;
+    transform: rotate(180deg);
+  }
+  .img-top-right {
+    top: 0;
+    right: 0;
+  }
 }
 
- .input-getStarted{
-   margin: 1.5rem 0 0 1.5rem;
-   display: flex;
+.input-getStarted {
+  margin: 1.5rem 0 0 1.5rem;
+  display: flex;
 
-   input{
-     padding: 8px 5px;
-     width: 70%;
-     border: none;
-     border-radius: 5px 0 0 5px;
-     background: white;
-    }
+  input {
+    padding: 8px 5px;
+    width: 70%;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    background: white;
   }
-    .get-started-email{
-     padding: 5px 10px;
-     border: none;
-     border-radius: 0 5px 5px 0;
-     background: #38BA5C;
-    }
-
-
+}
+.get-started-email {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background: #38ba5c;
+}
 
 @media (max-width: 760px) {
-    main{
-      padding: 1rem;
-      width: max-content;
-      height: 250px;
+  main {
+    padding: 1rem;
+    width: max-content;
+    height: 250px;
 
+    .text-area {
+      align-items: center;
+      text-align: center;
+      font-size: 13px;
+      padding: 1.5rem 0;
+      width: 300px;
 
-      .text-area{
-        align-items: center;
-        text-align: center;
-        font-size: 13px;
-        padding: 1.5rem 0;
-        width: 300px;
-
-        h2{
-          font-size: medium; 
-        }
+      h2 {
+        font-size: medium;
       }
+    }
 
-      img{
-        position: absolute;
-        width: 35px;
-      }
+    img {
+      position: absolute;
+      width: 35px;
+    }
   }
 
-  .input-getStarted{
-
-   input{
-     width: 65%;
+  .input-getStarted {
+    input {
+      width: 65%;
     }
   }
 }
 
-
 @media (min-width: 767px) and (max-width: 1025px) {
-  main{
- background: #D7F2FE;
- border-radius: 20px;
- border: none;
- display: grid;
- justify-items: center;
- position: relative;
- padding: 2.5rem;
- overflow: hidden;
- width: 650px;
- justify-self: center;
+  main {
+    background: #d7f2fe;
+    border-radius: 20px;
+    border: none;
+    display: grid;
+    justify-items: center;
+    position: relative;
+    padding: 2.5rem;
+    overflow: hidden;
+    width: 650px;
+    justify-self: center;
 
- .text-area{
-  align-items: center;
-  width: 500px;
-  text-align: center;
+    .text-area {
+      align-items: center;
+      width: 500px;
+      text-align: center;
 
-  h2{
-    font-family: "Space Grotesk", sans-serif;
+      h2 {
+        font-family: 'Space Grotesk', sans-serif;
+      }
+    }
+
+    img {
+      position: absolute;
+      width: 100px;
+    }
   }
- }
-
- img{
-  position: absolute;
-  width: 100px;
- }
- 
-}
 }
