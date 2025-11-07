@@ -10,11 +10,20 @@ import { CommonModule } from '@angular/common';
 })
 export class Headbar {
     isProductOffering = false;
+    isDevelopers = false;
 
     toggeleProductOffering(){
       this.isProductOffering = !this.isProductOffering
+      this.isDevelopers = false;
     }
+
+    toggleDevelopers() {
+  this.isDevelopers = !this.isDevelopers;
+  this.isProductOffering = false; 
+   }
+
     closeProductOffering(){
+      this.isDevelopers = false;
       this.isProductOffering = false;
     }
 
