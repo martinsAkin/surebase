@@ -1,20 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-.auth-shell {
-  background: #1f2937;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-}
+// .auth-shell {
+//   background: #1f2937;
+//   min-height: 100vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   padding: 24px;
+// }
 
 .auth-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: min(1200px, 96vw);
-  height: 900px;
-  border-radius: 14px;
+  width: 100%;
+  height: 920px;
+  
   overflow: hidden;
   background: #fff;
   box-shadow: 0 10px 30px rgba(0,0,0,.25);
@@ -32,7 +32,8 @@
 
 .card {
   width: 100%;
-  max-width: 420px;
+  max-width: 550px;
+ 
 }
 
 .brand {
@@ -240,6 +241,7 @@ input.invalid {
     background: url("/assets/world.png") no-repeat bottom center / contain;
     opacity: 1;
     pointer-events: none;
+    width: 100%;
   }
 
   .content {
@@ -247,6 +249,7 @@ input.invalid {
     z-index: 1;
     width: 100%;
     max-width: 660px;
+    
 
     h3 {
       font-weight: 700;
@@ -453,7 +456,7 @@ input.invalid {
 
 
 .panel-left { display:flex; align-items:center; justify-content:center; }
-.card       { width: 100%; max-width: 420px; }
+.card       { width: 100%; max-width: 550px; }
 
 
 .signup-art {
@@ -653,7 +656,7 @@ input.invalid {
     content: "";
     position: absolute;
     inset: auto 0 0 0;
-    height: 50%;
+    height: 53%;
     background: url("/assets/world.png") no-repeat bottom center / contain;
     opacity: 1;
     pointer-events: none;
@@ -663,7 +666,7 @@ input.invalid {
     position: relative;
     z-index: 1;
     width: 100%;
-    max-width: 660px;
+    max-width: 760px;
 
     h3 {
       font-weight: 700;
@@ -723,9 +726,9 @@ input.invalid {
     }
 
     > .feature p {
-      font-size: 13px;
+      font-size: 14px;
       color: #BBC0C6;
-      line-height: 20px;
+      line-height: 25px;
       font-weight: 600;
       font-family: "Montserrat", sans-serif;
       margin: 0;

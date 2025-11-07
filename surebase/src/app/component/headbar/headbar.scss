@@ -1,3 +1,8 @@
+header {
+  background-color: #111b36;
+  width: 100%;
+}
+
 .btn {
   border: 0;
   border-radius: 999px;
@@ -27,12 +32,13 @@
   font-family: 'Montserrat', sans-serif;
 }
 .nav {
-  max-width: 100%;
-  padding: 1rem 0 0 5rem;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #111b36;
+  
 }
 .nav .logo {
   height: 40px;
@@ -47,12 +53,13 @@
 
 .nav .links a {
   white-space: nowrap;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 28px;
+  font-weight: 500;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
-  color: white;
+  color: #E5EAF0;
 
   &.active-link {
     color: #38bdf8;
@@ -66,16 +73,19 @@
 .nav .actions {
   display: flex;
   gap: 12px;
-  margin-left: 3.5rem;
+  margin-left: 14.5rem;
 }
 
 .hamburger {
   display: none;
-  background: transparent;
+  background: #fff;
   border: 0;
-  color: #cbd5e1;
+  color: #44474B;
   font-size: 20px;
   margin-left: auto;
+  width: 35px;
+  padding: 2px 0px;
+  border-radius: 5px;
 }
 
 .productOffering {
@@ -87,10 +97,14 @@
     list-style: none;
     background-color: #fbfbfb;
     border: none;
+    color: #030508;
     border-radius: 10px;
+    font-size: 14px;
     /* height: 132px; */
-    width: 183px;
-    width: max-content;
+    width: 143px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    line-height: 22px;
     z-index: 10;
 
     li {
