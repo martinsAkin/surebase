@@ -32,21 +32,21 @@ header {
   font-family: 'Montserrat', sans-serif;
 }
 .nav {
-  max-width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 1.5rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  justify-self: center;
+  
 }
 .nav .logo {
-  height: 30px;
+  height: 40px;
 }
 .nav .links {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 30px;
   color: #e5eaf0;
   margin-left: 10rem;
 }
@@ -59,7 +59,7 @@ header {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
-  color: #e5eaf0;
+  color: #E5EAF0;
 
   &.active-link {
     color: #38bdf8;
@@ -73,14 +73,14 @@ header {
 .nav .actions {
   display: flex;
   gap: 12px;
-  margin-left: 7rem;
+  margin-left: 10.5rem;
 }
 
 .hamburger {
   display: none;
   background: #fff;
   border: 0;
-  color: #44474b;
+  color: #44474B;
   font-size: 20px;
   margin-left: auto;
   width: 35px;
