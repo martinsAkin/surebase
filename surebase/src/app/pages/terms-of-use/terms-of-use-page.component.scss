@@ -88,11 +88,11 @@
 }
 
 .legal-prose {
-  max-width: 1050px;           
+  max-width: 1500px;           
   margin: 48px auto 72px;     
-  padding: 0 26px;            
+  padding: 0 96px;            
   color: #0f172a;
-  font-size: 14px;
+  font-size: 24px;
   line-height: 38px;
   letter-spacing: 0%;
   font-family: "Montserrat", sans-serif;
@@ -103,7 +103,7 @@
 }
 
 @media (max-width: 640px) {
-  .legal-prose { margin: 32px auto 56px; font-size: 15px; line-height: 1.8; }
+  .legal-prose { margin: 32px auto 56px; font-size: 15px; line-height: 1.8; padding: 20px;}
 }
 
 

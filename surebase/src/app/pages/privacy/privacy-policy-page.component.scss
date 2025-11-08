@@ -63,7 +63,7 @@
 .pill{ display:inline-block; font-size:18px; padding:2px 5px; border-radius:999px; background:#BDE9FD; color:#133F53; }
 
 .hero-inner{
-  max-width:1400px; margin:36px auto 0; padding:0 20px;
+  max-width:1400px; margin:36px auto 0; padding:0 20px; 
   display:grid; grid-template-columns: 1.1fr .9fr; gap:40px; align-items:center;
 }
 .hero-copy{ width: 500px; }
@@ -83,11 +83,11 @@
 }
 
 .legal-prose {
-  max-width: 1050px;           
+  max-width: 1500px;           
   margin: 48px auto 72px;     
-  padding: 0 26px;            
+  padding: 0 96px;            
   color: #0f172a;
-  font-size: 14px;
+  font-size: 24px;
   line-height: 38px;
   font-family: "Montserrat", sans-serif;
 }
@@ -97,7 +97,7 @@
 }
 
 @media (max-width: 640px) {
-  .legal-prose { margin: 32px auto 56px; font-size: 15px; line-height: 1.8; }
+  .legal-prose { margin: 32px auto 56px; font-size: 15px; line-height: 1.8; padding: 25px; }
 }
 
 

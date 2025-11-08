@@ -1,4 +1,5 @@
-<header class="nav">
+<header class="header-bg">
+  <div class="nav">
   <img src="assets/Surebase-logo-white.png" alt="Surebase" class="logo" />
 
   <nav class="links">
@@ -19,6 +20,19 @@
         <li routerLink="/brokers" (click)="closeProductOffering()">Broker`s Page</li>
       </ul>
     </div>
+
+    <div class="productOffering">
+  <a (click)="toggleDevelopers()" style="display: flex; align-items: center">
+    Developers
+    <img src="assets/arrow-down.png" style="width: 20px; margin-left: 0.5rem" alt="dropdown" />
+  </a>
+
+  <ul class="productOfferingOptions" *ngIf="isDevelopers">
+    <li routerLink="/docs" (click)="closeProductOffering()">API Docs</li>
+    <li routerLink="/sdk" (click)="closeProductOffering()">SDKs</li>
+  </ul>
+</div>
+
     <a
       routerLink="/contact"
       routerLinkActive="active-link"
@@ -48,5 +62,6 @@
       <li routerLink="/login" (click)="toggleMenuClose()">Log In</li>
       <li routerLink="/signup" (click)="toggleMenuClose()">Get Started</li>
     </ul>
+  </div>
   </div>
 </header>

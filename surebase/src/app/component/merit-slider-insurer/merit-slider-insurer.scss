@@ -1,5 +1,6 @@
 .carousel-wrapper {
-  width: 85rem;
+  width: 77rem;
+  /* background-color: purple; */
   overflow: hidden;
   position: relative;
   min-height: 350px;
@@ -10,6 +11,7 @@
     display: flex;
     transition: transform 0.5s ease-in-out;
     width: max-content;
+    overflow: hidden;
   }
 
   .card {
@@ -145,6 +147,7 @@
     width: 100%;
     margin: 0 auto;
     padding: 0 1rem;
+    margin-left: 3rem;
     overflow: hidden;
     min-height: max-content;
 
@@ -153,9 +156,19 @@
       transition: transform 0.5s ease-in-out;
       width: max-content;
       margin-left: 0;
-      padding-left: 2rem;
+      padding-left: 5rem;
     }
-
+    .card {
+      flex: 0 0 auto;
+      height: 300px;
+      width: 600px;
+      margin-right: 100px;
+      box-sizing: border-box;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+    }
     .main-pagination-div {
       display: flex;
       gap: 0.8rem;

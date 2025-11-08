@@ -7,14 +7,22 @@
   gap: 5%;
   margin-top: 2rem;
 
+
   .text-box {
-    width: 40%;
+    width: 50%;
     margin-left: 5rem;
+    
     h3 {
-      font-size: 30px;
+      font-size: 36px;
       color: #133f53;
       font-weight: bold;
       font-family: 'Space Grotesk', sans-serif;
+      padding-bottom: 5px;
+    }
+    span {
+       
+       font-size: 22px;
+       color: #44474B;
     }
   }
 
@@ -24,18 +32,21 @@
 
     input {
       padding: 8px 5px;
-      width: 77%;
+      width: 75%;
       border: none;
-      border-radius: 5px 0 0 5px;
+      border-radius: 10px 0 0 10px;
       background: white;
-
+      font-size: 18px;
+        
       &:focus {
         outline: none;
       }
     }
   }
   .get-started-email {
-    padding: 5px 10px;
+    padding: 15px 15px;
+    font-size: 18px;
+    color: #030508;
     border: none;
     border-radius: 0 5px 5px 0;
     background: #38ba5c;
@@ -67,6 +78,13 @@
 
       h3 {
         text-align: center;
+        font-size: 24px;
+        line-height: 30px;
+        padding: 0 20px;
+      }
+      span {
+        font-size: 14px;
+        line-height: 0px;
       }
     }
 
@@ -77,6 +95,8 @@
       input {
         padding: 8px 5px;
         width: 70%;
+        font-size: 14px;
+        line-height: 20px;
 
         &:focus {
           outline: none;
@@ -84,7 +104,10 @@
       }
     }
     .get-started-email {
-      padding: 5px;
+      padding: 10px;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 500;
     }
 
     .mobile {
