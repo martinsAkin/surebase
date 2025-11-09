@@ -932,6 +932,110 @@ input.invalid {
 }
 
 
+/* ===== 1024px (tablet / small laptop) ===== */
+@media (min-width: 901px) and (max-width: 1024px) {
+  .auth-shell {
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .auth-card {
+    max-width: 1024px;
+    height: auto;        // 🔹 important: no fixed height
+    overflow: visible;             // a bit shorter than 920px
+    margin: 0 auto;
+    grid-template-columns: 1.1fr 0.9fr; // slightly more space for the form
+  }
+
+  .panel-left {
+    padding: 32px 32px;
+  }
+
+  .card {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-size: 22px;
+    line-height: 32px;
+    margin-bottom: 18px;
+  }
+
+  .field .label {
+    font-size: 14px;
+  }
+
+  input[type='email'],
+  input[type='password'],
+  input[type='text'],
+  .input-icon input {
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .field .phone-wrap {
+    padding: 6px 10px;
+  }
+
+  .btn.primary {
+    height: 40px;
+    font-size: 15px;
+    margin-top: 10px;
+  }
+
+  .agreed {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .muted {
+    font-size: 14px;
+  }
+
+  .right-panel {
+    padding: 40px 32px;
+  }
+
+  .right-panel .content {
+    max-width: 520px;
+  }
+
+  .right-panel .content h3 {
+    font-size: 18px;
+    line-height: 12px;
+    margin-bottom: 20px;
+  }
+
+  .right-panel .content > .feature {
+    padding-left: 70px;
+    margin-bottom: 18px;
+  }
+  
+   .right-panel .content > .feature p {
+    font-size: 12px;
+    line-height: 18px;
+    color: #cfd6e3;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .right-panel .content > .feature::before {
+    width: 60px;
+    height: 60px;
+  }
+
+  .right-panel .content > .feature > img {
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+  }
+
+}
+
 
 
 

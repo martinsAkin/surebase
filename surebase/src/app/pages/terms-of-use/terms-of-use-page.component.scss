@@ -155,6 +155,7 @@
   text-align: center; color: #FFFFFF; padding: 14px 0 24px; font-size: 14px; line-height: 22px; letter-spacing: 0%; font-family: "Montserrat", sans-serif;}
 
 
+/* existing footer tablet collapse */
 @media (max-width: 1024px) {
   .footer-inner { grid-template-columns: minmax(220px, 1fr) repeat(2, 1fr); column-gap: 32px; }
 }
@@ -286,4 +287,75 @@
   .cols{ display:grid; grid-template-columns:1fr; text-align:left; }
   .cols a{ width:auto; }
   .copy{ font-size:12px; padding:12px 14px 24px; }
+}
+
+/* ===== 1024px breakpoint (tablet / small laptop) ===== */
+@media (min-width: 901px) and (max-width: 1024px) {
+  /* nav tweaks */
+  .nav {
+    max-width: 1024px;
+    padding: 14px 24px;
+  }
+
+  .nav .logo {
+    height: 32px;
+  }
+
+  .nav .links {
+    gap: 32px;
+  }
+
+  .nav .links a {
+    font-size: 16px;
+  }
+
+  /* hero layout */
+  .hero-inner {
+    max-width: 1024px;
+    margin: 28px auto 0;
+    padding: 0 32px;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .hero-copy {
+    width: auto;
+  }
+
+  .hero-copy h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .hero-copy p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .pill {
+    font-size: 14px;
+    padding: 4px 10px;
+  }
+
+  .hero-art img {
+    width: 90%;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  /* legal content */
+  .legal-prose {
+    max-width: 1024px;
+    margin: 40px auto 64px;
+    padding: 0 60px;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  /* footer tightened for 1024 */
+  .footer-inner {
+    max-width: 1024px;
+    grid-template-columns: minmax(220px, 1fr) repeat(3, minmax(140px, 1fr));
+    column-gap: 40px;
+  }
 }
