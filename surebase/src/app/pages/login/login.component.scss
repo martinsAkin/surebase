@@ -517,6 +517,91 @@ form { display: grid; gap: 16px; }
   }
 }
 
+/* ================================
+   Auth page: 1200px–1420px
+   ================================ */
+@media (min-width: 1200px) and (max-width: 1420px) {
+  .auth-card {
+    max-width: 1240px;     /* keeps things tight on wide laptops */
+    margin: 36px auto;
+    height: 860px;         /* a bit shorter than 920 for nicer balance */
+    grid-template-columns: 1.08fr 0.92fr; /* favor the form a bit */
+    border-radius: 14px;
+  }
+
+  /* Left/form side */
+  .panel-left {
+    padding: 48px 40px;
+    background: #f8fafc;
+  }
+  .card { max-width: 520px; }
+  .brand { height: 32px; margin-bottom: 20px; }
+  .title { font: 700 22px/28px "Montserrat", sans-serif; margin-bottom: 20px; }
+
+  .field .label { font-size: 14px; }
+  .input-wrap input,
+  .password-wrap input {
+    height: 46px;
+    font-size: 14px;
+    padding-left: 40px;    /* space for icon-left */
+    padding-right: 46px;   /* space for eye-btn */
+  }
+  .icon-left { left: 12px; }
+  .eye-btn { right: 8px; }
+
+  .btn.primary {
+    height: 46px;
+    font-size: 16px;
+    margin-top: 6px;
+  }
+  .muted { font-size: 14px; }
+
+  /* Right/features panel */
+  .right-panel {
+    padding: 48px 40px;
+    background: radial-gradient(1200px 500px at 70% -100px, #1a2b56, #0b1330);
+  }
+  .right-panel::after {
+    height: 50%; /* world map size tuned for this width band */
+  }
+
+  .right-panel .content {
+    max-width: 600px;
+  }
+  .right-panel .content h3 {
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 22px;
+  }
+
+  .right-panel .content > .feature {
+    padding-left: 76px;
+    margin-bottom: 18px;
+    min-height: 60px;
+  }
+  .right-panel .content > .feature::before {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+  }
+  .right-panel .content > .feature > img {
+    width: 60px;
+    height: 60px;
+    left: 0;
+    top: 0;
+  }
+  .right-panel .content > .feature h4 {
+    font-size: 16px;
+  }
+  .right-panel .content > .feature p {
+    font-size: 13.5px;
+    line-height: 22px;
+  }
+
+  /* Hide mobile topbar in this band */
+  .mobile-topbar { display: none; }
+}
+
 
 
 

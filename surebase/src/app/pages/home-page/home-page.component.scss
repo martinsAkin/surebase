@@ -1976,3 +1976,161 @@ $radius: 16px;
     column-gap: 40px;
   }
 }
+
+
+/* =========================
+   Wide screens: 1200–1420px
+   ========================= */
+@media (min-width: 1200px) and (max-width: 1420px) {
+  /* Global container */
+  .container {
+    max-width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* ===== HERO ===== */
+  .hero .container {
+    padding-top: 72px;
+    padding-bottom: 64px;
+  }
+
+  .hero .hero-grid {
+    grid-template-columns: 50% 50%;
+    gap: 28px;
+  }
+
+  .hero .hero-copy h1 {
+    font-size: 46px;
+    line-height: 60px;
+  }
+  .hero .hero-copy p {
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 52ch;
+    padding: 16px 0;
+  }
+  .hero .hero-form {
+    max-width: 560px;
+  }
+  .hero .hero-art img {
+    max-width: 640px;
+    width: clamp(520px, 44vw, 640px);
+    transform: translateX(20px);
+  }
+
+  /* ===== FOUNDATION BAND ===== */
+  .band.band-foundation .band-grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 32px;
+  }
+  .band-left h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .band-left .feature-list li img {
+    width: 120px;
+    height: 120px;
+  }
+  .band-left .feature-list li p,
+  .band-left .feature-list li span {
+    font-size: 18px;
+    line-height: 28px;
+    margin-left: 48px;
+  }
+  .card {
+    max-width: 520px;
+  }
+  .card-header {
+    height: 400px;
+  }
+
+  /* ===== INTEGRATION BAND ===== */
+  .band.band-integration .integration-grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 32px;
+  }
+  .band.band-integration .integration-left h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .band.band-integration .integration-left .lede {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .band.band-integration .art-wrap img {
+    width: min(520px, 95%);
+  }
+  .band.band-integration .benefit-grid {
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    gap: 18px;
+  }
+  .band.band-integration .benefit .copy h3 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .band.band-integration .benefit .copy p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  /* ===== OPPORTUNITY BAND ===== */
+  .band.band-opportunity .op-grid {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 32px;
+  }
+  .band.band-opportunity .op-left h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .band.band-opportunity .op-left .lede {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .band.band-opportunity .op-right img {
+    width: min(560px, 100%);
+  }
+
+  /* ===== FAQ BAND ===== */
+  .band.band-faq .faq-grid {
+    grid-template-columns: 1fr 1.3fr;
+    gap: 32px;
+  }
+  .band.band-faq .faq-left h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .band.band-faq .faq-right .item .q span {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .band.band-faq .faq-right .item .a p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  /* ===== CTA BAND ===== */
+  .band.band-cta .cta-card {
+    padding: 64px 48px;
+  }
+  .band.band-cta .cta-card .cta-copy h3 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .band.band-cta .cta-card .cta-copy p {
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .band.band-cta .cta-card .deco {
+    width: 180px;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer-inner {
+    max-width: 1200px;
+    column-gap: 40px;
+  }
+  .cols a {
+    width: auto; /* prevent overflow at this width */
+  }
+}

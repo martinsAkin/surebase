@@ -1036,6 +1036,90 @@ input.invalid {
 
 }
 
+/* =========================================
+   Signup page: 1200px–1420px wide laptops
+   ========================================= */
+@media (min-width: 1200px) and (max-width: 1420px) {
+  .auth-shell { padding: 24px; }
+
+  .auth-card {
+    max-width: 1240px;
+    margin: 36px auto;
+    height: 860px;                       /* a bit shorter for nicer balance */
+    grid-template-columns: 1.08fr 0.92fr;/* favor the form slightly */
+    border-radius: 14px;
+    overflow: hidden;
+  }
+
+  /* Left/form side */
+  .panel-left { padding: 48px 40px; background: #f8fafc; }
+  .card { max-width: 520px; margin: 0 auto; }
+  .brand { height: 32px; margin-bottom: 20px; }
+  .title { font-size: 24px; line-height: 32px; margin-bottom: 20px; }
+
+  .field .label { font-size: 14px; }
+
+  /* Inputs + icons */
+  .input-icon input,
+  input[type='email'],
+  input[type='password'],
+  input[type='text'] {
+    height: 46px;
+    font-size: 14px;
+  }
+  .input-icon input { padding-left: 44px; }  /* room for .icon-left */
+  .icon-left { left: 12px; }
+
+  /* Phone composite */
+  .phone-wrap { grid-template-columns: 110px 1fr; gap: 10px; }
+  .phone-wrap select,
+  .phone-wrap input { height: 46px; font-size: 14px; }
+
+  /* Password reveal */
+  .password-wrap input { padding-left: 40px; padding-right: 46px; }
+  .eye-btn { right: 8px; }
+
+  /* Radios */
+  .radios { gap: 12px; }
+  .radio .title { font-size: 15px; }
+  .radio .desc { font-size: 13px; line-height: 21px; }
+
+  /* Buttons / meta */
+  .btn.primary { height: 46px; font-size: 16px; margin-top: 8px; }
+  .agreed { font-size: 13px; line-height: 20px; }
+  .muted { font-size: 14px; }
+
+  /* Right/features panel */
+  .right-panel {
+    padding: 48px 40px;
+    background: radial-gradient(1200px 500px at 70% -100px, #1a2b56, #0b1330);
+  }
+  .right-panel::after { height: 50%; }     /* world map sizing for this band */
+
+  .right-panel .content { max-width: 600px; }
+  .right-panel .content h3 {
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 22px;
+  }
+
+  .right-panel .content > .feature {
+    padding-left: 76px;                    /* icon tile */
+    min-height: 60px;
+    margin-bottom: 18px;
+  }
+  .right-panel .content > .feature::before {
+    width: 60px; height: 60px; border-radius: 10px;
+  }
+  .right-panel .content > .feature > img {
+    width: 60px; height: 60px; left: 0; top: 0;
+  }
+  .right-panel .content > .feature h4 { font-size: 16px; }
+  .right-panel .content > .feature p  { font-size: 13.5px; line-height: 22px; }
+
+  /* Hide the mobile topbar in this band */
+  .mobile-topbar { display: none; }
+}
 
 
 
