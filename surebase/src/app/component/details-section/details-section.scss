@@ -2,7 +2,7 @@ section {
   text-align: center;
   background: #d7f2fe;
   padding: 3rem 0;
-  
+
   .h1 {
     font-family: 'Space Grotesk', sans-serif;
     color: #133f53;
@@ -141,57 +141,58 @@ main {
       text-align: left;
     }
 
-  main {
-    flex-direction: column;
-    padding: 0;
-    width: 100%;
-
-    .who-surebase-serves {
-      background: #d7f1de;
-      width: max-content;
-      border: none;
-      border-radius: 20px;
-      padding: 0.5rem;
-      box-shadow: 1px 1px 3.5px grey;
-      display: flex;
-      align-items: center;
-      font-size: 13px;
-      gap: 5px;
-      font-weight: 500;
-      margin: 0 auto;
-
-      img {
-        height: 15px;
-        width: 15px;
-      }
-    }
-
-    .detail-item {
-      display: flex;
+    main {
       flex-direction: column;
-      gap: 1rem;
-      align-items: center;
-      margin-right: 0px;
+      padding: 0;
+      width: 100%;
 
-      img {
-        height: 150px;
-        width: 177px;
+      .who-surebase-serves {
+        background: #d7f1de;
+        width: max-content;
+        border: none;
+        border-radius: 20px;
+        padding: 0.5rem;
+        box-shadow: 1px 1px 3.5px grey;
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+        gap: 5px;
+        font-weight: 500;
+        margin: 0 auto;
+
+        img {
+          height: 15px;
+          width: 15px;
+        }
       }
 
-      div {
-        width: 100%;
-        text-align: center;
+      .detail-item {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        margin-right: 0px;
 
-        h2 {
-          font-size: 16px;
-          margin-bottom: 0.5rem;
-          color: #133F53;
+        img {
+          height: 150px;
+          width: 177px;
         }
 
-        span {
-          font-size: 12px;
-          line-height: 24px;
-          color: #030508;
+        div {
+          width: 100%;
+          text-align: center;
+
+          h2 {
+            font-size: 16px;
+            margin-bottom: 0.5rem;
+            color: #133f53;
+          }
+
+          span {
+            font-size: 12px;
+            line-height: 24px;
+            color: #030508;
+          }
         }
       }
     }
