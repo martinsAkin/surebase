@@ -7,8 +7,7 @@
     flex-direction: row;
     justify-content: space-between;
     gap: 80px;
-    width: 1400px;
-    margin: 0 auto;
+    width: max-content;
   }
 
   .footer__brand {
@@ -145,10 +144,10 @@
     padding: 50px 24px;
   }
 
-  .footer .footer__content {
+  .footer__content {
     flex-wrap: wrap;
     gap: 50px;
-    max-width: 1000px;
+    max-width: 100%;
   }
 }
 

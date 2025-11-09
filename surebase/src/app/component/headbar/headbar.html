@@ -1,67 +1,150 @@
 <header class="header-bg">
   <div class="nav">
-  <img src="assets/Surebase-logo-white.png" alt="Surebase" class="logo" />
+    <img src="assets/Surebase-logo-white.png" alt="Surebase" class="logo" />
 
-  <nav class="links">
-    <a
-      routerLink="/about"
-      routerLinkActive="active-link"
-      [routerLinkActiveOptions]="{ exact: true }"
-      >About Us</a
-    >
-    <div class="productOffering">
-      <a (click)="toggeleProductOffering()" style="display: flex; align-items: center">
-        Product Offerings
-        <img src="assets/arrow-down.png" style="width: 20px; margin-left: 0.5rem" alt="dropdown" />
+    <nav class="links">
+      <a
+        routerLink="/about"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >About Us</a
+      >
+      <div class="productOffering">
+        <a (click)="toggeleProductOffering()" style="display: flex; align-items: center">
+          Product Offerings
+          <img
+            src="assets/arrow-down.png"
+            style="width: 20px; margin-left: 0.5rem"
+            alt="dropdown"
+          />
+        </a>
+
+        <ul class="productOfferingOptions" *ngIf="isProductOffering">
+          <li routerLink="/insurers" (click)="closeProductOffering()">Insurer`s Page</li>
+          <li routerLink="/brokers" (click)="closeProductOffering()">Broker`s Page</li>
+        </ul>
+      </div>
+
+      <div class="productOffering">
+        <a (click)="toggleDevelopers()" style="display: flex; align-items: center">
+          Developers
+          <img
+            src="assets/arrow-down.png"
+            style="width: 20px; margin-left: 0.5rem"
+            alt="dropdown"
+          />
+        </a>
+
+        <ul class="productOfferingOptions" *ngIf="isDevelopers">
+          <li routerLink="/docs" (click)="closeProductOffering()">API Docs</li>
+          <li routerLink="/sdk" (click)="closeProductOffering()">SDKs</li>
+        </ul>
+      </div>
+
+      <a
+        routerLink="/contact"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Contact Us</a
+      >
+    </nav>
+
+    <div class="actions wider-screens">
+      <a routerLink="/login">
+        <button class="btn ghost">Log In</button>
       </a>
-
-      <ul class="productOfferingOptions" *ngIf="isProductOffering">
-        <li routerLink="/insurers" (click)="closeProductOffering()">Insurer`s Page</li>
-        <li routerLink="/brokers" (click)="closeProductOffering()">Broker`s Page</li>
-      </ul>
+      <a routerLink="/signup">
+        <button class="btn primarys">Get Started</button>
+      </a>
     </div>
 
-    <div class="productOffering">
-  <a (click)="toggleDevelopers()" style="display: flex; align-items: center">
-    Developers
-    <img src="assets/arrow-down.png" style="width: 20px; margin-left: 0.5rem" alt="dropdown" />
-  </a>
+    <div class="mobile-menu">
+      <button class="hamburger" (click)="toggleMenuOpen()">
+        <span aria-label="menu" *ngIf="!isMenuOpen">☰</span>
+        <span aria-label="cancel" *ngIf="isMenuOpen">X</span>
+      </button>
 
-  <ul class="productOfferingOptions" *ngIf="isDevelopers">
-    <li routerLink="/docs" (click)="closeProductOffering()">API Docs</li>
-    <li routerLink="/sdk" (click)="closeProductOffering()">SDKs</li>
-  </ul>
-</div>
+      <div *ngIf="isMenuOpen" class="mobile-menu-list">
+        <a routerLink="/home" (click)="toggleMenuClose()">Home</a>
+        <a routerLink="/about" (click)="toggleMenuClose()">About Us</a>
+        <div>
+          <a (click)="toggeleProductOffering()" style="display: flex; align-items: center">
+            Product Offerings
+            <img
+              src="assets/arrow-down.png"
+              style="width: 20px; margin-left: 0.5rem"
+              alt="dropdown"
+            />
+          </a>
 
-    <a
-      routerLink="/contact"
-      routerLinkActive="active-link"
-      [routerLinkActiveOptions]="{ exact: true }"
-      >Contact Us</a
-    >
-  </nav>
+          <ul class="productOfferingOptions" *ngIf="isProductOffering">
+            <a routerLink="/insurers" (click)="closeProductOffering()" (click)="toggleMenuClose()"
+              >Insurer`s Page</a
+            >
+            <a routerLink="/brokers" (click)="closeProductOffering()" (click)="toggleMenuClose()"
+              >Broker`s Page</a
+            >
+          </ul>
+        </div>
 
-  <div class="actions">
-    <a routerLink="/login">
-      <button class="btn ghost">Log In</button>
-    </a>
-    <a routerLink="/signup">
-      <button class="btn primarys">Get Started</button>
-    </a>
-  </div>
+        <a routerLink="/contact" (click)="toggleMenuClose()">Contact Us</a>
+        <div class="actions mobile">
+          <a routerLink="/login" (click)="toggleMenuClose()">
+            <button class="btn ghost">Log In</button>
+          </a>
+          <a routerLink="/signup" (click)="toggleMenuClose()">
+            <button class="btn primarys">Get Started</button>
+          </a>
+        </div>
 
-  <div class="mobile-menu">
-    <button class="hamburger" aria-label="menu" (click)="toggleMenuOpen()">☰</button>
+        <div class="footer__brand">
+          <img src="assets/Surebase-logo-white.png" alt="Surebase Logo" class="logo" />
 
-    <ul *ngIf="isMenuOpen" class="mobile-menu-list">
-      <li routerLink="/home" (click)="toggleMenuClose()">Home</li>
-      <li routerLink="/about" (click)="toggleMenuClose()">About Us</li>
-      <li routerLink="/insurers" (click)="toggleMenuClose()">Insurer`s Page</li>
-      <li routerLink="/brokers" (click)="toggleMenuClose()">Broker`s Pagee</li>
-      <li routerLink="/contact" (click)="toggleMenuClose()">Contact Us</li>
-      <li routerLink="/login" (click)="toggleMenuClose()">Log In</li>
-      <li routerLink="/signup" (click)="toggleMenuClose()">Get Started</li>
-    </ul>
-  </div>
+          <p class="footer__tagline" style="color: white">Built to Back the Insurance Stack</p>
+
+          <div class="footer__socials">
+            <a
+              href="https://facebook.com/surebase"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social"
+            >
+              <img src="assets/Facebook.svg" alt="Facebook" />
+            </a>
+            <a
+              href="https://twitter.com/surebase"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social"
+            >
+              <img src="assets/Group 5.svg" alt="Twitter / X" />
+            </a>
+            <a
+              href="https://instagram.com/surebase"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social"
+            >
+              <img src="assets/Group 2.svg" alt="Instagram" />
+            </a>
+            <a
+              href="https://linkedin.com/company/surebase"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social"
+            >
+              <img src="assets/Group 3.svg" alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
+
+        <div class="contact">
+          <h4 style="font-weight: bolder; margin-bottom: 1rem; font-size: 20px">Contact</h4>
+          <p>Info&#64;surebase.it</p>
+          <p>+2349187439803 (9:00AM - 5:OOPM)</p>
+          <p>Adeniji Jones, Ikeja GRA, Lagos</p>
+        </div>
+      </div>
+    </div>
   </div>
 </header>

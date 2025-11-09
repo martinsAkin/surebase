@@ -38,10 +38,9 @@ section {
 
 main {
   display: flex;
-  gap: 20px;
   justify-content: center;
   margin-top: 2.5rem;
-  width: 1400px;
+  padding: 2rem;
   margin: 0 auto;
 
   .detail-item {
@@ -57,18 +56,18 @@ main {
     }
 
     div {
-      width: 450px;
+      width: 400px;
       text-align: center;
 
       h2 {
-        font-size: 22px;
+        font-size: 20px;
         margin-bottom: 0.5rem;
-        color: #133F53;
+        color: #133f53;
       }
 
       span {
-        font-size: 18px;
-        line-height: 28px;
+        font-size: 15px;
+        line-height: 25px;
         color: #030508;
       }
     }
@@ -141,7 +140,6 @@ main {
       padding-bottom: 20px;
       text-align: left;
     }
-  }
 
   main {
     flex-direction: column;

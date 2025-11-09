@@ -32,33 +32,34 @@ header {
   font-family: 'Montserrat', sans-serif;
 }
 .nav {
-  max-width: 1400px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 1.5rem 1rem;
+  padding: 1rem 1rem 1rem 5rem;
+  justify-items: center;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .nav .logo {
-  height: 40px;
+  height: 30px;
 }
 .nav .links {
   display: flex;
   align-items: center;
   gap: 30px;
   color: #e5eaf0;
-  margin-left: 10rem;
+  margin-left: 5rem;
 }
 
 .nav .links a {
   white-space: nowrap;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 28px;
   font-weight: 500;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   text-decoration: none;
-  color: #E5EAF0;
+  color: #e5eaf0;
 
   &.active-link {
     color: #38bdf8;
@@ -72,14 +73,14 @@ header {
 .nav .actions {
   display: flex;
   gap: 12px;
-  margin-left: 10.5rem;
+  margin-left: 2.5rem;
 }
 
 .hamburger {
   display: none;
   background: #fff;
   border: 0;
-  color: #44474B;
+  color: #44474b;
   font-size: 20px;
   margin-left: auto;
   width: 35px;
