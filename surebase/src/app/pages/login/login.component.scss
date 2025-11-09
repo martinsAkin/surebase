@@ -440,6 +440,84 @@ form { display: grid; gap: 16px; }
 }
 
 
+/* ===== 1024px (tablet / small laptop) ===== */
+@media (min-width: 901px) and (max-width: 1024px) {
+  .auth-card {
+    width: 100%;
+    max-width: 1024px;
+    margin: 40px auto;
+    height: 760px; // a bit shorter than 920px so it breathes better
+    grid-template-columns: 1.1fr 0.9fr; // slightly favor the form
+  }
+
+  .panel-left {
+    padding: 40px 32px;
+    background: #f8fafc;
+  }
+
+  .card {
+    max-width: 460px;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 18px;
+  }
+
+  .input-wrap input,
+  .password-wrap input {
+    height: 42px;
+    font-size: 14px;
+  }
+
+  .btn.primary {
+    height: 44px;
+    font-size: 15px;
+  }
+
+  .right-panel {
+    padding: 40px 32px;
+  }
+
+  .right-panel .content {
+    max-width: 520px;
+  }
+
+  .right-panel .content h3 {
+    font-size: 18px;
+    line-height: 12px;
+    margin-bottom: 20px;
+  }
+
+  .right-panel .content > .feature {
+    padding-left: 70px;
+    margin-bottom: 18px;
+  }
+  
+   .right-panel .content > .feature p {
+    font-size: 12px;
+    line-height: 18px;
+    color: #cfd6e3;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .right-panel .content > .feature::before {
+    width: 60px;
+    height: 60px;
+  }
+
+  .right-panel .content > .feature > img {
+    width: 60px;
+    height: 60px;
+    top: 0;
+    left: 0;
+  }
+}
+
+
 
 
 

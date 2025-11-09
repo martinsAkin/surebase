@@ -120,3 +120,65 @@
     }
   }
 }
+
+/* ===== 1024px breakpoint (tablet / small laptop) ===== */
+@media (min-width: 901px) and (max-width: 1024px) {
+  .build-the-future {
+    height: auto;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 60px 40px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+
+    .text-box {
+      width: 55%;
+      margin-left: 0;
+
+      h3 {
+        font-size: 30px;
+        line-height: 40px;
+        color: #133f53;
+        margin-bottom: 10px;
+      }
+
+      span {
+        display: block;
+        font-size: 18px;
+        line-height: 28px;
+        color: #44474b;
+      }
+    }
+
+    .input-getStarted {
+      margin-top: 1.5rem;
+      display: flex;
+      max-width: 500px;
+
+      input {
+        padding: 10px 12px;
+        font-size: 16px;
+        width: 70%;
+        border-radius: 12px 0 0 12px;
+      }
+
+      .get-started-email {
+        font-size: 14px;
+        padding: 12px 20px;
+        border-radius: 0 12px 12px 0;
+      }
+    }
+
+    .desktop {
+      display: block;
+      width: 40%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .mobile {
+      display: none;
+    }
+  }
+}
