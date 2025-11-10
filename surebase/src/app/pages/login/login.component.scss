@@ -1,20 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-.auth-shell {
-  background: #1f2937;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-}
+// .auth-shell {
+//   background: #1f2937;
+//   min-height: 100vh;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   padding: 24px;
+// }
 
 .auth-card {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: min(1200px, 96vw);
-  height: 800px;
-  border-radius: 14px;
+  width: 100%;
+  height: 920px;
   overflow: hidden;
   background: #fff;
   box-shadow: 0 10px 30px rgba(0,0,0,.25);
@@ -28,10 +27,11 @@
   align-items: center;
   justify-content: center;
   background: #f8fafc;
-  padding: 32px;
+  padding: 0px;
+  
 }
 
-.card { width: 100%; max-width: 420px; }
+.card { width: 100%; max-width: 550px; }
 .brand { height: 40px; margin: 0 auto 18px; display: block; }
 .title { font: 700 22px/1.2 "Montserrat", sans-serif; color: #0f172a; text-align: center; margin-bottom: 20px; }
 
@@ -198,7 +198,7 @@ form { display: grid; gap: 16px; }
     content: "";
     position: absolute;
     inset: auto 0 0 0;
-    height: 50%;
+    height: 53%;
     background: url("/assets/world.png") no-repeat bottom center / contain;
     opacity: 1;
     pointer-events: none;
@@ -208,7 +208,8 @@ form { display: grid; gap: 16px; }
     position: relative;
     z-index: 1;
     width: 100%;
-    max-width: 660px;
+    max-width: 760px;
+  
 
     h3 {
       font-weight: 700;
@@ -268,9 +269,9 @@ form { display: grid; gap: 16px; }
     }
 
     > .feature p {
-      font-size: 13px;
+      font-size: 14px;
       color: #BBC0C6;
-      line-height: 20px;
+      line-height: 25px;
       font-weight: 600;
       font-family: "Montserrat", sans-serif;
       margin: 0;
@@ -305,10 +306,7 @@ form { display: grid; gap: 16px; }
 
 
 @media (max-width: 600px) {
-  .auth-shell {
-    padding: 16px;
-    align-items: flex-start;
-  }
+  
 
   .auth-card {
     grid-template-columns: 1fr;    

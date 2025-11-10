@@ -78,11 +78,15 @@ main {
       align-items: center;
       text-align: center;
       font-size: 13px;
-      padding: 1.5rem 0;
+      padding: 0;
       width: 300px;
 
       h2 {
         font-size: medium;
+      }
+      span {
+        margin-top: 0.5rem;
+        line-height: 20px;
       }
     }
 
@@ -128,3 +132,4 @@ main {
     }
   }
 }
+
