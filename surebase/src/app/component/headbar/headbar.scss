@@ -42,8 +42,8 @@ header {
 }
 @media (min-width: 1500px) {
   .nav {
-    margin: 0 auto;
     justify-self: center;
+    gap: 5rem;
   }
 }
 .nav .logo {

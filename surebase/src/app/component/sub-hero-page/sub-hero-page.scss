@@ -1,7 +1,7 @@
 .main {
   display: flex;
   flex-direction: row-reverse;
-  gap: 7rem;
+  gap: 5rem;
   align-items: center;
   padding: 2rem 3rem;
   justify-content: center;
@@ -9,14 +9,14 @@
   img {
     height: 500px;
     width: 700px;
-    margin-left: -2rem;
+    margin-left: -1rem;
   }
 }
 
 .text-heading {
   font-size: 30px;
   font-weight: bold;
-  width: 550px;
+  width: 520px;
   margin-bottom: 10px;
   background: #d7f2fe;
   font-family: 'Space Grotesk', sans-serif;
