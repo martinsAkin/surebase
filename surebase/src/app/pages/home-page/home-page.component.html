@@ -1,7 +1,6 @@
 <section class="hero">
   <div class="container hero-grid">
     <div class="hero-copy">
-
       <h1>
         The Future of <br/> <span>Insurance Distribution,</span><br />
         <strong>Built on One API</strong>
@@ -14,8 +13,6 @@
         <input class="email" type="email" placeholder="Type your email" />
         <button class="btn btn-success" type="submit">Get Started</button>
       </form>
-
-
     </div>
 
     <div class="hero-art">
@@ -61,12 +58,17 @@
     <div class="integration-left">
       <div class="chip">
         <img src="assets/LOGO.png" alt="Logo" />
-        Surebase Differentiators</div>
+        Surebase Differentiators
+      </div>
 
-      <h2>Seamless Integration. Unwavering<br class="hide-mobile"> Reliability</h2>
+      <h2>
+        Seamless Integration. Unwavering<br class="hide-mobile" />
+        Reliability
+      </h2>
 
       <p class="lede">
-        Our strategy combines a unified API, digital dashboards, and robust infrastructure for 99.99% uptime and full regulatory compliance, ensuring unmatched scale and security.
+        Our strategy combines a unified API, digital dashboards, and robust infrastructure for
+        99.99% uptime and full regulatory compliance, ensuring unmatched scale and security.
       </p>
 
       <!-- Email + CTA -->
@@ -90,37 +92,49 @@
         </div>
         <div class="copy">
           <h3>Single API Endpoint</h3>
-          <p>Access thousands of products through one robust API, simplifying integrations for brokers, fintechs, and other partners.</p>
+          <p>
+            Access thousands of products through one robust API, simplifying integrations for
+            brokers, fintechs, and other partners.
+          </p>
         </div>
       </article>
 
       <article class="benefit">
         <div class="icon-tile">
-          <img src="assets/Frame4.png" alt="">
+          <img src="assets/Frame4.png" alt="" />
         </div>
         <div class="copy">
           <h3>Digital Dashboard for Insurers &amp; Brokers</h3>
-          <p>For insurance companies without an online presence, our intuitive dashboard lets you instantly list and manage your products.</p>
+          <p>
+            For insurance companies without an online presence, our intuitive dashboard lets you
+            instantly list and manage your products.
+          </p>
         </div>
       </article>
 
       <article class="benefit">
         <div class="icon-tile">
-          <img src="assets/Frame22.png" alt="">
+          <img src="assets/Frame22.png" alt="" />
         </div>
         <div class="copy">
           <h3>Seamless Integration</h3>
-          <p>We integrate directly with registered insurance companies that already offer API access, expanding their market effortlessly.</p>
+          <p>
+            We integrate directly with registered insurance companies that already offer API access,
+            expanding their market effortlessly.
+          </p>
         </div>
       </article>
 
       <article class="benefit">
         <div class="icon-tile">
-          <img src="assets/Frame23.png" alt="">
+          <img src="assets/Frame23.png" alt="" />
         </div>
         <div class="copy">
           <h3>99.99% Uptime &amp; Security</h3>
-          <p>Near-perfect availability on a secure, multi-tenant system that adheres to NAICOM, NDPR, and GDPR standards.</p>
+          <p>
+            Near-perfect availability on a secure, multi-tenant system that adheres to NAICOM, NDPR,
+            and GDPR standards.
+          </p>
         </div>
       </article>
     </div>
@@ -134,15 +148,15 @@
   <div class="container op-grid">
     <!-- LEFT -->
     <div class="op-left">
-      <div class="chip">
-        <img src="assets/LOGO.png" alt="Logo" />Market Opportunity</div>
+      <div class="chip"><img src="assets/LOGO.png" alt="Logo" />Market Opportunity</div>
 
       <h2>Tapping into Untapped Potential</h2>
 
       <p class="lede">
         With insurance penetration in Nigeria below 3% and rapidly growing digital adoption across
         fintechs and banks, Surebase fills a critical gap. We bridge fragmented insurance systems,
-        meeting the increasing demand for embedded insurance across travel, health, and banking sectors.
+        meeting the increasing demand for embedded insurance across travel, health, and banking
+        sectors.
       </p>
 
       <!-- Email input + CTA -->
@@ -169,8 +183,10 @@
     <aside class="faq-left">
       <div class="chip"><img src="assets/LOGO.png" alt="Logo" />Common Questions</div>
       <h2>Frequently Asked Questions (FAQs)</h2>
-      <p class="helper">For assistance, please visit our Contact Us page or call our customer support hotline at
-        (671) 555-0110. Our dedicated team is ready to help you on your journey to a greener, more sustainable future.
+      <p class="helper">
+        For assistance, please visit our Contact Us page or call our customer support hotline at
+        (671) 555-0110. Our dedicated team is ready to help you on your journey to a greener, more
+        sustainable future.
       </p>
 
       <div class="more more--left">
@@ -179,40 +195,49 @@
       </div>
     </aside>
 
-
-
-
     <div class="faq-right">
       <div class="accordion">
         <div class="item" *ngFor="let f of faqs; let i = index" [class.open]="f.open">
           <button class="q" (click)="toggleFaq(i)" [attr.aria-expanded]="f.open">
             <span>{{ f.q }}</span>
-            <svg class="chev" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <svg
+              class="chev"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M6 9l6 6 6-6"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
             </svg>
           </button>
-          <div class="a"><p>{{ f.a }}</p></div>
+          <div class="a">
+            <p>{{ f.a }}</p>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- moved here so it's last on mobile -->
-  <div class="more more--right">
+    <div class="more more--right">
       <span>More Frequently Asked Questions (FAQs)?</span><br />
       <a class="read-more" routerLink="/faq">Read More</a>
     </div>
   </div>
-
 </section>
-
-
 
 <!-- BOTTOM CTA -->
 <section class="band band-cta">
   <div class="container">
     <div class="cta-card">
-      <img class="deco deco-left"  src="assets/absolute-logo.png"  alt="" aria-hidden="true">
-      <img class="deco deco-right" src="assets/absolute-logo.png" alt="" aria-hidden="true">
+      <img class="deco deco-left" src="assets/absolute-logo.png" alt="" aria-hidden="true" />
+      <img class="deco deco-right" src="assets/absolute-logo.png" alt="" aria-hidden="true" />
 
       <div class="cta-copy">
         <h3>Ready to Build the Future of Insurance with Surebase?</h3>
@@ -224,7 +249,7 @@
 
       <!-- Email input + CTA -->
       <form class="cta-row" (submit)="$event.preventDefault()">
-        <input type="email" placeholder="Type your email" aria-label="Email">
+        <input type="email" placeholder="Type your email" aria-label="Email" />
         <button type="submit" class="btn btn-success">Get Started</button>
       </form>
     </div>

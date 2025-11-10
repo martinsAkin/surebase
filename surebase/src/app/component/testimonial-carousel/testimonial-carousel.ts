@@ -1,6 +1,6 @@
 // testimonial-carousel.ts
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, OnDestroy, AfterViewChecked, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit, AfterViewChecked, ChangeDetectorRef } from '@angular/core';
 
 interface Slide {
   id: number;
@@ -39,9 +39,11 @@ interface Slide {
   templateUrl: './testimonial-carousel.html',
   styleUrls: ['./testimonial-carousel.scss'],
 })
-export class TestimonialCarousel implements OnInit, OnDestroy {
+export class TestimonialCarousel implements OnInit, OnDestroy, AfterViewInit, AfterViewChecked {
   currentSlide = 0;
   private autoSlideInterval: any;
+  private hasUpdatedProgressBar = false;
+  
   constructor(private cdr: ChangeDetectorRef) {}
 
   slides: Slide[] = [
@@ -144,18 +146,33 @@ export class TestimonialCarousel implements OnInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
-    this.startAutoSlide();
+    // Initial update after view is initialized
+    setTimeout(() => this.updateProgressBarPosition(), 100);
   }
 
-  private updateProgressBarWidth(): void {
-    const featuredLogo = document.querySelector('.partners-container img.featured') as HTMLElement;
-    const progressBar = document.querySelector('.progress-bar') as HTMLElement;
+  ngAfterViewChecked(): void {
+    // Update progress bar position after view changes
+    if (!this.hasUpdatedProgressBar) {
+      this.updateProgressBarPosition();
+    }
+  }
 
-    if (featuredLogo instanceof HTMLImageElement && progressBar && featuredLogo.complete) {
-      const logoWidth = featuredLogo.offsetWidth;
-      if (logoWidth > 0) {
-        // Ensure we have a valid width
-        progressBar.style.width = `${logoWidth}px`;
+  private updateProgressBarPosition(): void {
+    const featuredLogo = document.querySelector('.partners-container img.featured') as HTMLImageElement;
+    const container = document.querySelector('.partners-container') as HTMLElement;
+
+    if (featuredLogo && container && featuredLogo.complete) {
+      const logoRect = featuredLogo.getBoundingClientRect();
+      const containerRect = container.getBoundingClientRect();
+      
+      // Calculate the center position of the featured logo relative to the container
+      const logoCenter = logoRect.left + logoRect.width / 2 - containerRect.left;
+      const logoWidth = logoRect.width;
+
+      if (logoWidth > 0 && logoCenter > 0) {
+        document.documentElement.style.setProperty('--featured-logo-width', `${logoWidth}px`);
+        document.documentElement.style.setProperty('--featured-logo-left', `${logoCenter}px`);
+        this.hasUpdatedProgressBar = true;
       }
     }
   }
@@ -163,7 +180,6 @@ export class TestimonialCarousel implements OnInit, OnDestroy {
   startAutoSlide(): void {
     this.autoSlideInterval = setInterval(() => {
       this.nextSlide();
-      this.cdr.detectChanges();
     }, 3000);
   }
 
@@ -174,24 +190,36 @@ export class TestimonialCarousel implements OnInit, OnDestroy {
   }
 
   nextSlide(): void {
+    this.hasUpdatedProgressBar = false;
     this.currentSlide = (this.currentSlide + 1) % this.slides.length;
     this.cdr.detectChanges();
+    setTimeout(() => this.updateProgressBarPosition(), 50);
   }
 
   prevSlide(): void {
+    this.hasUpdatedProgressBar = false;
     this.currentSlide = this.currentSlide === 0 ? this.slides.length - 1 : this.currentSlide - 1;
     this.cdr.detectChanges();
+    setTimeout(() => this.updateProgressBarPosition(), 50);
   }
 
   goToSlide(index: number): void {
     this.stopAutoSlide();
+    this.hasUpdatedProgressBar = false;
     this.currentSlide = index;
+    this.cdr.detectChanges();
+    setTimeout(() => this.updateProgressBarPosition(), 50);
     this.startAutoSlide();
   }
 
   setProgressBarWidth(logoElement: HTMLImageElement): void {
-    const logoWidth = logoElement.offsetWidth;
-    document.documentElement.style.setProperty('--featured-logo-width', `${logoWidth}px`);
+    if (logoElement.complete) {
+      this.updateProgressBarPosition();
+    } else {
+      logoElement.onload = () => {
+        this.updateProgressBarPosition();
+      };
+    }
   }
 
   getFeaturedLogoWidth(): number {

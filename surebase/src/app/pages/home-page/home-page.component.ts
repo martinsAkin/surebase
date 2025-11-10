@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DetailsSection } from '../../component/details-section/details-section';
 import { TestimonialCarousel } from '../../component/testimonial-carousel/testimonial-carousel';
+import { FoundationSectionComponent } from '../foundation-section/foundation-section';
 
 type Faq = { q: string; a: string; open?: boolean };
 type Testimonial = { quote: string; author: string; role: string; avatar?: string };
@@ -9,7 +10,7 @@ type Testimonial = { quote: string; author: string; role: string; avatar?: strin
 @Component({
   standalone: true,
   selector: 'app-home-page',
-  imports: [CommonModule, DetailsSection, TestimonialCarousel],
+  imports: [CommonModule, DetailsSection, TestimonialCarousel, FoundationSectionComponent],
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.scss'],
 })
