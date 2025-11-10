@@ -38,7 +38,7 @@ $badge-bg: #D7F2FE;
   margin: 0 auto;
   overflow: hidden;
   
-  @media (max-width: 1400px) and (min-width: 961px) {
+  @media (max-width: 1439px) and (min-width: 961px) {
     transform: scale(0.85);
     transform-origin: center;
   }
@@ -347,13 +347,13 @@ $badge-bg: #D7F2FE;
   }
 
   &.left-card {
-    left: 200px;
+    left: 250px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
 
     @media (min-width: 1024px) {
-      left: 200px;
+      left: 250px;
       top: 50%;
     }
     
@@ -373,7 +373,7 @@ $badge-bg: #D7F2FE;
   }
 
   &.right-card {
-    right: 200px;
+    right: 250px;
     top: 50%;
     transform: translateY(-50%);
     z-index: 2;
@@ -438,85 +438,26 @@ $badge-bg: #D7F2FE;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3rem;
-    height: 100px;
-    padding: 0 2rem;
-    overflow: hidden;
-    
-  @media (max-width: 960px) {
-      gap: 2.5rem;
-      height: 80px;
-      padding: 0 1rem;
-    }
-    
-    @media (max-width: 768px) {
-      gap: 2rem;
-      height: 60px;
-    }
-    
-    @media (max-width: 480px) {
-      gap: 1.5rem;
-    }
-
-    img {
-      height: 70px;
-      width: auto;
-      object-fit: contain;
-
-      @media (max-width: 960px) {
-        height: 60px;
-      }
-      
-      @media (max-width: 768px) {
-        height: 48px;
-      }
-      
-      @media (max-width: 480px) {
-        height: 40px;
-      }
-
-      &.featured {
-        opacity: 1;
-      }
-
-      &:hover {
-        opacity: 0.6;
-      }
-    }
-  }
-
-
-  .partners-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 4rem;  
     height: 100px;
     padding: 0 2rem;
     overflow: hidden;
     position: relative;  
 
-     transform: translateX(2px);
-
-    @media (max-width: 960px) {
-      bottom: 35px;
-    }
-    
-    @media (max-width: 768px) {
-      bottom: 25px;
-      padding-top: 20px;
-    }
-  }
+    transform: translateX(2px);
 
     @media (max-width: 960px) {
       gap: 3rem; 
       height: 80px;
       padding: 0 1rem;
+      bottom: 35px;
     }
     
     @media (max-width: 768px) {
       gap: 2.5rem; 
       height: 60px;
+      bottom: 25px;
+      padding-top: 20px;
     }
     
     @media (max-width: 480px) {
@@ -542,9 +483,9 @@ $badge-bg: #D7F2FE;
       }
       
       &.featured {
-      opacity: 1;
-      position: relative;
-      z-index: 2;
+        opacity: 1;
+        position: relative;
+        z-index: 2;
         
         &::after {
           content: '';
@@ -565,12 +506,18 @@ $badge-bg: #D7F2FE;
         transform: scale(1.05); 
       }
     }
+  }
 
   .progress-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding-bottom: 1rem;
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
     
     @media (max-width: 768px) {
       padding-bottom: 0.5rem;
@@ -582,19 +529,22 @@ $badge-bg: #D7F2FE;
     height: 4px;
     border-radius: 200px;
     transition: all 0.5s ease;  
-    position: relative;
+    position: absolute;
+    bottom: 1rem;
+    // left: var(--featured-logo-left, 50%);
+    transform: translateX(-50%);
     
     @media (max-width: 768px) {
       width: 100px;
       height: 3px;
+      bottom: 0.5rem;
     }
     
     @media (max-width: 480px) {
       width: 100px;
     }
-    
   }
-  }
+}
   
 // Animations
 @keyframes fadeInSlide {
