@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common'
-import { RouterOutlet, RouterLinkWithHref, RouterLinkActive } from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 import { Footer } from './component/footer/footer';
 import { Headbar } from './component/headbar/headbar';
 import { Router } from '@angular/router'
@@ -11,8 +11,6 @@ import { Router } from '@angular/router'
     CommonModule,
     Headbar,
     RouterOutlet,
-    RouterLinkWithHref,
-    RouterLinkActive,
     Footer
   ],
   templateUrl: './app.html',   
