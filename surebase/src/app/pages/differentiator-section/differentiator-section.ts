@@ -24,7 +24,7 @@ export class DifferentiatorSection {
 
   differentiators: Differentiator[] = [
     {
-      icon: '/blockchain.svg',
+      icon: '/blockchain.webp',
       iconBg: 'blue',
       title: 'Single API Endpoint',
       description: 'Access thousands of products through one robust API, simplifying integrations for brokers, fintechs, and other partners.'
@@ -36,13 +36,13 @@ export class DifferentiatorSection {
       description: 'For insurance companies without an online presence, our intuitive dashboard lets you instantly list and manage your products.'
     },
     {
-      icon: 'glowing-blockchain.svg',
+      icon: 'glowing-blockchain.webp',
       iconBg: 'green',
       title: 'Seamless Integration',
       description: 'We integrate directly with registered insurance companies that already offer API access, expanding their market effortlessly.'
     },
     {
-      icon: 'data-security.svg',
+      icon: 'data-security.webp',
       iconBg: 'blue',
       title: '99.99% Uptime & Security',
       description: 'Count on near-perfect availability and a secure, multi-tenant system that adheres to NAICOM, NDPR, and GDPR standards. Surebase is the trusted infrastructure you need.'

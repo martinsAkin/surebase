@@ -1,44 +1,46 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 
 // pages and components
-import { SignupComponent } from './pages/signup/signup.component';
-import { LoginComponent } from './pages/login/login.component';
-import { About } from './pages/about/about/about';
-import { BrokersHomePage } from './pages/brokers-home-page/brokers-home-page';
-import { InsurersHomePage } from './pages/insurers-home-page/insurers-home-page';
-import { FaqComponent } from './pages/faq/faq.component';
-import { TermsOfUsePageComponent } from './pages/terms-of-use/terms-of-use-page.component';
-import { Contact } from './pages/contact/contact/contact';
-import { PrivacyPolicyPageComponent } from './pages/privacy/privacy-policy-page.component';
-import { HomePageComponent } from './pages/home-page/home-page.component';
-
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: HomePageComponent },
-  { path: 'signup', component: SignupComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'about', component: About },
-  { path: 'contact', component: Contact },
-  { path: 'faqs', component: FaqComponent },
-  { path: 'insurers', component: InsurersHomePage },
-  { path: 'brokers', component: BrokersHomePage },
-  { path: 'terms-of-use', component: TermsOfUsePageComponent },
-  { path: 'privacy-policy', component: PrivacyPolicyPageComponent },
+  {
+    path: 'home', 
+    loadComponent: () => import('./pages/home-page/home-page.component').then(p => p.HomePageComponent)
+  },
+  {
+    path: 'signup', 
+    loadComponent: () => import('./pages/signup/signup.component').then(p => p.SignupComponent)
+  },
+  {
+    path: 'login', 
+    loadComponent: () => import('./pages/login/login.component').then(p => p.LoginComponent)
+  },
+  {
+    path: 'about', 
+    loadComponent: () => import('./pages/about/about/about').then(p => p.About)
+  },
+  {
+    path: 'contact', 
+    loadComponent: () => import('./pages/contact/contact/contact').then(p => p.Contact)
+  },
+  {
+    path: 'faqs', 
+    loadComponent: () => import('./pages/faq/faq.component').then(p => p.FaqComponent)
+  },
+  {
+    path: 'insurers', 
+    loadComponent: () => import('./pages/insurers-home-page/insurers-home-page').then(p => p.InsurersHomePage)
+  },
+  {
+    path: 'brokers', 
+    loadComponent: () => import('./pages/brokers-home-page/brokers-home-page').then(p => p.BrokersHomePage)
+  },
+  {
+    path: 'terms-of-use', 
+    loadComponent: () => import('./pages/terms-of-use/terms-of-use-page.component').then(p => p.TermsOfUsePageComponent)
+  },
+  {
+    path: 'privacy-policy', 
+    loadComponent: () => import('./pages/privacy/privacy-policy-page.component').then(p => p.PrivacyPolicyPageComponent)
+  },
 ];
-
-// import { Routes } from '@angular/router';
-// import { LoginComponent } from './pages/login/login.component';
-// import { FaqComponent } from './pages/faq/faq.component';
-// import { TermsOfUsePageComponent } from './pages/terms-of-use/terms-of-use-page.component';
-// import { PrivacyPolicyPageComponent } from './pages/privacy/privacy-policy-page.component';
-
-// export const routes: Routes = [
-//   { path: 'login', component: LoginComponent },
-//   { path: 'faq',   component: FaqComponent },
-//    { path: 'terms-of-use', component: TermsOfUsePageComponent },
-//    { path: 'privacy-policy', component: PrivacyPolicyPageComponent },
-//    { path: 'signup', loadComponent: () => import('./pages/signup/signup.component').then(m => m.SignupComponent) },
-//   { path: '', redirectTo: 'login', pathMatch: 'full' }, // or 'faq'
-//   { path: '**', redirectTo: 'login' }                   // catch-all
-// ];
